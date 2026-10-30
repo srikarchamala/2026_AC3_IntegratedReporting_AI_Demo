@@ -2,7 +2,7 @@
 
 Demo materials for **"Bridging the AI Readiness Gap: A Five-Pillar Framework for Equitable Cancer Research"**, 9th Biennial African Caribbean Cancer Consortium (AC3) Conference, Bridgetown, Barbados, October 2026.
 
-**Start the no-code demo:** download the [complete upload kit](manual_demo/AC3_No_Code_Demo_Kit.zip) and follow [START_HERE](manual_demo/START_HERE.md). Use it directly in ChatGPT or Claude.
+**Start the Claude Project demo:** download the [Claude Project kit](manual_demo/Claude_Project_Demo_Kit.zip) and open its [Word participant guide](manual_demo/claude_project/PARTICIPANT_GUIDE.docx). Paste the Project instructions and manually upload eight Word workflow documents plus four PDF reports. Participants do not need to use Markdown or install a native Skill. The [online Project guide](manual_demo/claude_project/README.md) has the same setup directions.
 
 > Everything here is a **synthetic teaching case**. No real patient data. Not for clinical use.
 
@@ -13,14 +13,19 @@ Demo materials for **"Bridging the AI Readiness Gap: A Five-Pillar Framework for
 | Part | What to do |
 |---|---|
 | Regular chat | In a fresh ordinary chat, attach the four component PDFs and use `01_BASELINE_PROMPT.txt`. Run this before enabling the demo skill. |
+| **Claude Project — preferred route** | Copy the Project instructions from the Word guide or `claude_project/PROJECT_INSTRUCTIONS.txt`. Upload the twelve individual files from `claude_project/upload_word/`. Run the setup check, then the demo prompt in the Project. |
 | Saved skill | Upload the inner `integrated-reporting-demo.zip` through the app's Skills interface, enable it, then attach the same reports in a new chat and use `02_AGENT_START_PROMPT.txt`. |
-| Project alternative | If Skills upload is unavailable, paste `03_PROJECT_INSTRUCTIONS.txt` into a new ChatGPT Project's instructions and attach the four reports. |
+| ChatGPT Project alternative | Paste `03_PROJECT_INSTRUCTIONS.txt` into a new ChatGPT Project's instructions and attach the four reports. This self-contained alternative is different from the modular Claude Project setup. |
 | Evidence review | Show a reported finding, its quotation, the guideline source, an assessed criterion, and the supported report statement. An optional fresh-chat review uses `04_QA_PROMPT.txt`. |
 
 Use the same app and model for both demonstrations. A regular chat can produce a good result; compare what actually happened instead of assuming a failure.
 
 ### Downloads and files
 
+- **[Claude Project kit](manual_demo/Claude_Project_Demo_Kit.zip):** extract it, open the Word participant guide, paste the Project instructions, and upload the twelve files inside `upload_word/` individually. Includes a setup check and demo prompts. `upload_files/` is the equivalent Markdown alternative; use one set.
+- **[Word participant guide](manual_demo/claude_project/PARTICIPANT_GUIDE.docx):** setup directions, complete Project instructions, and all three prompts in one readable Word document.
+- **[Word upload files](manual_demo/claude_project/upload_word/):** `SKILL.docx`, the common policy, four extractor checklists, guideline sources, report template, and four PDFs.
+- **[Claude Project folder](manual_demo/claude_project/):** browse both formats, prompts, and setup materials separately.
 - **[Complete demo kit](manual_demo/AC3_No_Code_Demo_Kit.zip):** the four PDFs, uploadable skill, prompt files, editable skill sources, and presenter guide. Extract this outer ZIP first.
 - **[Skill upload file](manual_demo/integrated-reporting-demo.zip):** upload this inner ZIP through Skills. It contains one named folder with `SKILL.md` and supporting Markdown references.
 - **[Start-here guide](manual_demo/START_HERE.md):** click-by-click Claude/ChatGPT setup and a five-to-six-minute presentation script.
@@ -36,6 +41,8 @@ The skill contains workflow instructions, not hand-written medical criteria or a
 ### What this demonstrates
 
 One assistant follows a reusable procedure: report-specific extraction, source retrieval, criterion assessment, integration, and review. These are separate stages in one conversation. Uploading a skill does not automatically create four independent agents, and a same-chat review is not independent QA. The [design notes](docs/ARCHITECTURE.md) explain the evidence boundaries.
+
+For the Claude Project route, the uploaded Word or Markdown files are workflow documents read under the pasted Project instructions. They are not automatically installed native Skills. The setup prompt asks Claude to identify which files it actually read and to report partial or missing content. Project retrieval can still omit content; inspect the evidence during rehearsal.
 
 For a recorded fallback, open [`index.html`](index.html). It displays archived workshop outputs; identify it as a replay.
 

@@ -1,8 +1,10 @@
 # Start here: regular chat versus a saved reporting workflow
 
-Use this kit directly in Claude or ChatGPT. **Skill = saved procedure; reports = evidence; WHO = external reference.** The case is synthetic, and every output is a teaching draft requiring review.
+Use this kit directly in Claude or ChatGPT. **Workflow files = saved procedure; reports = evidence; WHO = external reference.** The case is synthetic, and every output is a teaching draft requiring review.
 
-Extract `AC3_No_Code_Demo_Kit.zip` on your computer. Keep the inner **`integrated-reporting-demo.zip`** intact: that is the file to upload through the app's Skills interface. Attaching it to an ordinary conversation does not establish that the skill is installed.
+**Preferred for this workshop: Claude Projects with individual Word uploads.** Follow [the Claude Project guide](claude_project/README.md), or open `claude_project/PARTICIPANT_GUIDE.docx` for the complete directions, Project instructions, and prompts in Word. Use the dedicated [Claude Project kit](https://raw.githubusercontent.com/srikarchamala/2026_AC3_IntegratedReporting_AI_Demo/main/manual_demo/Claude_Project_Demo_Kit.zip), or the `claude_project/` folder inside the complete kit.
+
+Extract the downloaded kit on your computer. For the Project route, upload the individual files from `claude_project/upload_word/`, or the equivalent Markdown set in `claude_project/upload_files/`, after pasting the Project instructions. The separate inner `integrated-reporting-demo.zip` is used only for the optional native Skills route below.
 
 ## 1. Run regular chat first
 
@@ -19,7 +21,13 @@ Paste the contents of `01_BASELINE_PROMPT.txt` and send. Save the response. Keep
 
 ## 2. Choose one setup
 
-### Claude: upload the Skill ZIP
+### Claude Project with individual workflow files
+
+Create a Project named **AC3 Integrated Reporting Demo**. Under **Set project instructions**, paste the contents of `claude_project/PROJECT_INSTRUCTIONS.txt` and save. Add all twelve documents from `claude_project/upload_word/` to the Project's Files or knowledge area: eight Word workflow documents and the four PDFs. An equivalent Markdown set is in `upload_files/`; use one set.
+
+Start a conversation inside the Project. Send `claude_project/CHECK_SETUP_PROMPT.txt`, resolve any reported missing or partial content, then send `claude_project/RUN_DEMO_PROMPT.txt`. All copy-and-paste text is also in the Word participant guide. These documents guide the workflow without native Skill installation. See the [complete Project guide](claude_project/README.md) for the file list and source-access steps.
+
+### Optional Claude route: upload the native Skill ZIP
 
 1. In **Settings → Capabilities**, enable **Code execution and file creation**, called **Create and edit files** in the updated layout.
 2. Open **Customize → Skills**.
@@ -41,7 +49,7 @@ Create a new Project. Open its **••• menu → Project settings**, and past
 
 ## 3. Let the workflow use evidence
 
-Enable web search for the workflow when available. Its stages are to extract each report, retrieve the approved reference, assess criteria, draft an integrated report, and review the evidence.
+Enable web search for the workflow when your interface offers that control. The newer Claude interface may search without a toggle; explicitly ask it to open the approved reference. The workflow's stages are to extract each report, retrieve the approved reference, assess criteria, draft an integrated report, and review the evidence.
 
 The default reference is the [public 2022 WHO fifth-edition myeloid author overview](https://doi.org/10.1038/s41375-022-01613-1). It is neither the complete Blue Book nor a claim of the latest guidance. An optional ELN reference addresses a separate risk framework; formal risk assessment requires that reference and its scope to be checked.
 
@@ -56,7 +64,7 @@ For an additional review, open another fresh chat and use `04_QA_PROMPT.txt` wit
 | Time | Show |
 |---|---|
 | 0:00–1:00 | The four source reports and the regular-chat request |
-| 1:00–2:00 | Its actual result, then the installed skill or Project instructions |
+| 1:00–2:00 | Its actual result, then Project instructions and the uploaded workflow documents |
 | 2:00–4:00 | The workflow's extraction, external reference, and draft |
 | 4:00–5:00 | One sentence traced to findings and criteria; the review stage |
 | 5:00–6:00 | Observed differences and remaining uncertainty |
@@ -66,7 +74,8 @@ Rehearse beforehand. If showing saved output, identify it as a rehearsal result.
 ## If something blocks the demo
 
 - **WHO page cannot be read:** stop classification or attach the original public article, retaining its URL and edition. Do not substitute a search snippet, remembered rules, or a condensed answer key.
-- **Skill unavailable:** use the Project route if permitted. Its instructions need no additional support-file uploads.
+- **Native Skill unavailable:** use the Claude Project route with individual Word or Markdown workflow documents. The separate ChatGPT Project alternative is self-contained and uses only report uploads.
+- **Project file not read:** identify the missing or partial document, reattach it if needed, and repeat the setup check. Uploading does not guarantee full retrieval.
 - **Skill not loading:** confirm it is enabled and name it explicitly.
 - **Slow generation:** use your labeled rehearsal output and inspect its evidence.
 
