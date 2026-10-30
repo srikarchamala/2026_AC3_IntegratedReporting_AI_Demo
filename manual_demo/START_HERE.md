@@ -1,6 +1,6 @@
 # Start here: regular chat versus a saved reporting workflow
 
-Use this kit directly in Claude or ChatGPT. **Workflow files = saved procedure; reports = evidence; WHO = external reference.** The case is synthetic, and every output is a teaching draft requiring review.
+Use this kit directly in Claude or ChatGPT. **Skills files = saved procedure; reports = evidence; WHO = external reference.** The case is synthetic, and every output is a teaching draft requiring review.
 
 **Preferred for this workshop: Claude Projects with individual Word uploads.** Follow [the Claude Project guide](claude_project/README.md), or open `claude_project/PARTICIPANT_GUIDE.docx` for the complete directions, Project instructions, and prompts in Word. Use the dedicated [Claude Project kit](https://raw.githubusercontent.com/srikarchamala/2026_AC3_IntegratedReporting_AI_Demo/main/manual_demo/Claude_Project_Demo_Kit.zip), or the `claude_project/` folder inside the complete kit.
 
@@ -10,20 +10,22 @@ Extract the downloaded kit on your computer. For the Project route, upload the i
 
 Before installing or enabling the demo skill, open a **fresh ordinary chat outside Projects**. Use a conversation without the answer key or previous case conclusions. If the skill is already installed, disable it for this baseline.
 
-Attach only the four PDFs in `case/`:
+Attach only the four pathology reports in `case/`:
 
-- `01_bone_marrow_morphology.pdf`
-- `02_flow_cytometry.pdf`
-- `03_cytogenetics_fish.pdf`
-- `04_molecular_ngs.pdf`
+- `Pathology_Report_1_bone_marrow_morphology.pdf`
+- `Pathology_Report_2_flow_cytometry.pdf`
+- `Pathology_Report_3_cytogenetics_fish.pdf`
+- `Pathology_Report_4_molecular_ngs.pdf`
+
+The same four files are in `claude_project/upload_word/`. In the GitHub repository, the originals are in the top-level `case/` folder as `01_` to `04_`.
 
 Paste the contents of `01_BASELINE_PROMPT.txt` and send. Save the response. Keep the **same app and model** for the second demonstration. A regular chat may produce a good report; compare the actual results without assuming it must fail.
 
 ## 2. Choose one setup
 
-### Claude Project with individual workflow files
+### Claude Project with individual Skills files
 
-Create a Project named **AC3 Integrated Reporting Demo**. Under **Set project instructions**, paste the contents of `claude_project/PROJECT_INSTRUCTIONS.txt` and save. Add all twelve documents from `claude_project/upload_word/` to the Project's Files or knowledge area: eight Word workflow documents and the four PDFs. An equivalent Markdown set is in `upload_files/`; use one set.
+Create a Project named **AC3 Integrated Reporting Demo**. Under **Set project instructions**, paste the contents of `claude_project/PROJECT_INSTRUCTIONS.txt` and save. Add all twelve documents from `claude_project/upload_word/` to the Project's Files or knowledge area: eight Skills files (`Skills_1` to `Skills_8`) and the four pathology reports (`Pathology_Report_1` to `_4`). An equivalent Markdown set is in `upload_files/`; use one set.
 
 Start a conversation inside the Project. Send `claude_project/CHECK_SETUP_PROMPT.txt`, resolve any reported missing or partial content, then send `claude_project/RUN_DEMO_PROMPT.txt`. All copy-and-paste text is also in the Word participant guide. These documents guide the workflow without native Skill installation. See the [complete Project guide](claude_project/README.md) for the file list and source-access steps.
 
@@ -63,8 +65,8 @@ For an additional review, open another fresh chat and use `04_QA_PROMPT.txt` wit
 
 | Time | Show |
 |---|---|
-| 0:00–1:00 | The four source reports and the regular-chat request |
-| 1:00–2:00 | Its actual result, then Project instructions and the uploaded workflow documents |
+| 0:00–1:00 | The four pathology reports and the regular-chat request |
+| 1:00–2:00 | Its actual result, then Project instructions and the uploaded Skills files |
 | 2:00–4:00 | The workflow's extraction, external reference, and draft |
 | 4:00–5:00 | One sentence traced to findings and criteria; the review stage |
 | 5:00–6:00 | Observed differences and remaining uncertainty |
@@ -74,7 +76,7 @@ Rehearse beforehand. If showing saved output, identify it as a rehearsal result.
 ## If something blocks the demo
 
 - **WHO page cannot be read:** stop classification or attach the original public article, retaining its URL and edition. Do not substitute a search snippet, remembered rules, or a condensed answer key.
-- **Native Skill unavailable:** use the Claude Project route with individual Word or Markdown workflow documents. The separate ChatGPT Project alternative is self-contained and uses only report uploads.
+- **Native Skill unavailable:** use the Claude Project route with individual Word or Markdown Skills files. The separate ChatGPT Project alternative is self-contained and uses only report uploads.
 - **Project file not read:** identify the missing or partial document, reattach it if needed, and repeat the setup check. Uploading does not guarantee full retrieval.
 - **Skill not loading:** confirm it is enabled and name it explicitly.
 - **Slow generation:** use your labeled rehearsal output and inspect its evidence.

@@ -1,6 +1,6 @@
 # MOLEC: molecular report extraction pass
 
-Use `extractor_common.md` and the **MOLEC** source ID. Inspect only the assigned molecular report. Return the common findings table, starting at `MOLEC-001`.
+Use `Skills_2_extraction_rules_all_reports.md` and the **MOLEC** source ID. Inspect only the assigned molecular report. Return the common findings table, starting at `MOLEC-001`.
 
 | Field / population | What to capture |
 |---|---|

@@ -25,8 +25,8 @@ Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
 
 | File or folder | What it is | Upload it? |
 |---|---|---|
-| `upload_word/` | 8 Word workflow documents + 4 PDF reports (12 files) | **Yes**, into the Project (step 3) |
-| `upload_files/` | The same 8 workflow documents as Markdown, plus the same 4 PDFs | Only if you prefer Markdown. Use **one** set, never both |
+| `upload_word/` | 8 Skills files (Word) + 4 pathology reports (PDF): 12 files | **Yes**, into the Project (step 3) |
+| `upload_files/` | The same 8 Skills files as Markdown, plus the same 4 pathology reports | Only if you prefer Markdown. Use **one** set, never both |
 | `PROJECT_INSTRUCTIONS.txt` | Text you paste into the Project's instructions | Paste, don't upload |
 | `BASELINE_PROMPT.txt` | Prompt for the regular chat (step 2) | Paste |
 | `CHECK_SETUP_PROMPT.txt` | Prompt that checks Claude can read every file (step 4) | Paste |
@@ -92,7 +92,7 @@ They fall into four groups. Together they work like a written procedure handed t
 | `Pathology_Report_3_cytogenetics_fish.pdf` | Synthetic karyotype and FISH report (CYTO) |
 | `Pathology_Report_4_molecular_ngs.pdf` | Synthetic molecular NGS report from a separate reference lab (MOLEC) |
 
-The 8 workflow files contain no diagnosis or expected answer, and none of them are the guideline itself; Claude reads the WHO article separately in step 5. The `upload_files/` folder has the same 8 workflow files as Markdown (`.md`) if you prefer them.
+The 8 Skills files contain no diagnosis or expected answer, and none of them are the guideline itself; Claude reads the WHO article separately in step 5. The `upload_files/` folder has the same 8 Skills files as Markdown (`.md`) if you prefer them.
 
 Do **not** upload the answer key (`case/05_GOLD_STANDARD_integrated_report.pdf`), this README, the participant guide, or anything from `runs/`. They contain the expected answer and would make the comparison unfair.
 

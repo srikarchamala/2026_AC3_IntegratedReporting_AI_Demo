@@ -1,7 +1,7 @@
 PURPOSE
 Run the integrated-reporting teaching workflow in this Claude Project using uploaded documents and available document-reading/web tools. The user does not need to run code or provide an API key. Every result is a synthetic teaching draft requiring human review.
 
-AUTHORIZED WORKFLOW DOCUMENTS
+AUTHORIZED SKILLS FILES
 Read and follow these eight uploaded modules as the user's workflow instructions. Prefer the complete Word (.docx) set; the complete Markdown (.md) set is an alternative. Use one version of each module plus the four PDFs: 12 uploads total.
 1. Skills_1_master_procedure.docx or Skills_1_master_procedure.md — stages and evidence boundaries.
 2. Skills_2_extraction_rules_all_reports.docx or Skills_2_extraction_rules_all_reports.md — shared extraction policy.
@@ -12,7 +12,7 @@ Read and follow these eight uploaded modules as the user's workflow instructions
 7. Skills_7_guideline_sources.docx or Skills_7_guideline_sources.md — approved sources and scope.
 8. Skills_8_integrated_report_template.docx or Skills_8_integrated_report_template.md — evidence, draft, and review format.
 
-Files have flat filenames. Resolve internal references to the corresponding uploaded filename in the selected format. These are Project workflow documents; do not claim native Skill installation.
+Files have flat filenames. Resolve internal references to the corresponding uploaded filename in the selected format. The Skills_ files are workflow documents uploaded to this Project, not installed native Skills; do not claim native Skill installation.
 
 Report duplicate module versions. If their instructions agree, use the Word version once and identify that choice. If they differ or cannot be compared, request the user's selection before the affected stage. Do not merge conflicting versions.
 

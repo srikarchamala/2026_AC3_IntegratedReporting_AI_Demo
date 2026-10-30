@@ -1,6 +1,6 @@
 # Claude Project demonstration guide
 
-Build a reusable reporting workflow by uploading familiar documents to a Claude Project. Participants can use the **Word files**; an equivalent Markdown set is included for those who prefer plain text. The four case reports remain PDFs. No programming or native Skill installation is required.
+Build a reusable reporting workflow by uploading familiar documents to a Claude Project. Participants can use the **Word files**; an equivalent Markdown set is included for those who prefer plain text. The four pathology reports remain PDFs. No programming or native Skill installation is required.
 
 Use `PARTICIPANT_GUIDE.docx` for these directions, the Project instructions, and all three prompts in Word. Keep this guide on your computer; upload only the files in the set you choose below.
 
@@ -8,7 +8,7 @@ Use `PARTICIPANT_GUIDE.docx` for these directions, the Project instructions, and
 
 Download and extract the [Claude Project demo kit](https://raw.githubusercontent.com/srikarchamala/2026_AC3_IntegratedReporting_AI_Demo/main/manual_demo/Claude_Project_Demo_Kit.zip). The ZIP is a download container. Upload its individual documents to the Project.
 
-For the workshop, use **`upload_word/`**. It contains eight Word workflow files and four PDF reports, twelve files in total. The alternative **`upload_files/`** folder contains the same eight workflow modules as Markdown plus the same four PDFs. Choose one complete set. Uploading both sets creates duplicate instructions.
+For the workshop, use **`upload_word/`**. It contains eight Skills files (Word) and four pathology reports (PDF), twelve files in total. The alternative **`upload_files/`** folder contains the same eight Skills files as Markdown plus the same four PDFs. Choose one complete set. Uploading both sets creates duplicate instructions.
 
 ## 2 Run regular chat first
 
@@ -24,7 +24,7 @@ Select **Set project instructions**. Paste the complete contents of `PROJECT_INS
 
 In the Project's **Files** or **project knowledge** area, use **+** to upload each of the twelve documents from `upload_word/`. You may select them together while keeping them as individual files. Some accounts have a newer Project layout; use its corresponding files and instructions controls.
 
-### Eight workflow documents
+### Eight Skills files
 
 | Word file | What it tells Claude to do |
 |---|---|
@@ -37,14 +37,14 @@ In the Project's **Files** or **project knowledge** area, use **+** to upload ea
 | `Skills_7_guideline_sources.docx` | Locate and read the approved original WHO reference; use optional ELN guidance only when requested |
 | `Skills_8_integrated_report_template.docx` | Format the report, criteria table, and evidence review |
 
-### Four source reports
+### Four pathology reports
 
 - `Pathology_Report_1_bone_marrow_morphology.pdf`
 - `Pathology_Report_2_flow_cytometry.pdf`
 - `Pathology_Report_3_cytogenetics_fish.pdf`
 - `Pathology_Report_4_molecular_ngs.pdf`
 
-The Markdown alternative uses the same workflow filenames ending in `.md`. Project instructions recognize either format. Word files contain the workflow as real document text, with headings and readable tables; they are not screenshots of the instructions.
+The Markdown alternative uses the same Skills filenames ending in `.md`. Project instructions recognize either format. Word files contain the workflow as real document text, with headings and readable tables; they are not screenshots of the instructions.
 
 ## 4 Check what Claude can read
 
@@ -65,7 +65,7 @@ Show one reported finding, its original quotation, the guideline section actuall
 | Time | Show |
 |---|---|
 | First minute | Four PDFs and the regular-chat result |
-| Second minute | Project instructions and the eight uploaded Word workflow documents |
+| Second minute | Project instructions and the eight uploaded Skills files |
 | Next two minutes | Report extraction, actual reference access, and integrated draft |
 | Final one or two minutes | One evidence trail, review concerns, and observed differences |
 
@@ -83,4 +83,4 @@ Menu labels and file support were checked on 30 October 2026.
 - [Web search and direct URL access](https://support.claude.com/en/articles/10684626-enable-and-use-web-search)
 - [Claude file formats including Markdown](https://claude.com/product/overview)
 
-The separate native Skills option is documented in [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude). Uploading a Word or Markdown workflow document to Project knowledge does not itself install a native Skill.
+The separate native Skills option is documented in [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude). Uploading a Word or Markdown Skills file to Project knowledge does not itself install a native Skill.

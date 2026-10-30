@@ -1,6 +1,6 @@
 # CYTO: cytogenetics and FISH extraction pass
 
-Use `extractor_common.md` and the **CYTO** source ID. Inspect only the assigned cytogenetics/FISH report. Return the common findings table, starting at `CYTO-001`.
+Use `Skills_2_extraction_rules_all_reports.md` and the **CYTO** source ID. Inspect only the assigned cytogenetics/FISH report. Return the common findings table, starting at `CYTO-001`.
 
 | Field / population | What to capture |
 |---|---|

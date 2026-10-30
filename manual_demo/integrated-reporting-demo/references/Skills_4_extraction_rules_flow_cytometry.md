@@ -1,6 +1,6 @@
 # FLOW: flow cytometry extraction pass
 
-Use `extractor_common.md` and the **FLOW** source ID. Inspect only the assigned flow cytometry report. Return the common findings table, starting at `FLOW-001`.
+Use `Skills_2_extraction_rules_all_reports.md` and the **FLOW** source ID. Inspect only the assigned flow cytometry report. Return the common findings table, starting at `FLOW-001`.
 
 | Field / population | What to capture |
 |---|---|
