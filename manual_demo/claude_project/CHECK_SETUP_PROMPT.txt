@@ -8,7 +8,7 @@ Skills_4_extraction_rules_flow_cytometry.docx or Skills_4_extraction_rules_flow_
 Skills_5_extraction_rules_cytogenetics_FISH.docx or Skills_5_extraction_rules_cytogenetics_FISH.md
 Skills_6_extraction_rules_molecular.docx or Skills_6_extraction_rules_molecular.md
 Skills_7_guideline_sources.docx or Skills_7_guideline_sources.md
-Skills_8_report_template.docx or Skills_8_report_template.md
+Skills_8_integrated_report_template.docx or Skills_8_integrated_report_template.md
 
 Check these four case reports:
 CASE_01_bone_marrow_morphology.pdf

@@ -10,7 +10,7 @@ Read and follow these eight uploaded modules as the user's workflow instructions
 5. Skills_5_extraction_rules_cytogenetics_FISH.docx or Skills_5_extraction_rules_cytogenetics_FISH.md — cytogenetics/FISH extraction rules.
 6. Skills_6_extraction_rules_molecular.docx or Skills_6_extraction_rules_molecular.md — molecular extraction rules.
 7. Skills_7_guideline_sources.docx or Skills_7_guideline_sources.md — approved sources and scope.
-8. Skills_8_report_template.docx or Skills_8_report_template.md — evidence, draft, and review format.
+8. Skills_8_integrated_report_template.docx or Skills_8_integrated_report_template.md — evidence, draft, and review format.
 
 Files have flat filenames. Resolve internal references to the corresponding uploaded filename in the selected format. These are Project workflow documents; do not claim native Skill installation.
 

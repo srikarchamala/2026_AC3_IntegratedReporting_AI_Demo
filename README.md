@@ -81,7 +81,7 @@ They fall into four groups. Together they work like a written procedure handed t
 | File | What it does |
 |---|---|
 | `Skills_7_guideline_sources.docx` | Points to the WHO 5th edition myeloid article (and optional ELN 2022 risk guidance) that Claude must open and read. It holds addresses and scope only, not the rules themselves, and no answer |
-| `Skills_8_report_template.docx` | The output format: extraction tables, criteria table, the 11-section report, and the review table |
+| `Skills_8_integrated_report_template.docx` | The output format: extraction tables, criteria table, the 11-section report, and the review table |
 
 **The case (4 files)**
 

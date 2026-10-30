@@ -44,7 +44,7 @@ If the required text cannot be read, finish evidence extraction if useful, then 
 
 ## 4. Assess criteria before classification
 
-Use the criterion table in [the report template](Skills_8_report_template.md). Cite the actual source section/table and the finding IDs for every assessment. Read context, exclusions, hierarchy, and prerequisites before deciding **met**, **not met**, **unknown**, or **not applicable**. Keep unknown evidence distinct from a negative result. Use brief quotations within source quotation limits; paraphrase other criteria with precise citations.
+Use the criterion table in [the report template](Skills_8_integrated_report_template.md). Cite the actual source section/table and the finding IDs for every assessment. Read context, exclusions, hierarchy, and prerequisites before deciding **met**, **not met**, **unknown**, or **not applicable**. Keep unknown evidence distinct from a negative result. Use brief quotations within source quotation limits; paraphrase other criteria with precise citations.
 
 State one classification status: **supported**, **insufficient evidence**, or **outside the retrieved source's scope**. A supported WHO classification requires applicable WHO criteria and case evidence. Unknown necessary classification prerequisites block a definitive conclusion. Optional risk uncertainty is a separate issue.
 
