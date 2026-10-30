@@ -28,14 +28,14 @@ In the Project's **Files** or **project knowledge** area, use **+** to upload ea
 
 | Word file | What it tells Claude to do |
 |---|---|
-| `WORKFLOW_1_procedure.docx` | Follow the complete reporting workflow |
-| `WORKFLOW_2_extraction_rules_all_reports.docx` | Preserve quotations, evidence locations, measurements, and missing information |
-| `WORKFLOW_3_checklist_morphology.docx` | Extract morphology findings |
-| `WORKFLOW_4_checklist_flow_cytometry.docx` | Extract flow cytometry findings |
-| `WORKFLOW_5_checklist_cytogenetics_FISH.docx` | Extract cytogenetics and FISH findings |
-| `WORKFLOW_6_checklist_molecular.docx` | Extract molecular findings |
-| `WORKFLOW_7_guideline_sources.docx` | Locate and read the approved original WHO reference; use optional ELN guidance only when requested |
-| `WORKFLOW_8_report_template.docx` | Format the report, criteria table, and evidence review |
+| `Skills_1_procedure.docx` | Follow the complete reporting workflow |
+| `Skills_2_extraction_rules_all_reports.docx` | Preserve quotations, evidence locations, measurements, and missing information |
+| `Skills_3_checklist_morphology.docx` | Extract morphology findings |
+| `Skills_4_checklist_flow_cytometry.docx` | Extract flow cytometry findings |
+| `Skills_5_checklist_cytogenetics_FISH.docx` | Extract cytogenetics and FISH findings |
+| `Skills_6_checklist_molecular.docx` | Extract molecular findings |
+| `Skills_7_guideline_sources.docx` | Locate and read the approved original WHO reference; use optional ELN guidance only when requested |
+| `Skills_8_report_template.docx` | Format the report, criteria table, and evidence review |
 
 ### Four source reports
 
@@ -58,7 +58,7 @@ In that Project conversation, send `RUN_DEMO_PROMPT.txt`, also reproduced in the
 
 If your interface has a **Web search** option in the chat's **+** menu, enable it. The newer Claude interface searches when useful and may have no toggle. The run prompt explicitly requests opening and reading the source. Workspace settings can affect access.
 
-Show one reported finding, its original quotation, the guideline section actually read, and the report statement supported by that evidence. A file named `WORKFLOW_7_guideline_sources` supplies the source address and scope; it is not itself the guideline. The default is the public 2022 WHO fifth-edition myeloid overview, rather than a claim to have consulted the full current Blue Book. If Claude cannot read the necessary article text, it should pause derived classification and request the original article as an upload.
+Show one reported finding, its original quotation, the guideline section actually read, and the report statement supported by that evidence. A file named `Skills_7_guideline_sources` supplies the source address and scope; it is not itself the guideline. The default is the public 2022 WHO fifth-edition myeloid overview, rather than a claim to have consulted the full current Blue Book. If Claude cannot read the necessary article text, it should pause derived classification and request the original article as an upload.
 
 ## A short presentation sequence
 

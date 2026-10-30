@@ -33,7 +33,7 @@ Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
 | `RUN_DEMO_PROMPT.txt` | Prompt that runs the workflow (step 5) | Paste |
 | `PARTICIPANT_GUIDE.docx` | All of the above in one Word document | Keep for yourself; **don't upload** |
 
-Every upload file is named for its job: `WORKFLOW_1` to `WORKFLOW_8` are the instructions, in the order Claude uses them, and `CASE_01` to `CASE_04` are the four reports. Both folders hold the same four reports.
+Every upload file is named for its job: `Skills_1` to `Skills_8` are the instructions, in the order Claude uses them, and `CASE_01` to `CASE_04` are the four reports. Both folders hold the same four reports.
 
 ## Step 2: Run the regular chat first
 
@@ -54,7 +54,7 @@ Note the model you used (shown near the message box). Use the same model in step
 3. Click **Set project instructions**. Paste the **entire** contents of `PROJECT_INSTRUCTIONS.txt` and click **Save instructions**.
    Put it in the instructions box, not in the Project description.
 4. In the Project's **Files** (project knowledge) area, click **+** and upload all **12 files** from `upload_word/`. You can select them together.
-5. Check that the Project lists 12 files: 8 starting `WORKFLOW_` and 4 starting `CASE_`.
+5. Check that the Project lists 12 files: 8 starting `Skills_` and 4 starting `CASE_`.
 
 ### What the 12 files are
 
@@ -64,24 +64,24 @@ They fall into four groups. Together they work like a written procedure handed t
 
 | File | What it does |
 |---|---|
-| `WORKFLOW_1_procedure.docx` | The master procedure. Lists the six stages (inventory, extraction, guideline, criteria, draft, review), the evidence rules, and which other file to use at each stage |
+| `Skills_1_procedure.docx` | The master procedure. Lists the six stages (inventory, extraction, guideline, criteria, draft, review), the evidence rules, and which other file to use at each stage |
 
 **How to read each report (5 files)**
 
 | File | What it does |
 |---|---|
-| `WORKFLOW_2_extraction_rules_all_reports.docx` | Rules for every report: quote the exact words, record where they came from, keep units and methods, and treat "not reported" as unknown, never as negative |
-| `WORKFLOW_3_checklist_morphology.docx` | Checklist for the bone marrow morphology report: cellularity, blast and monocyte counts kept separate, lineage wording, cytochemistry |
-| `WORKFLOW_4_checklist_flow_cytometry.docx` | Checklist for the flow cytometry report: each cell population and its percentage, gating, markers, lineage wording |
-| `WORKFLOW_5_checklist_cytogenetics_FISH.docx` | Checklist for the cytogenetics and FISH report: exact karyotype, each FISH probe and result, and the limits of a targeted panel |
-| `WORKFLOW_6_checklist_molecular.docx` | Checklist for the molecular (NGS) report: each variant with its transcript, allele fraction and tier, what was tested, and assay limits |
+| `Skills_2_extraction_rules_all_reports.docx` | Rules for every report: quote the exact words, record where they came from, keep units and methods, and treat "not reported" as unknown, never as negative |
+| `Skills_3_checklist_morphology.docx` | Checklist for the bone marrow morphology report: cellularity, blast and monocyte counts kept separate, lineage wording, cytochemistry |
+| `Skills_4_checklist_flow_cytometry.docx` | Checklist for the flow cytometry report: each cell population and its percentage, gating, markers, lineage wording |
+| `Skills_5_checklist_cytogenetics_FISH.docx` | Checklist for the cytogenetics and FISH report: exact karyotype, each FISH probe and result, and the limits of a targeted panel |
+| `Skills_6_checklist_molecular.docx` | Checklist for the molecular (NGS) report: each variant with its transcript, allele fraction and tier, what was tested, and assay limits |
 
 **Where the rules come from and how to write it up (2 files)**
 
 | File | What it does |
 |---|---|
-| `WORKFLOW_7_guideline_sources.docx` | Points to the WHO 5th edition myeloid article (and optional ELN 2022 risk guidance) that Claude must open and read. It holds addresses and scope only, not the rules themselves, and no answer |
-| `WORKFLOW_8_report_template.docx` | The output format: extraction tables, criteria table, the 11-section report, and the review table |
+| `Skills_7_guideline_sources.docx` | Points to the WHO 5th edition myeloid article (and optional ELN 2022 risk guidance) that Claude must open and read. It holds addresses and scope only, not the rules themselves, and no answer |
+| `Skills_8_report_template.docx` | The output format: extraction tables, criteria table, the 11-section report, and the review table |
 
 **The case (4 files)**
 
