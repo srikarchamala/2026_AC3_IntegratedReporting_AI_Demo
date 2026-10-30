@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "source_id": "WHO5E_MYEOID_2022",
+      "default": true,
+      "title": "The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Myeloid and Histiocytic/Dendritic Neoplasms",
+      "framework": "WHO fifth edition (2022 myeloid overview)",
+      "edition": "5th edition; public author overview published in 2022",
+      "publication_year": 2022,
+      "source_kind": "public_author_overview",
+      "scope": "Public 2022 author overview of WHO fifth-edition myeloid classification. This is not the full current WHO Blue Book. The retrieved introduction, complete AML section (including its tables), and secondary-myeloid-neoplasm section define the available evidence scope. Do not apply this source to other tumour families or silently substitute ICC criteria.",
+      "canonical_url": "https://doi.org/10.1038/s41375-022-01613-1",
+      "identity": {
+        "doi": "10.1038/s41375-022-01613-1",
+        "pmid": "35732831",
+        "pmcid": "PMC9252913"
+      },
+      "allowed_hosts": ["www.ebi.ac.uk", "pmc.ncbi.nlm.nih.gov", "www.nature.com"],
+      "retrieval_urls": [
+        "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9252913/fullTextXML",
+        "https://www.nature.com/articles/s41375-022-01613-1",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9252913/"
+      ],
+      "sections": [
+        {"id": "WHO5E-INTRO", "title": "Introduction", "end_title": "Clonal haematopoiesis", "min_chars": 800},
+        {"id": "WHO5E-AML", "title": "Acute myeloid leukaemia", "end_title": "Secondary myeloid neoplasms", "min_chars": 5000, "required_text": ["Table 7", "Table 8", "Table 9"]},
+        {"id": "WHO5E-SECONDARY", "title": "Secondary myeloid neoplasms", "end_title": "Myeloid/lymphoid neoplasms with eosinophilia and tyrosine kinase gene fusions", "min_chars": 1500}
+      ],
+      "tables": []
+    },
+    {
+      "source_id": "ELN2022_AML_RISK",
+      "default": false,
+      "title": "Diagnosis and management of AML in adults: 2022 recommendations from an international expert panel on behalf of the ELN",
+      "framework": "ELN 2022 adult AML genetic risk",
+      "edition": "2022 recommendations",
+      "publication_year": 2022,
+      "source_kind": "public_consensus_recommendations",
+      "scope": "Optional ELN 2022 adult AML genetic risk assessment. This is a separate risk framework, not WHO disease classification. The article states that these risk categories were developed mainly from intensively treated patients; apply the retrieved qualifications, exclusions, and table footnotes. Do not present this as the latest guidance or infer treatment eligibility from the synthetic case.",
+      "canonical_url": "https://doi.org/10.1182/blood.2022016867",
+      "identity": {"doi": "10.1182/blood.2022016867", "pmid": "35797463"},
+      "allowed_hosts": ["www.leukemia-net.org", "leukemia-net.org"],
+      "retrieval_urls": [
+        "https://www.leukemia-net.org/sites/leukemia-net/content/e58/e480/e481/e11514/Doehner_H.etal_Blood2022.DiagnosisandmanagementofAMLinadults-2022recommendationsfromaninternationalexpertpanelonbehalfoftheELN.pdf"
+      ],
+      "sections": [
+        {"id": "ELN2022-RISK-CONTEXT", "title": "2022 European LeukemiaNet genetic risk classification at diagnosis", "end_title": "Monitoring of measurable residual disease", "min_chars": 1500}
+      ],
+      "tables": [
+        {"id": "ELN2022-RISK-TABLE6", "title": "2022 ELN risk classification by genetics at initial diagnosis", "label": "Table 6", "min_chars": 1800, "required_text": ["Concurrent KIT", "For the time being", "TP53 mutation at a variant allele fraction"]}
+      ]
+    }
+  ]
+}

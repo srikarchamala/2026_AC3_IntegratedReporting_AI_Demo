@@ -1,0 +1,15 @@
+ASSIGNED MODALITY: FLOW — flow cytometry.
+Apply the shared extraction instructions and the FLOW schema. Read only this flow cytometry report.
+
+MODALITY CHECKLIST
+blast_percentage; promonocyte_percentage; population_description; immunophenotype; gating_strategy; lineage_assessment; specimen_adequacy.
+
+CAPTURE
+- Each reported population and its percentage separately. Use population_percentage for populations without a more specific field.
+- Retain the source's population label, gating strategy, denominator, and whether a population is included in or excluded from another reported population when explicitly stated.
+- Use a common group_id for a population's descriptive, numerical, and immunophenotype findings. Do not merge a blast gate with a separately described monocytic or other population.
+- Preserve marker names, positive/negative status, intensity, subset qualifiers, and aberrant-expression descriptions. The units, method, and denominator must be supported by source text rather than inferred from customary laboratory practice.
+- Extract lineage assessments exactly at the source's stated certainty. Do not decide whether flow resolves an uncertainty in a morphology report you have not been given.
+- Record stated adequacy, hemodilution, viability, gating, and other limitations. A missing panel result is not a negative result.
+
+Put a source-authored diagnostic interpretation in reported_interpretation with a quotation. Do not create an integrated diagnosis, add cell percentages, assign disease thresholds, or assume two percentages describe the same denominator.

@@ -1,5 +1,7 @@
 # WHO 5e Classification — Instructions for the Integrator
 
+> **Historical workshop artifact — inactive in the new workflow.** This condensed summary is retained to explain the archived runs; it is not an authoritative or current source of classification rules. Its simplifications should not be reused for new interpretation. The executable workflow retrieves and verifies public source articles through [`workflow/sources.json`](../../workflow/sources.json). See the [source-grounded demo guide](../../docs/SOURCE_GROUNDED_DEMO.md).
+
 These are condensed classification rules for the four tumor families the
 workshop pipeline handles. They are the **default content** of the
 **WHO Instructions** node feeding the WHO Classifier in

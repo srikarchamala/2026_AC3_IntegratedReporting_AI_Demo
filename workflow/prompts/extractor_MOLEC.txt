@@ -1,0 +1,16 @@
+ASSIGNED MODALITY: MOLEC — molecular testing.
+Apply the shared extraction instructions and the MOLEC schema. Read only this molecular report.
+
+MODALITY CHECKLIST
+assay_name; assay_scope; assay_method; result_summary; coverage_or_sensitivity.
+
+CAPTURE
+- The assay name, tested scope, reported method, overall result, detection/coverage limitations, and pending or unsuccessful components.
+- For each explicitly reported variant or gene-level result, assign a distinct group_id such as MOLEC-G001. Keep its gene, variant, transcript, variant_type, zygosity, variant_allele_fraction, and source-reported annotations in that group when present.
+- Preserve exact gene symbols, HGVS/variant strings, transcript accessions, and measurement qualifications. Do not reconstruct an HGVS expression, infer a transcript, convert a ratio into an allele fraction, or infer clonality or inheritance.
+- Record a source-provided tier as reported_variant_tier and a source-provided significance statement as reported_variant_significance. Preserve their wording and supporting quotations; do not independently assign either.
+- Record prognostic and predictive comments only when the source states them, using reported_prognostic_statement or reported_predictive_statement. Their presence records what this report says, not an independently verified scientific conclusion.
+- If an attribute of an actual reported variant is absent, it may be recorded as not_reported within that existing group. Do not fabricate a variant or gene-level negative result to fill a field. If no variants are described, record the supported overall result or missingness through result_summary.
+- Preserve explicit negative results only within their stated tested scope. An unmentioned gene or alteration is not a negative result.
+
+Do not label a variant as classifying, diagnostic, prognostic, actionable, or predictive based on model memory. Extract such a label only as the source author's attributed statement with a quotation. Derived classification and risk interpretation are separate downstream tasks requiring retrieved reference evidence.

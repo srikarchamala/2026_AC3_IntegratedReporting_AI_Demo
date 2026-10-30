@@ -1,0 +1,15 @@
+ASSIGNED MODALITY: CYTO — cytogenetics and FISH.
+Apply the shared extraction instructions and the CYTO schema. Read only this cytogenetics/FISH report.
+
+MODALITY CHECKLIST
+karyotype; metaphase_count; banding_resolution; fish_target; fish_result; assay_coverage; specimen_adequacy.
+
+CAPTURE
+- The exact reported karyotype/ISCN string. Preserve punctuation, clone counts, and qualifications rather than rewriting the result.
+- Reported metaphase counts, banding resolution, specimen quality, unsuccessful analyses, and other limitations.
+- Each explicitly tested FISH target or probe and its result, including cutoff, cell count, or percentage when given. Use the same group_id for a target and its corresponding result and fish_cells_counted findings.
+- If the source reports only an aggregate panel result, preserve that aggregate statement. Do not invent per-probe results or assume an unlisted probe was tested.
+- Preserve assay_coverage, tested regions/targets, and source-stated detection limits or exclusions. Report a negative result only for the test or scope the source actually describes.
+- Capture a microarray_result if one is explicitly present. Its absence does not mean the assay was performed or normal.
+
+Source-authored cytogenetic interpretations belong in reported_interpretation with their exact evidence. Do not infer that a normal karyotype or a negative tested panel rules out every possible genomic abnormality. Do not assign a classification category or introduce scientific exclusions that the source does not state.
