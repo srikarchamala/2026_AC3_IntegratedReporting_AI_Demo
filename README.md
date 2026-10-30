@@ -1,114 +1,174 @@
-# Integrated Reporting with AI: Chatbot vs Agent
+# Integrated Reporting with AI: Regular Chat vs a Guided Workflow
 
 Demo materials for **"Bridging the AI Readiness Gap: A Five-Pillar Framework for Equitable Cancer Research"**, 9th Biennial African Caribbean Cancer Consortium (AC3) Conference, Bridgetown, Barbados, October 2026.
 
-**Start the Claude Project demo:** download the [Claude Project kit](manual_demo/Claude_Project_Demo_Kit.zip) and open its [Word participant guide](manual_demo/claude_project/PARTICIPANT_GUIDE.docx). Paste the Project instructions and manually upload eight Word workflow documents plus four PDF reports. Participants do not need to use Markdown or install a native Skill. The [online Project guide](manual_demo/claude_project/README.md) has the same setup directions.
+You give the same four pathology reports to Claude twice:
 
-> Everything here is a **synthetic teaching case**. No real patient data. Not for clinical use.
+1. **Regular chat:** attach the reports and ask once.
+2. **Claude Project:** the same model, plus written instructions and a reference to the WHO classification. It extracts each report with quotes, reads the guideline, checks criteria, drafts the report, and reviews it.
 
-## No-code chat-versus-agent demonstration
+Then you compare what you can *check* in each answer. No coding, no API key, no software to install.
 
-**Download, upload, and chat.** The demo needs no local Python setup, terminal commands, or API key. It uses your app's file-reading and web capabilities.
+> **Synthetic teaching case only.** The patient and all reports are fictional. Never put real patient information into a consumer AI tool. Outputs are teaching drafts, not clinical reports.
 
-| Part | What to do |
+---
+
+## What you need
+
+- A Claude account that can create **Projects** ([claude.ai/projects](https://claude.ai/projects)).
+- About **20 minutes** the first time.
+- The demo kit: **[Claude_Project_Demo_Kit.zip](manual_demo/Claude_Project_Demo_Kit.zip)** (on that page, click the download button).
+
+## Step 1: Download and unzip the kit
+
+Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
+
+| File or folder | What it is | Upload it? |
+|---|---|---|
+| `upload_word/` | 8 Word workflow documents + 4 PDF reports (12 files) | **Yes**, into the Project (step 3) |
+| `upload_files/` | The same 8 workflow documents as Markdown, plus the same 4 PDFs | Only if you prefer Markdown. Use **one** set, never both |
+| `PROJECT_INSTRUCTIONS.txt` | Text you paste into the Project's instructions | Paste, don't upload |
+| `BASELINE_PROMPT.txt` | Prompt for the regular chat (step 2) | Paste |
+| `CHECK_SETUP_PROMPT.txt` | Prompt that checks Claude can read every file (step 4) | Paste |
+| `RUN_DEMO_PROMPT.txt` | Prompt that runs the workflow (step 5) | Paste |
+| `PARTICIPANT_GUIDE.docx` | All of the above in one Word document | Keep for yourself; **don't upload** |
+
+The four reports are the same in both folders:
+`01_bone_marrow_morphology.pdf`, `02_flow_cytometry.pdf`, `03_cytogenetics_fish.pdf`, `04_molecular_ngs.pdf`.
+
+## Step 2: Run the regular chat first
+
+Do this **before** you create the Project, so nothing from the Project influences it.
+
+1. Open a **new chat** at [claude.ai](https://claude.ai), **outside** any Project.
+2. If your chat has a Memory option in the **+** menu, turn it off for this chat.
+3. Attach the **four PDFs** (paperclip or **+** → upload). Attach nothing else.
+4. Paste the contents of `BASELINE_PROMPT.txt` and send.
+5. Save the answer (copy it into a document, or leave the tab open).
+
+Note the model you used (shown near the message box). Use the same model in step 5.
+
+## Step 3: Create the Project
+
+1. Go to [claude.ai/projects](https://claude.ai/projects) and click **+ New Project**.
+2. Name it `AC3 Integrated Reporting Demo`. Keep it private.
+3. Click **Set project instructions**. Paste the **entire** contents of `PROJECT_INSTRUCTIONS.txt` and click **Save instructions**.
+   Put it in the instructions box, not in the Project description.
+4. In the Project's **Files** (project knowledge) area, click **+** and upload all **12 files** from `upload_word/`. You can select them together.
+5. Check that the Project lists 12 files: 8 `.docx` and 4 `.pdf`.
+
+Do **not** upload the answer key (`case/05_GOLD_STANDARD_integrated_report.pdf`), this README, the participant guide, or anything from `runs/`. They contain the expected answer and would make the comparison unfair.
+
+## Step 4: Check that Claude can read every file
+
+1. Start a **new chat inside the Project**.
+2. Paste the contents of `CHECK_SETUP_PROMPT.txt` and send.
+3. Claude returns a table with one row per file and a status: **READ**, **PARTIAL**, **MISSING** or **UNREADABLE**.
+4. It should end with **"File setup ready for the workflow."**
+
+If it says **"File setup incomplete"**, re-upload the files it names and run the check again. This check does not diagnose anything; it only confirms the files are readable.
+
+## Step 5: Run the workflow
+
+1. In the same Project chat, turn on **Web search** if your **+** menu offers it. (Some newer layouts search automatically and have no switch.)
+2. Paste the contents of `RUN_DEMO_PROMPT.txt` and send.
+3. Wait. The full run usually takes **several minutes** and produces a long answer.
+
+Claude works through six labelled stages:
+
+| Stage | What you should see |
 |---|---|
-| Regular chat | In a fresh ordinary chat, attach the four component PDFs and use `01_BASELINE_PROMPT.txt`. Run this before enabling the demo skill. |
-| **Claude Project — preferred route** | Copy the Project instructions from the Word guide or `claude_project/PROJECT_INSTRUCTIONS.txt`. Upload the twelve individual files from `claude_project/upload_word/`. Run the setup check, then the demo prompt in the Project. |
-| Saved skill | Upload the inner `integrated-reporting-demo.zip` through the app's Skills interface, enable it, then attach the same reports in a new chat and use `02_AGENT_START_PROMPT.txt`. |
-| ChatGPT Project alternative | Paste `03_PROJECT_INSTRUCTIONS.txt` into a new ChatGPT Project's instructions and attach the four reports. This self-contained alternative is different from the modular Claude Project setup. |
-| Evidence review | Show a reported finding, its quotation, the guideline source, an assessed criterion, and the supported report statement. An optional fresh-chat review uses `04_QA_PROMPT.txt`. |
+| 1. Inventory | The four reports matched to MORPH, FLOW, CYTO, MOLEC, with accessions and an identity check |
+| 2. Extraction | Four tables. Each finding has an ID (e.g. `MOLEC-003`) and an exact quote from its report |
+| 3. Guideline | A **source card** for the WHO 5th edition article it actually opened, with what it read |
+| 4. Criteria | A table of WHO criteria marked met / not met / unknown, each citing finding IDs |
+| 5. Draft | An 11-section integrated report. Statements cite findings, e.g. `[MOLEC-003; C2]` |
+| 6. Review | A table of concerns by severity. Open issues stay visible |
 
-Use the same app and model for both demonstrations. A regular chat can produce a good result; compare what actually happened instead of assuming a failure.
+**If Claude says it could not open the WHO article:** download the open-access PDF from [PubMed Central (PMC9252913)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9252913/), attach it to the chat, and ask Claude to continue using the uploaded article. It will label it as an uploaded source.
 
-### Downloads and files
+## Step 6: Compare the two answers
 
-- **[Claude Project kit](manual_demo/Claude_Project_Demo_Kit.zip):** extract it, open the Word participant guide, paste the Project instructions, and upload the twelve files inside `upload_word/` individually. Includes a setup check and demo prompts. `upload_files/` is the equivalent Markdown alternative; use one set.
-- **[Word participant guide](manual_demo/claude_project/PARTICIPANT_GUIDE.docx):** setup directions, complete Project instructions, and all three prompts in one readable Word document.
-- **[Word upload files](manual_demo/claude_project/upload_word/):** `SKILL.docx`, the common policy, four extractor checklists, guideline sources, report template, and four PDFs.
-- **[Claude Project folder](manual_demo/claude_project/):** browse both formats, prompts, and setup materials separately.
-- **[Complete demo kit](manual_demo/AC3_No_Code_Demo_Kit.zip):** the four PDFs, uploadable skill, prompt files, editable skill sources, and presenter guide. Extract this outer ZIP first.
-- **[Skill upload file](manual_demo/integrated-reporting-demo.zip):** upload this inner ZIP through Skills. It contains one named folder with `SKILL.md` and supporting Markdown references.
-- **[Start-here guide](manual_demo/START_HERE.md):** click-by-click Claude/ChatGPT setup and a five-to-six-minute presentation script.
-- **[Skill source](manual_demo/integrated-reporting-demo/SKILL.md):** the saved procedure, with separate morphology, flow, cytogenetics, and molecular checklists.
-- **[Project instructions](manual_demo/03_PROJECT_INSTRUCTIONS.txt):** a self-contained alternative requiring only the four case reports as uploads.
+Put the regular-chat answer (step 2) next to the Project answer (step 5) and check:
 
-### Where the WHO guidance goes
+| Question | Where to look |
+|---|---|
+| Does the diagnosis name the defining mutation (NPM1)? | Diagnosis line in both |
+| Is **DNMT3A** in the diagnosis line? It shouldn't be: it is prognostic, not classifying | Diagnosis line in both |
+| Are both blast counts (18% morphology, 22% flow) named and reconciled? | Interpretation in both |
+| Can you tell which report each statement came from? | Regular chat: usually no. Project: finding IDs and quotes |
+| Which classification source was used, and which part of it? | Project: source card and criteria table |
+| What is still uncertain? | Project: review table |
 
-The [guideline source directory](manual_demo/integrated-reporting-demo/references/guideline_sources.md) identifies the approved original articles. The assistant is instructed to open and read the source, including relevant tables, footnotes, exclusions, and scope, before deriving a classification. The default is the **public 2022 author overview of WHO fifth-edition myeloid classification**, not the full current WHO Blue Book. Optional ELN 2022 adult AML risk guidance is separate.
+The regular chat may produce a good answer. The point is not that it is wrong, but that you can't easily check it.
 
-The skill contains workflow instructions, not hand-written medical criteria or an expected case answer. If the reference cannot be read, the assistant must say so and request the original public article rather than reconstruct rules from memory.
+**Only after both runs**, open the pathologist-written answer key, [`case/05_GOLD_STANDARD_integrated_report.pdf`](case/05_GOLD_STANDARD_integrated_report.pdf), and compare the diagnosis lines. Run the regular chat again in a fresh chat and see what changes between runs.
 
-### What this demonstrates
+## Troubleshooting
 
-One assistant follows a reusable procedure: report-specific extraction, source retrieval, criterion assessment, integration, and review. These are separate stages in one conversation. Uploading a skill does not automatically create four independent agents, and a same-chat review is not independent QA. The [design notes](docs/ARCHITECTURE.md) explain the evidence boundaries.
+| Problem | What to do |
+|---|---|
+| Setup check shows PARTIAL or MISSING | Re-upload that file. Project search sometimes reads only parts of a document; run the check again |
+| Claude asks you to run code or give an API key | You don't need to. Reply: "Continue using only the uploaded files and the web, no code." |
+| Classification paused, WHO article not read | Attach the PMC PDF (link in step 5) and ask Claude to continue |
+| Answer is too long to present | Ask: "Show only the opening summary, one extraction row with its quote, the source card, and the review table." |
+| Claude mentions the answer key or earlier results | You uploaded extra files. Remove them, start a new Project chat, and rerun |
+| Results differ between runs | Expected. AI output varies; that is part of what the demo shows |
 
-For the Claude Project route, the uploaded Word or Markdown files are workflow documents read under the pasted Project instructions. They are not automatically installed native Skills. The setup prompt asks Claude to identify which files it actually read and to report partial or missing content. Project retrieval can still omit content; inspect the evidence during rehearsal.
+## What this does and doesn't show
 
-For a recorded fallback, open [`index.html`](index.html). It displays archived workshop outputs; identify it as a replay.
+- It is **one assistant following written stages**, not several independent agents. The review stage is the same assistant checking its own work, not independent quality control.
+- The WHO source is the public **2022 author overview** of the WHO 5th edition myeloid classification (Khoury et al., [doi:10.1038/s41375-022-01613-1](https://doi.org/10.1038/s41375-022-01613-1)), not the full WHO Blue Book.
+- A real deployment would bring the model to the data: an approved model inside the institution, fed by the laboratory information system rather than PDFs, producing a draft a pathologist reviews and signs, validated and governed like any other clinical tool. See Part 3 of [`case/00_DEMO_GUIDE.pdf`](case/00_DEMO_GUIDE.pdf).
 
-## Original teaching case and archived results
+---
 
-The material below describes the original workshop artifacts. `prompts/agent_pipeline/`, `prompts/two_prompt_by_hand/`, `runs/`, the answer key, and the embedded data in `index.html` are historical. For the new demo, upload **only** `case/01` through `case/04` as case evidence. Do not upload this README, the guide, answer key, archived outputs, or condensed historical rules into the generation chats; they contain teaching answers or prior conclusions.
+## About the case
 
-### The case
+> **Spoiler:** this section contains the expected answer. Don't upload it to Claude.
 
-One fictional patient, one bone marrow specimen, four separately issued reports (in [`case/`](case/)):
+One fictional 58-year-old patient, one bone marrow specimen, four reports from different laboratories ([`case/`](case/)):
 
 | Report | What only it shows |
 |---|---|
 | `01_bone_marrow_morphology.pdf` | Blasts 18% by manual count; monocytic lineage only "probable" |
-| `02_flow_cytometry.pdf` | Blasts 22% by gated count; proves monocytic lineage |
+| `02_flow_cytometry.pdf` | Blasts 22% by gated count; confirms monocytic lineage |
 | `03_cytogenetics_fish.pdf` | Normal karyotype 46,XY[20]; AML FISH panel negative |
-| `04_molecular_ngs.pdf` | NPM1 (defining), FLT3-ITD, DNMT3A R882H (not classifying) |
+| `04_molecular_ngs.pdf` | NPM1 (disease-defining), FLT3-ITD, DNMT3A R882H (not classifying) |
 
-No single report is enough. The diagnosis is **acute myeloid leukemia with mutated NPM1, with monocytic differentiation**. The built-in trap: DNMT3A is real and prognostic but belongs in the prognostic notes, not the diagnosis line. The pathologist-authored answer key is `case/05_GOLD_STANDARD_integrated_report.pdf`.
+No single report is enough. The pathologist-authored answer is **acute myeloid leukemia with mutated NPM1, with monocytic differentiation; FLT3-ITD present; normal karyotype** ([`case/05_GOLD_STANDARD_integrated_report.pdf`](case/05_GOLD_STANDARD_integrated_report.pdf)). The built-in trap: DNMT3A is real and prognostically relevant but belongs in the prognostic notes, not the diagnosis line.
 
-### Three archived approaches
+## Other ways to run it
 
-| Approach | What it is | Prompts | Outputs |
-|---|---|---|---|
-| **Chatbot** | Attach the four reports, ask once | [`prompts/agent_pipeline/chatbot__DEFAULT_SYSTEM_PROMPT.txt`](prompts/agent_pipeline/) | [`runs/chatbot/`](runs/chatbot/) (3 runs) |
-| **Two prompts by hand** | Extract with quotes, then integrate with a trace, in any chat tool | [`prompts/two_prompt_by_hand/`](prompts/two_prompt_by_hand/) | [`runs/two_prompt_by_hand/`](runs/two_prompt_by_hand/) |
-| **Agent pipeline** | 12 steps: per-report extraction, cross-report analysis, parsers, WHO classifier, QA | [`prompts/agent_pipeline/`](prompts/agent_pipeline/) | [`runs/agent_pipeline/`](runs/agent_pipeline/) |
+| Route | When to use it | Files |
+|---|---|---|
+| **Claude native Skill** | Your account allows uploading Skills (Settings → Capabilities → code execution/file creation on) | Upload [`manual_demo/integrated-reporting-demo.zip`](manual_demo/integrated-reporting-demo.zip) as a Skill; see [`START_HERE.md`](manual_demo/START_HERE.md) |
+| **ChatGPT Project** | You use ChatGPT | Paste [`manual_demo/03_PROJECT_INSTRUCTIONS.txt`](manual_demo/03_PROJECT_INSTRUCTIONS.txt) into Project instructions; upload the four PDFs; use [`02_AGENT_START_PROMPT.txt`](manual_demo/02_AGENT_START_PROMPT.txt) |
+| **Two prompts by hand** | Any chat tool, simplest version | Step 1: attach the four PDFs and paste [`prompt_extractor.txt`](prompts/two_prompt_by_hand/prompt_extractor.txt) + [`schema_extractor_output.json`](prompts/two_prompt_by_hand/schema_extractor_output.json). Step 2: paste [`prompt_integrator.txt`](prompts/two_prompt_by_hand/prompt_integrator.txt) + the JSON from step 1 |
 
-### Historical two-prompt exercise (no code)
+## Example runs (for reference)
 
-You need any AI chat tool. Use only the synthetic files here, never patient data in a public tool.
+[`index.html`](index.html) is an offline, click-through page (download it and open it in a browser) showing example outputs on this case: three regular-chat runs, the 12-step agent pipeline from the API Summit workshop, and the two-prompt version, scored against the answer key. These are **rehearsal runs made with Claude on 29–30 October 2026 using the workshop's prompts**, not outputs from the original workshop. Raw outputs are in [`runs/`](runs/) and the prompts in [`prompts/`](prompts/).
 
-1. Open a new chat. Attach the four PDFs from `case/`.
-2. Paste the contents of `prompts/two_prompt_by_hand/prompt_extractor.txt`, then the contents of `schema_extractor_output.json`. Send.
-3. You get one block of structured data (JSON). Every finding is tagged with its report and a quote.
-4. Paste the contents of `prompt_integrator.txt`, then the JSON from step 3. Send.
-5. You get the 11-section integrated report and an evidence trace: every sentence of the interpretation and diagnosis mapped to its source.
-6. Compare with `case/05_GOLD_STANDARD_integrated_report.pdf`. Check the diagnosis line, both blast counts, and where DNMT3A landed. Run it again and see what changes.
-
-### What happened in the recorded workshop runs
-
-| Check | Chatbot (3 runs) | Agent pipeline | Two prompts |
+| Check | Regular chat (3 runs) | Agent pipeline | Two prompts |
 |---|---|---|---|
 | Diagnosis names NPM1 | 3 of 3 | Yes | Yes |
 | DNMT3A kept out of the diagnosis | 0 of 3 | Yes | Yes |
-| Diagnosis lines match the gold standard | 0 of 3 | Close (FLT3-ITD sent to prognostic notes) | Yes |
+| Diagnosis lines match the answer key | 0 of 3 | Close (FLT3-ITD sent to prognostic notes) | Yes |
 | Every sentence traced to a source report | No trace | 19 of 19 | 27 of 27 |
 | Extracted quotes found in the source text | n/a | 61 of 61 | 33 of 33 |
 | Lab names and accessions carried through | Yes | No (not in its extraction schema) | Yes |
 
-The chatbot was usually close. The difference is that the structured versions can be checked.
-
-**How these runs were made:** all three approaches used Claude with the prompts in this repo, one fresh call per step. The live workshop below ran on a different model, so wording differs.
-
-## From demo to practice
-
-A real deployment brings the model to the data: an on-premises or contractually walled-off model, fed by the lab information system rather than PDFs, producing a draft a pathologist reviews and signs, validated and governed like any other clinical tool. See Part 3 of `case/00_DEMO_GUIDE.pdf`.
+`prompts/agent_pipeline/who5e_instructions.md` is the workshop's condensed rule summary, kept only to explain those runs. The Project workflow reads the original WHO article instead.
 
 ## Credits
 
-The synthetic case, the two-prompt pipeline, the gold standard and the agent pipeline come from the **Agentic Pathology Workshop**, API Summit 2026: [github.com/hesamhakim/agentic-pathology-workshop](https://github.com/hesamhakim/agentic-pathology-workshop)
+The synthetic case, answer key, two-prompt pipeline and agent pipeline come from the **Agentic Pathology Workshop**, API Summit 2026: [github.com/hesamhakim/agentic-pathology-workshop](https://github.com/hesamhakim/agentic-pathology-workshop)
 
 - Hesam H. Javadi, PhD (Medical College of Wisconsin, Children's Wisconsin): workshop infrastructure, LangFlow components
 - Srikar Chamala, PhD (Children's Hospital Los Angeles, USC Keck School of Medicine)
-- Omar Baba, MD (Henry Ford Health): AML case design, gold standard, two-stage prompts
+- Omar Baba, MD (Henry Ford Health): AML case design, answer key, two-stage prompts
 
-Workshop materials are used under the MIT License; see [`LICENSE-workshop-materials`](LICENSE-workshop-materials).
+Workshop materials are used under the MIT License; see [`LICENSE-workshop-materials`](LICENSE-workshop-materials). The WHO and ELN articles belong to their authors and publishers and are linked, not redistributed.
 
 Contact: Srikar Chamala, schamala@chla.usc.edu
