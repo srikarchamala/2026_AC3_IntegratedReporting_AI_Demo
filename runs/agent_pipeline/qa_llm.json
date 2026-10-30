@@ -1,0 +1,46 @@
+{
+  "flags": [
+    {
+      "category": "hidden_discordance",
+      "severity": "medium",
+      "concern": "Sentence 5 says morphology's 22% blast-equivalent count (18% blasts + 4% promonocytes) 'matches flow', but the flow 22% counts only CD34/CD117 myeloid blasts and excludes the separately reported 11% promonocytes/immature monocytic cells, so the two figures are not like-for-like and the 4% vs 11% promonocyte discordance is never acknowledged."
+    ,"reference": "integrated_interpretation sentence 5; final_integrated_diagnosis sentence 3"
+    },
+    {
+      "category": "other",
+      "severity": "medium",
+      "concern": "Sentence 16 says the entity is named by the NPM1 mutation alone and not by differentiation, yet the final diagnosis appends 'with monocytic differentiation' to the WHO 5e name without explaining that this is a descriptive qualifier and not part of the classification.",
+      "reference": "integrated_interpretation sentence 16; final_integrated_diagnosis sentence 1"
+    },
+    {
+      "category": "overstatement",
+      "severity": "medium",
+      "concern": "FLT3-ITD is presented as prognostically adverse without qualification, but in the NPM1-mutated setting current ELN 2022 risk stratification places NPM1-mut/FLT3-ITD in the intermediate category whatever the allelic ratio, so the claim should be attributed to the source or qualified.",
+      "reference": "integrated_interpretation sentence 11; prognostic_predictive_notes"
+    },
+    {
+      "category": "overstatement",
+      "severity": "low",
+      "concern": "Sentence 13 says karyotype and a targeted FISH panel 'exclude' the competing recurrent-rearrangement categories, but cryptic fusions not covered by the panel (e.g. NUP98 rearrangements) are not excluded at 400-425 bphs, and the cytogenetics report itself notes that submicroscopic abnormalities are not excluded.",
+      "reference": "integrated_interpretation sentence 13"
+    },
+    {
+      "category": "trace_basis_mismatch",
+      "severity": "low",
+      "concern": "Sentence 13 is traced as a CYTO-only single_source_finding, but its conclusion ('leaving NPM1 as the single classifying abnormality') relies on the MOLEC result and is an integrative classification inference, not a single-source finding.",
+      "reference": "integrated_interpretation sentence 13"
+    },
+    {
+      "category": "overstatement",
+      "severity": "low",
+      "concern": "Sentence 11 says FLT3-ITD 'makes the patient a candidate for FLT3 inhibitor therapy', which turns the source's statement that FLT3-ITD is a therapeutic target into a patient-level treatment eligibility judgement that depends on clinical factors outside these reports.",
+      "reference": "integrated_interpretation sentence 11"
+    },
+    {
+      "category": "trace_basis_mismatch",
+      "severity": "low",
+      "concern": "Sentence 3 only states the blast-count discordance and does not resolve it, so its basis of 'discordance_resolution' does not fit the content; the resolution is in sentences 4-5.",
+      "reference": "integrated_interpretation sentence 3"
+    }
+  ]
+}

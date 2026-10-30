@@ -1,0 +1,492 @@
+{
+  "case_id": "AML-WORKSHOP-CASE-01",
+  "sources": [
+    {
+      "source_id": "MORPH",
+      "report_type": "bone_marrow_morphology",
+      "accession": "S26-BM-01187",
+      "performing_lab": "Riverbend Regional Medical Center, Department of Pathology & Laboratory Medicine (Hematopathology)",
+      "report_date": "2026-04-24",
+      "report_status": "FINAL (morphology component)"
+    },
+    {
+      "source_id": "FLOW",
+      "report_type": "flow_cytometry",
+      "accession": "FC-26-003942",
+      "performing_lab": "Riverbend Regional Medical Center, Flow Cytometry Laboratory",
+      "report_date": "2026-04-23",
+      "report_status": "FINAL"
+    },
+    {
+      "source_id": "CYTO",
+      "report_type": "cytogenetics_fish",
+      "accession": "CG-26-00871",
+      "performing_lab": "Riverbend Regional Medical Center, Cytogenetics Laboratory",
+      "report_date": "2026-04-29",
+      "report_status": "FINAL"
+    },
+    {
+      "source_id": "MOLEC",
+      "report_type": "molecular_ngs",
+      "accession": "MMD-26-NGS-22150",
+      "performing_lab": "Meridian Molecular Diagnostics (reference laboratory, CLIA 14D8888888)",
+      "report_date": "2026-05-04",
+      "report_status": "FINAL"
+    }
+  ],
+  "patient": {
+    "name": "DOE, JONATHAN R.",
+    "mrn": "MRN-4471902",
+    "age": 58,
+    "sex": "Male",
+    "ordering_provider": "Patel, Anjali R., MD (Hematology/Oncology)"
+  },
+  "specimen": {
+    "site": "Bone marrow, left posterior iliac crest",
+    "collection_date": "2026-04-22",
+    "types_received": [
+      "aspirate smears (Wright-Giemsa)",
+      "clot section",
+      "decalcified core biopsy (H&E)",
+      "bone marrow aspirate for flow cytometry",
+      "bone marrow aspirate for cytogenetics/FISH",
+      "bone marrow aspirate, EDTA, for molecular NGS"
+    ]
+  },
+  "clinical_history": {
+    "summary": "58-year-old man with three weeks of progressive fatigue, dyspnea on exertion, gingival bleeding, and scattered lower-extremity ecchymoses. Peripheral smear with 41% circulating blasts, some with folded nuclei and abundant cytoplasm. No prior hematologic history, no prior chemotherapy or radiation. Bone marrow performed to evaluate for acute leukemia.",
+    "cbc": {
+      "wbc": "38.4 x10^9/L",
+      "hemoglobin": "7.9 g/dL",
+      "platelets": "31 x10^9/L",
+      "peripheral_blast_pct": 41
+    },
+    "source_ids": ["MORPH", "FLOW", "CYTO", "MOLEC"]
+  },
+  "components": {
+    "morphology": {
+      "source_id": "MORPH",
+      "aspirate_blast_pct": 18,
+      "blast_count_method": "500-cell manual aspirate differential; promonocytes (4%) enumerated separately from blasts",
+      "core_cellularity_pct": "approximately 90-95%",
+      "core_blast_assessment": "Markedly hypercellular core with extensive replacement by immature mononuclear cells arranged in sheets; interstitial and paratrabecular distribution; extensive blast-equivalent infiltration",
+      "lineage_assessment": "Myeloid process with probable monocytic differentiation by morphology and cytochemistry; to be confirmed by flow cytometry. Occasional monocytoid cells noted, but unequivocal promonocytes are difficult to distinguish from immature myeloid forms on morphology alone.",
+      "auer_rods": "No definite Auer rods identified after review of multiple smears",
+      "cytochemistry": [
+        { "stain": "Myeloperoxidase (MPO)", "result": "positive in a minor subset of blasts (approximately 5-10%)" },
+        { "stain": "Non-specific esterase (NSE, alpha-naphthyl butyrate)", "result": "positive in a subset of cells with partial fluoride inhibition, supporting a monocytic component" },
+        { "stain": "Reticulin", "result": "no significant fibrosis (MF-1)" },
+        { "stain": "Iron (aspirate)", "result": "storage iron present; no ring sideroblasts" }
+      ],
+      "dysplasia_notes": "Erythropoiesis is left-shifted with mild megaloblastoid change. Megakaryocytes are reduced (markedly reduced on core). No ring sideroblasts.",
+      "morphologic_diagnosis": "HYPERCELLULAR MARROW WITH ACUTE MYELOID LEUKEMIA (see comment). Aspirate blast count 18% by 500-cell manual differential; core biopsy with extensive blast-equivalent infiltration. Probable monocytic differentiation by morphology and cytochemistry; to be confirmed by flow cytometry.",
+      "stated_limitations": "Manual aspirate blast percentage (18%) is below the historical 20% threshold; aspirate enumeration is likely affected by hemodilution and by the difficulty of separating promonocytes from myeloid blasts on smears. Classification depends on integration with flow cytometry, cytogenetic, and molecular results, pending at time of report. Component report not intended to stand alone.",
+      "key_findings": [
+        {
+          "text": "Aspirate blast count 18% by 500-cell manual differential",
+          "source_id": "MORPH",
+          "verbatim_support": "Aspirate blast count 18% by 500-cell manual differential",
+          "category": "blast_burden"
+        },
+        {
+          "text": "Core biopsy markedly hypercellular (approximately 90-95%) with extensive replacement by immature mononuclear cells in sheets",
+          "source_id": "MORPH",
+          "verbatim_support": "The core is markedly hypercellular (cellularity approximately 90-95%) with extensive replacement by",
+          "category": "blast_burden"
+        },
+        {
+          "text": "Acute myeloid leukemia diagnosed morphologically",
+          "source_id": "MORPH",
+          "verbatim_support": "HYPERCELLULAR MARROW WITH ACUTE MYELOID LEUKEMIA (see comment).",
+          "category": "lineage"
+        },
+        {
+          "text": "Monocytic differentiation is probable but not confirmed (hedged lineage call)",
+          "source_id": "MORPH",
+          "verbatim_support": "Probable monocytic differentiation by morphology and cytochemistry; to be confirmed by flow cytometry.",
+          "category": "lineage"
+        },
+        {
+          "text": "Promonocytes difficult to distinguish from immature myeloid forms on morphology",
+          "source_id": "MORPH",
+          "verbatim_support": "unequivocal promonocytes are difficult to distinguish from immature myeloid forms on morphology alone",
+          "category": "limitation"
+        },
+        {
+          "text": "MPO positive in a minor subset of blasts (approximately 5-10%)",
+          "source_id": "MORPH",
+          "verbatim_support": "Myeloperoxidase (MPO): positive in a minor subset of blasts (approximately 5-10%).",
+          "category": "lineage"
+        },
+        {
+          "text": "NSE positive with partial fluoride inhibition, supporting a monocytic component",
+          "source_id": "MORPH",
+          "verbatim_support": "positive in a subset of cells with partial fluoride inhibition, supporting a monocytic component",
+          "category": "lineage"
+        },
+        {
+          "text": "No definite Auer rods",
+          "source_id": "MORPH",
+          "verbatim_support": "No definite Auer rods are identified after review of multiple smears.",
+          "category": "other"
+        },
+        {
+          "text": "Mild megaloblastoid change in left-shifted erythropoiesis; megakaryocytes reduced",
+          "source_id": "MORPH",
+          "verbatim_support": "Erythropoiesis is left-shifted with mild megaloblastoid change. Megakaryocytes are reduced.",
+          "category": "dysplasia"
+        },
+        {
+          "text": "No significant marrow fibrosis (MF-1)",
+          "source_id": "MORPH",
+          "verbatim_support": "shows no significant fibrosis (MF-1)",
+          "category": "other"
+        },
+        {
+          "text": "Aspirate blast count likely affected by hemodilution and promonocyte/blast separation difficulty",
+          "source_id": "MORPH",
+          "verbatim_support": "enumeration is likely affected by hemodilution and by the difficulty of separating promonocytes from myeloid blasts on smears",
+          "category": "limitation"
+        },
+        {
+          "text": "Report states that under WHO and ICC a 20% blast count is not required when a defining genetic abnormality is present",
+          "source_id": "MORPH",
+          "verbatim_support": "Under current WHO and ICC classifications, a diagnosis of acute myeloid leukemia does not require a 20% blast count when a",
+          "category": "limitation"
+        }
+      ]
+    },
+    "flow_cytometry": {
+      "source_id": "FLOW",
+      "blast_pct_of_tnc": 22,
+      "blast_immunophenotype": [
+        { "marker": "CD34", "result": "Positive (subset, ~60%)" },
+        { "marker": "CD117", "result": "Positive" },
+        { "marker": "HLA-DR", "result": "Positive (bright)" },
+        { "marker": "CD13", "result": "Positive" },
+        { "marker": "CD33", "result": "Positive (bright)" },
+        { "marker": "CD38", "result": "Positive" },
+        { "marker": "MPO (cyto)", "result": "Positive, dim subset" },
+        { "marker": "CD64", "result": "Positive" },
+        { "marker": "CD4", "result": "Positive (dim)" },
+        { "marker": "CD11b", "result": "Partial / variable" },
+        { "marker": "CD14", "result": "Negative on blasts" },
+        { "marker": "CD56", "result": "Positive (partial, aberrant)" },
+        { "marker": "CD7", "result": "Positive (aberrant, subset)" },
+        { "marker": "CD2 / CD19 / cyCD3", "result": "Negative" }
+      ],
+      "monocytic_population": {
+        "present": true,
+        "approx_pct_of_tnc": 30,
+        "immunophenotype_summary": "Markedly expanded and left-shifted monocytic compartment (maturing monocytes 19% plus promonocytes/immature monocytic 11%, together approximately 30% of TNC) with bright uniform CD64, CD14 on the maturing fraction, CD11b, CD11c, CD36, HLA-DR, dim CD4, CD13/CD33 positive, CD34 negative, CD56 partial (subset)."
+      },
+      "aberrant_markers": ["CD56 (partial, on blasts)", "CD7 (subset, on blasts)"],
+      "lineage_conclusion": "Diagnostic of acute myeloid leukemia with monocytic differentiation; the immunophenotype establishes the monocytic lineage that was only favored on morphology.",
+      "stated_limitations": "Flow blast estimate (22%) differs modestly from the manual aspirate differential; flow gating and manual counts are expected to differ. Flow cytometry is a component study; final lineage and classification require integration with morphology, cytogenetics, and molecular results. Laboratory-developed test.",
+      "key_findings": [
+        {
+          "text": "Abnormal myeloid blast population approximately 22% of total nucleated cells",
+          "source_id": "FLOW",
+          "verbatim_support": "abnormal myeloid blast population comprising approximately 22% of total nucleated cells",
+          "category": "blast_burden"
+        },
+        {
+          "text": "Blasts express CD34, CD117, HLA-DR, CD13, CD33 and dim cytoplasmic MPO",
+          "source_id": "FLOW",
+          "verbatim_support": "CD34, CD117, HLA-DR, CD13, CD33, and dim cytoplasmic MPO, with aberrant CD56 and partial CD7",
+          "category": "lineage"
+        },
+        {
+          "text": "Expanded, left-shifted monocytic compartment approximately 30% of TNC",
+          "source_id": "FLOW",
+          "verbatim_support": "maturing monocytes plus promonocytes together approximately 30% of total",
+          "category": "lineage"
+        },
+        {
+          "text": "Diagnostic of AML with monocytic differentiation; establishes monocytic lineage only favored on morphology",
+          "source_id": "FLOW",
+          "verbatim_support": "The immunophenotype\nestablishes the monocytic lineage that was only favored on morphology.",
+          "category": "lineage"
+        },
+        {
+          "text": "Flow and manual blast counts expected to differ; either value supports the diagnosis",
+          "source_id": "FLOW",
+          "verbatim_support": "flow gating and manual counts are expected to differ and either value supports the diagnosis in this",
+          "category": "limitation"
+        },
+        {
+          "text": "Aberrant CD56/CD7 expression potentially useful for MRD tracking",
+          "source_id": "FLOW",
+          "verbatim_support": "Aberrant CD56/CD7 expression is noted and may be useful for measurable residual disease tracking.",
+          "category": "other"
+        },
+        {
+          "text": "Mature lymphocytes polytypic without aberrancy",
+          "source_id": "FLOW",
+          "verbatim_support": "Polytypic, no aberrancy",
+          "category": "other"
+        }
+      ]
+    },
+    "cytogenetics": {
+      "source_id": "CYTO",
+      "karyotype_iscn": "46,XY[20]",
+      "karyotype_interpretation": "Normal male karyotype; twenty metaphases analyzed, five fully karyotyped, no clonal numerical or structural abnormality at 400-425 bphs. Cytogenetically normal category.",
+      "fish_panel": [
+        { "probe": "RUNX1-RUNX1T1", "target": "t(8;21)(q22;q22)", "result": "NEGATIVE (0.5%)" },
+        { "probe": "CBFB", "target": "inv(16)/t(16;16)(p13;q22)", "result": "NEGATIVE (1.0%)" },
+        { "probe": "PML-RARA", "target": "t(15;17)(q24;q21)", "result": "NEGATIVE (0.5%)" },
+        { "probe": "KMT2A (MLL)", "target": "11q23.3 rearrangement", "result": "NEGATIVE (1.5%)" },
+        { "probe": "MECOM (EVI1)", "target": "3q26.2 rearrangement", "result": "NEGATIVE (1.0%)" },
+        { "probe": "-5/5q- (EGR1)", "target": "deletion 5q31", "result": "NEGATIVE (1.5%)" },
+        { "probe": "-7/7q- (D7S486)", "target": "monosomy 7 / del(7q)", "result": "NEGATIVE (1.0%)" },
+        { "probe": "TP53 (17p13.1)", "target": "deletion 17p", "result": "NEGATIVE (2.0%)" }
+      ],
+      "cytogenetic_risk_category": "Cytogenetically normal (no explicit risk tier stated in report)",
+      "stated_limitations": "A normal karyotype does not exclude a submicroscopic abnormality; correlation with FISH and molecular studies is advised. Cytogenetically normal AML is frequently driven by gene-level mutations not visible by karyotype or FISH; molecular testing is required for classification and risk stratification.",
+      "key_findings": [
+        {
+          "text": "Normal male karyotype 46,XY[20]",
+          "source_id": "CYTO",
+          "verbatim_support": "46,XY[20]",
+          "category": "genetics"
+        },
+        {
+          "text": "AML FISH panel negative for all targeted rearrangements and copy-number abnormalities",
+          "source_id": "CYTO",
+          "verbatim_support": "No evidence of the targeted rearrangements or copy-number\nabnormalities.",
+          "category": "genetics"
+        },
+        {
+          "text": "No recurrent cytogenetic abnormality of AML detected; cytogenetically normal category",
+          "source_id": "CYTO",
+          "verbatim_support": "This places the case in the cytogenetically normal category.",
+          "category": "genetics"
+        },
+        {
+          "text": "Normal karyotype does not exclude submicroscopic abnormality",
+          "source_id": "CYTO",
+          "verbatim_support": "A normal karyotype does\nnot exclude a submicroscopic abnormality",
+          "category": "limitation"
+        },
+        {
+          "text": "Molecular testing required for classification and risk stratification",
+          "source_id": "CYTO",
+          "verbatim_support": "is required for classification and risk stratification and has been ordered separately",
+          "category": "limitation"
+        }
+      ]
+    },
+    "molecular": {
+      "source_id": "MOLEC",
+      "panel_description": "Myeloid neoplasm next-generation sequencing panel (54-gene), hybrid-capture targeted NGS on genomic DNA from bone marrow; mean target coverage 1,150x, minimum 250x; FLT3-ITD detection supplemented by capillary fragment analysis.",
+      "variants_detected": [
+        {
+          "gene": "NPM1",
+          "hgvs": "NM_002520.7:c.860_863dup p.(Trp288CysfsTer12)",
+          "consequence": "Frameshift insertion (type A, 4-bp TCTG duplication)",
+          "vaf": "39%",
+          "tier": "I",
+          "classifying": true,
+          "prognostic_note": "Report states mutated NPM1 is a WHO and ICC disease-defining genetic abnormality; blast threshold of 20% not required for this entity."
+        },
+        {
+          "gene": "FLT3",
+          "hgvs": "Internal tandem duplication, exon 14 (~36 bp insertion)",
+          "consequence": "In-frame ITD; ITD/WT allelic ratio 0.62",
+          "vaf": "31%",
+          "tier": "I",
+          "classifying": false,
+          "prognostic_note": "Report states FLT3-ITD is prognostically adverse and a target for FLT3 inhibitor therapy; allelic ratio 0.62 reported to support treatment decisions."
+        },
+        {
+          "gene": "DNMT3A",
+          "hgvs": "NM_022552.5:c.2645G>A p.(Arg882His)",
+          "consequence": "Missense, R882 hotspot",
+          "vaf": "44%",
+          "tier": "II",
+          "classifying": false,
+          "prognostic_note": "Report states commonly co-mutated with NPM1 and FLT3-ITD, frequently a clonal hematopoiesis founder event; does not by itself define or change the WHO/ICC disease category; reported for completeness and potential prognostic relevance."
+        }
+      ],
+      "genes_no_variant": [
+        "CEBPA", "RUNX1", "TP53", "ASXL1", "IDH1", "IDH2", "NRAS", "KRAS", "KIT", "TET2",
+        "SRSF2", "U2AF1", "SF3B1", "EZH2", "BCOR", "STAG2", "PTPN11", "WT1", "PHF6", "ZRSR2",
+        "JAK2", "CALR", "MPL", "SETBP1", "CSF3R", "NF1", "RAD21", "GATA2", "ETV6", "CBL"
+      ],
+      "molecular_interpretation": "Mutated NPM1 (type A, VAF 39%) with FLT3-ITD (VAF 31%, allelic ratio 0.62) and DNMT3A R882H (VAF 44%). The report states that, in the context of AML established by morphology and flow cytometry, mutated NPM1 is a WHO and ICC disease-defining genetic abnormality and that a 20% blast threshold is not required for this entity. FLT3-ITD is prognostically adverse and targetable. DNMT3A R882H does not by itself define or change the disease category.",
+      "stated_limitations": "Analytical sensitivity approximately 5% VAF for SNVs and small indels. Does not reliably detect large structural rearrangements, copy-number changes, or variants in regions of low coverage or high homology. A negative result does not exclude a mutation below the limit of detection. Laboratory-developed test, not FDA cleared or approved.",
+      "key_findings": [
+        {
+          "text": "NPM1 type A frameshift insertion detected, VAF 39%",
+          "source_id": "MOLEC",
+          "verbatim_support": "mutated NPM1 variant (type A frameshift insertion, VAF 39%)",
+          "category": "genetics"
+        },
+        {
+          "text": "FLT3-ITD detected, VAF 31%, ITD/WT allelic ratio 0.62",
+          "source_id": "MOLEC",
+          "verbatim_support": "FLT3 internal\ntandem duplication (VAF 31%, ITD/WT allelic ratio 0.62)",
+          "category": "genetics"
+        },
+        {
+          "text": "DNMT3A R882H missense variant, VAF 44%",
+          "source_id": "MOLEC",
+          "verbatim_support": "DNMT3A R882H missense variant (VAF 44%)",
+          "category": "genetics"
+        },
+        {
+          "text": "Report states mutated NPM1 is a WHO and ICC disease-defining abnormality",
+          "source_id": "MOLEC",
+          "verbatim_support": "mutated NPM1 is a World Health Organization and\nICC disease-defining genetic abnormality",
+          "category": "genetics"
+        },
+        {
+          "text": "Report states 20% blast threshold not required for this entity",
+          "source_id": "MOLEC",
+          "verbatim_support": "a blast\nthreshold of 20% is not required for this entity",
+          "category": "blast_burden"
+        },
+        {
+          "text": "FLT3-ITD prognostically adverse and targetable by FLT3 inhibitors",
+          "source_id": "MOLEC",
+          "verbatim_support": "The concurrent FLT3-ITD is prognostically adverse and is a target for FLT3 inhibitor\ntherapy",
+          "category": "prognosis"
+        },
+        {
+          "text": "DNMT3A R882H does not by itself define or change the disease category; possible clonal hematopoiesis founder event",
+          "source_id": "MOLEC",
+          "verbatim_support": "it does not by itself define or change the WHO/ICC disease\ncategory",
+          "category": "prognosis"
+        },
+        {
+          "text": "No reportable variant in CEBPA, TP53, RUNX1, ASXL1 among others",
+          "source_id": "MOLEC",
+          "verbatim_support": "No reportable variant detected in: CEBPA, RUNX1, TP53, ASXL1",
+          "category": "genetics"
+        },
+        {
+          "text": "Assay does not reliably detect structural rearrangements or copy-number changes; ~5% VAF sensitivity",
+          "source_id": "MOLEC",
+          "verbatim_support": "The assay does not\nreliably detect large structural rearrangements, copy-number changes",
+          "category": "limitation"
+        }
+      ]
+    }
+  },
+  "cross_report_observations": {
+    "concordances": [
+      {
+        "statement": "All four reports share the same patient (DOE, JONATHAN R.), MRN (MRN-4471902), DOB (1967-09-14), and collection date (2026-04-22); the molecular report also cross-references client accession S26-BM-01187 and the cytogenetics report references MMD-26-NGS-22150.",
+        "supporting_source_ids": ["MORPH", "FLOW", "CYTO", "MOLEC"]
+      },
+      {
+        "statement": "Identical clinical history and CBC (WBC 38.4 x10^9/L, Hb 7.9 g/dL, platelets 31 x10^9/L, 41% peripheral blasts) repeated in all four reports.",
+        "supporting_source_ids": ["MORPH", "FLOW", "CYTO", "MOLEC"]
+      },
+      {
+        "statement": "Morphology and flow cytometry both identify acute myeloid leukemia with monocytic differentiation (probable on morphology/cytochemistry, established on flow).",
+        "supporting_source_ids": ["MORPH", "FLOW"]
+      },
+      {
+        "statement": "MPO is expressed in only a subset of blasts by both cytochemistry (approximately 5-10%) and flow (positive, dim subset).",
+        "supporting_source_ids": ["MORPH", "FLOW"]
+      },
+      {
+        "statement": "Morphology (folded/indented nuclei, monocytoid features, NSE positivity) and flow (expanded monocytic compartment) both support a monocytic component; peripheral blasts with folded nuclei noted in shared history.",
+        "supporting_source_ids": ["MORPH", "FLOW"]
+      },
+      {
+        "statement": "Morphology and molecular reports both state that under WHO/ICC a 20% blast count is not required when a defining genetic abnormality is present.",
+        "supporting_source_ids": ["MORPH", "MOLEC"]
+      },
+      {
+        "statement": "Cytogenetics finds no recurrent AML abnormality and no TP53 deletion; molecular finds no TP53, RUNX1, or KIT variant and identifies gene-level drivers, consistent with the cytogenetics report's statement that cytogenetically normal AML is frequently driven by gene-level mutations.",
+        "supporting_source_ids": ["CYTO", "MOLEC"]
+      },
+      {
+        "statement": "All four reports state that final classification requires integration of the component studies.",
+        "supporting_source_ids": ["MORPH", "FLOW", "CYTO", "MOLEC"]
+      }
+    ],
+    "discordances": [
+      {
+        "topic": "Marrow blast percentage",
+        "positions": [
+          { "source_id": "MORPH", "position": "Aspirate blast count 18% by 500-cell manual differential (promonocytes 4% counted separately); core shows extensive blast-equivalent infiltration." },
+          { "source_id": "FLOW", "position": "Myeloid blasts approximately 22% of total nucleated cells by CD45/SSC gating; promonocytes/immature monocytic 11% counted with monocytic series." }
+        ],
+        "resolution": "Both values are recorded as reported; the difference is expected methodological variance and does not need to be forced to a single number at this stage.",
+        "resolution_basis": "Manual smear differentials and gated flow counts are expected to differ (stated by FLOW); MORPH attributes its lower count to hemodilution of the aspirate and difficulty separating promonocytes from myeloid blasts; the core biopsy shows infiltration well above either figure. Both MORPH and MOLEC state that a 20% blast threshold is not required when a defining genetic abnormality is present, and MOLEC reports mutated NPM1, so the 18% vs 22% straddling of 20% is not decisive.",
+        "changes_diagnosis": false
+      },
+      {
+        "topic": "Lineage certainty (monocytic differentiation)",
+        "positions": [
+          { "source_id": "MORPH", "position": "Probable monocytic differentiation by morphology and cytochemistry; to be confirmed by flow cytometry; promonocytes hard to separate from immature myeloid forms." },
+          { "source_id": "FLOW", "position": "Diagnostic of AML with monocytic differentiation; immunophenotype establishes the monocytic lineage." }
+        ],
+        "resolution": "Not a true conflict: morphology hedges and explicitly defers to flow; flow confirms monocytic lineage.",
+        "resolution_basis": "Immunophenotyping (bright uniform CD64, CD14, CD11b, CD11c, CD36, dim CD4 on an expanded monocytic compartment) is the more specific method for monocytic lineage assignment; MORPH itself states its call is to be confirmed by flow cytometry.",
+        "changes_diagnosis": false
+      },
+      {
+        "topic": "Aspirate morphologic diagnosis below historical 20% blast threshold vs AML diagnosis",
+        "positions": [
+          { "source_id": "MORPH", "position": "Manual aspirate blast percentage (18%) is below the historical 20% threshold, yet AML is diagnosed with comment." },
+          { "source_id": "MOLEC", "position": "Mutated NPM1 is a WHO/ICC disease-defining abnormality; a blast threshold of 20% is not required for this entity." }
+        ],
+        "resolution": "The apparent tension is resolved by the stated classification rule reported in both MORPH and MOLEC; final classification left to Stage 2.",
+        "resolution_basis": "Classification rule as stated in the source reports: under WHO and ICC, AML with a defining genetic abnormality (mutated NPM1, reported by MOLEC) does not require a 20% blast count.",
+        "changes_diagnosis": false
+      }
+    ],
+    "single_source_findings": [
+      {
+        "finding": "NPM1 type A frameshift insertion (c.860_863dup), VAF 39% - the disease-defining genetic abnormality",
+        "only_source_id": "MOLEC",
+        "invisible_to": ["MORPH", "FLOW", "CYTO"],
+        "diagnostic_impact": "Per MOLEC, defines the WHO/ICC disease category and removes the 20% blast requirement, rendering the 18% vs 22% blast discordance non-decisive. Karyotype and FISH were normal, and morphology/flow cannot detect gene-level mutations."
+      },
+      {
+        "finding": "FLT3 internal tandem duplication, VAF 31%, ITD/WT allelic ratio 0.62",
+        "only_source_id": "MOLEC",
+        "invisible_to": ["MORPH", "FLOW", "CYTO"],
+        "diagnostic_impact": "Does not change disease category but is prognostically adverse and identifies a target for FLT3 inhibitor therapy; directly affects risk stratification and treatment."
+      },
+      {
+        "finding": "DNMT3A R882H, VAF 44% (possible clonal hematopoiesis founder event)",
+        "only_source_id": "MOLEC",
+        "invisible_to": ["MORPH", "FLOW", "CYTO"],
+        "diagnostic_impact": "Non-classifying; potential prognostic relevance only. Must not drift into the classification."
+      },
+      {
+        "finding": "Aberrant CD56 (partial) and CD7 (subset) expression on blasts",
+        "only_source_id": "FLOW",
+        "invisible_to": ["MORPH", "CYTO", "MOLEC"],
+        "diagnostic_impact": "No change to diagnosis; provides a leukemia-associated immunophenotype useful for measurable residual disease tracking."
+      },
+      {
+        "finding": "Normal karyotype 46,XY[20] with negative AML FISH panel (excludes recurrent rearrangements including PML-RARA, RUNX1-RUNX1T1, CBFB, KMT2A, MECOM, and -5/-7/17p loss)",
+        "only_source_id": "CYTO",
+        "invisible_to": ["MORPH", "FLOW", "MOLEC"],
+        "diagnostic_impact": "Excludes competing cytogenetically defined AML entities and adverse-risk cytogenetic lesions; MOLEC states its assay does not reliably detect large structural rearrangements or copy-number changes, so only CYTO can exclude these."
+      }
+    ]
+  },
+  "extraction_metadata": {
+    "model": "Claude (stand-in for single chat message, Stage 1 extractor)",
+    "uncertain_extractions": [
+      "case_id not stated in any source report; 'AML-WORKSHOP-CASE-01' taken from the schema example.",
+      "Morphology report shows report date 2026-04-24, while flow (resulted 2026-04-23) was issued before it, yet morphology states ancillary results were pending; recorded dates as printed.",
+      "Morphology monocyte/promonocyte counts (6% mature monocytes, 4% promonocytes) differ from flow (19% maturing monocytes, 11% promonocytes); recorded as-is in components, not reconciled.",
+      "Flow monocytic approx_pct_of_tnc recorded as 30 from the report's 'approximately 30%' (19% + 11%).",
+      "Cytogenetic risk category: the report states only 'cytogenetically normal category' and gives no explicit ELN/risk tier.",
+      "FLT3 has no HGVS string in the report; descriptive ITD text used in hgvs field rather than inventing one.",
+      "PDF text extraction split some table rows (NPM1 and FLT3 rows) across lines; HGVS, consequence, and VAF reassembled by column position.",
+      "Some verbatim_support strings span a line break in the extracted PDF text; line break preserved as \\n.",
+      "Performing lab names for Riverbend components are paraphrased from report headers.",
+      "Morphology footer reads 'Page 1 of 1' although the extracted text has two pages; content from both pages used."
+    ]
+  }
+}

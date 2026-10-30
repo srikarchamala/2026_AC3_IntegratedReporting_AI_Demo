@@ -1,0 +1,93 @@
+{
+  "concordances": [
+    {
+      "statement": "The process is acute myeloid leukemia: morphology diagnoses AML, flow cytometry calls the findings diagnostic of AML, and the NGS report diagnoses AML with mutated NPM1 on the basis of AML established by morphology and flow.",
+      "supporting_source_ids": ["MORPH", "FLOW", "MOLEC"]
+    },
+    {
+      "statement": "The leukemia shows monocytic differentiation: morphology and cytochemistry (folded nuclei, NSE positivity with partial fluoride inhibition) favor it, and flow confirms an expanded, left-shifted monocytic compartment (about 30% of TNC) with CD64, CD14, CD11b, CD11c, CD36 and dim CD4.",
+      "supporting_source_ids": ["MORPH", "FLOW"]
+    },
+    {
+      "statement": "Myeloid lineage of the blasts is supported by MPO expression: cytochemical MPO is positive in a minor subset (about 5-10%) and flow shows dim cytoplasmic MPO with CD13, CD33 and CD117.",
+      "supporting_source_ids": ["MORPH", "FLOW"]
+    },
+    {
+      "statement": "The marrow blast burden lies close to 20% of nucleated cells (18% by manual aspirate differential, about 22% by flow gating), against a background of extensive marrow replacement and 41% peripheral blood blasts.",
+      "supporting_source_ids": ["MORPH", "FLOW"]
+    },
+    {
+      "statement": "No TP53 abnormality was found: FISH is negative for a 17p13.1 deletion, and NGS detects no reportable TP53 variant.",
+      "supporting_source_ids": ["CYTO", "MOLEC"]
+    },
+    {
+      "statement": "Each component report says it does not stand alone and that final classification requires integration with the other studies, and morphology, flow and cytogenetics each name the pending molecular results as necessary.",
+      "supporting_source_ids": ["MORPH", "FLOW", "CYTO", "MOLEC"]
+    }
+  ],
+  "discordances": [
+    {
+      "topic": "Marrow blast percentage relative to the 20% threshold",
+      "positions": [
+        {"source_id": "MORPH", "position": "18% blasts by 500-cell aspirate differential, below the historical 20% threshold; promonocytes (4%) were counted separately, and the count is likely depressed by hemodilution."},
+        {"source_id": "FLOW", "position": "Abnormal myeloid blasts are about 22% of total nucleated cells by CD45/SSC gating; the report says this differs modestly from the manual count and that either value supports the diagnosis."},
+        {"source_id": "MOLEC", "position": "Mutated NPM1 is disease-defining, so a 20% blast threshold is not required for this entity."}
+      ],
+      "resolution": "The difference does not affect classification. AML with mutated NPM1 is defined by the genetic abnormality, not by reaching 20% blasts. The true blast-equivalent burden is probably at or above 20%: counting the 4% promonocytes as blast equivalents gives 22%, which matches flow, and the core shows extensive blast-equivalent infiltration with 41% circulating blasts.",
+      "resolution_basis": "Classification rule: NPM1-mutated AML needs no 20% blast threshold. A manual count and a gated count are expected to differ, and the aspirate count is lowered by hemodilution and by subjective promonocyte assignment.",
+      "changes_diagnosis": false
+    },
+    {
+      "topic": "Certainty of monocytic lineage",
+      "positions": [
+        {"source_id": "MORPH", "position": "Monocytic differentiation is only probable; promonocytes are hard to separate from immature myeloid forms, and confirmation by flow is required."},
+        {"source_id": "FLOW", "position": "The immunophenotype establishes the monocytic lineage that morphology only favored."}
+      ],
+      "resolution": "Monocytic differentiation is confirmed. The flow immunophenotype (bright uniform CD64, CD14 on maturing cells, CD11b, CD11c, CD36, dim CD4) resolves the uncertainty that morphology raised.",
+      "resolution_basis": "Methodological: multiparameter immunophenotyping assigns lineage more objectively than smear morphology, and the morphology report itself deferred to flow for confirmation.",
+      "changes_diagnosis": false
+    },
+    {
+      "topic": "Presence of a classifying genetic abnormality",
+      "positions": [
+        {"source_id": "CYTO", "position": "Normal male karyotype 46,XY[20] and a negative AML FISH panel: cytogenetically normal, with no recurrent cytogenetic abnormality of AML detected."},
+        {"source_id": "MOLEC", "position": "Positive for NPM1 type A frameshift (Tier I, disease-defining), FLT3-ITD (Tier I) and DNMT3A R882H (Tier II)."}
+      ],
+      "resolution": "This is only an apparent conflict. The NPM1, FLT3-ITD and DNMT3A variants are small sequence-level changes that karyotyping and FISH cannot see. The case is cytogenetically normal AML with mutated NPM1.",
+      "resolution_basis": "Methodological scope: karyotype and FISH detect only large structural or numerical changes. The cytogenetics report itself states that a normal karyotype does not exclude a submicroscopic abnormality and that molecular testing is needed for classification.",
+      "changes_diagnosis": false
+    }
+  ],
+  "single_source_findings": [
+    {
+      "finding": "NPM1 type A frameshift insertion c.860_863dup p.(Trp288CysfsTer12), VAF 39%, Tier I, disease-defining.",
+      "only_source_id": "MOLEC",
+      "invisible_to": ["MORPH", "FLOW", "CYTO"],
+      "diagnostic_impact": "It assigns the case to AML with mutated NPM1 and makes the 18% versus 22% blast-threshold question irrelevant to classification."
+    },
+    {
+      "finding": "FLT3 internal tandem duplication, exon 14 (about 36 bp), VAF 31%, ITD/WT allelic ratio 0.62, Tier I.",
+      "only_source_id": "MOLEC",
+      "invisible_to": ["MORPH", "FLOW", "CYTO"],
+      "diagnostic_impact": "It does not change the disease category, but it is prognostically adverse and makes the patient a candidate for FLT3 inhibitor therapy."
+    },
+    {
+      "finding": "DNMT3A R882H missense variant, VAF 44%, Tier II.",
+      "only_source_id": "MOLEC",
+      "invisible_to": ["MORPH", "FLOW", "CYTO"],
+      "diagnostic_impact": "It does not define or change the WHO/ICC category; it is reported as a likely clonal hematopoiesis founder event with possible prognostic relevance."
+    },
+    {
+      "finding": "Normal karyotype 46,XY[20] with a negative FISH panel for RUNX1-RUNX1T1, CBFB, PML-RARA, KMT2A, MECOM, -5/5q-, -7/7q- and TP53 deletion.",
+      "only_source_id": "CYTO",
+      "invisible_to": ["MORPH", "FLOW", "MOLEC"],
+      "diagnostic_impact": "It excludes the competing recurrent-rearrangement and cytogenetic-risk categories of AML, leaving NPM1 as the single classifying abnormality."
+    },
+    {
+      "finding": "Aberrant CD56 (partial) and CD7 (subset) expression on blasts.",
+      "only_source_id": "FLOW",
+      "invisible_to": ["MORPH", "CYTO", "MOLEC"],
+      "diagnostic_impact": "It does not change the diagnosis, but it gives a leukemia-associated immunophenotype for tracking measurable residual disease."
+    }
+  ]
+}

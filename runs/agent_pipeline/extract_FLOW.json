@@ -1,0 +1,74 @@
+{
+  "source_id": "FLOW",
+  "display_name": "Flow cytometry immunophenotyping",
+  "summary": "Flow cytometry of a bone marrow aspirate (viability 94% by 7-AAD; eight-color panel, CD45 vs side scatter gating) shows an abnormal myeloid blast population of approximately 22% of total nucleated cells expressing CD34 (subset, ~60%), CD117, HLA-DR (bright), CD13, CD33 (bright), CD38, CD64, dim CD4 and dim cytoplasmic MPO, with aberrant CD56 (partial) and CD7 (subset); CD14 negative on blasts and CD2/CD19/cyCD3 negative. There is a markedly expanded, left-shifted monocytic compartment (maturing monocytes 19% plus promonocytes/immature monocytic 11%, together approximately 30% of TNC) with bright uniform CD64, CD14 on the maturing fraction, CD11b, CD11c, CD36, HLA-DR and dim CD4. The report states the combined findings are diagnostic of acute myeloid leukemia with monocytic differentiation and that the immunophenotype establishes the monocytic lineage that was only favored on morphology. It notes the flow blast estimate (22%) differs modestly from the manual aspirate differential, that aberrant CD56/CD7 may be useful for MRD tracking, and that correlation with cytogenetic and molecular studies is required for final classification.",
+  "key_findings": [
+    {
+      "text": "Abnormal myeloid blast population comprising approximately 22% of total nucleated cells.",
+      "verbatim_support": "abnormal myeloid blast population comprising approximately 22% of total nucleated cells",
+      "category": "blast_burden"
+    },
+    {
+      "text": "Blasts express CD34, CD117, HLA-DR, CD13, CD33, and dim cytoplasmic MPO.",
+      "verbatim_support": "expressing\nCD34, CD117, HLA-DR, CD13, CD33, and dim cytoplasmic MPO",
+      "category": "lineage"
+    },
+    {
+      "text": "CD34 is positive on a subset (~60%) of blasts.",
+      "verbatim_support": "CD34 Positive (subset, ~60%)",
+      "category": "other"
+    },
+    {
+      "text": "Aberrant CD56 and partial CD7 expression on blasts.",
+      "verbatim_support": "with aberrant CD56 and partial CD7",
+      "category": "other"
+    },
+    {
+      "text": "CD14 is negative on blasts; CD2, CD19 and cyCD3 are negative.",
+      "verbatim_support": "CD14 Negative on blasts",
+      "category": "lineage"
+    },
+    {
+      "text": "Markedly expanded and left-shifted monocytic compartment, maturing monocytes plus promonocytes together approximately 30% of total nucleated cells.",
+      "verbatim_support": "maturing monocytes plus promonocytes together approximately 30% of total\nnucleated cells",
+      "category": "lineage"
+    },
+    {
+      "text": "Monocytic population shows bright uniform CD64, CD14 on the maturing fraction, CD11b, CD11c, CD36, HLA-DR, and dim CD4.",
+      "verbatim_support": "with bright uniform CD64, CD14 on the maturing fraction, CD11b, CD11c, CD36, HLA-DR, and dim CD4",
+      "category": "lineage"
+    },
+    {
+      "text": "Combined findings reported as diagnostic of acute myeloid leukemia with monocytic differentiation.",
+      "verbatim_support": "The combined findings are diagnostic of acute myeloid leukemia with monocytic differentiation",
+      "category": "lineage"
+    },
+    {
+      "text": "Report states the immunophenotype establishes the monocytic lineage that was only favored on morphology.",
+      "verbatim_support": "The immunophenotype\nestablishes the monocytic lineage that was only favored on morphology",
+      "category": "lineage"
+    },
+    {
+      "text": "Flow blast estimate (22%) differs modestly from the manual aspirate differential; report states either value supports the diagnosis.",
+      "verbatim_support": "the flow blast estimate (22%) differs modestly from\nthe manual aspirate differential",
+      "category": "limitation"
+    },
+    {
+      "text": "Aberrant CD56/CD7 expression may be useful for measurable residual disease tracking.",
+      "verbatim_support": "Aberrant CD56/CD7 expression is noted and may be useful for measurable residual disease tracking",
+      "category": "biomarker"
+    },
+    {
+      "text": "Correlation with cytogenetic and molecular studies is required for final classification.",
+      "verbatim_support": "Correlation with\ncytogenetic and molecular studies is required for final classification",
+      "category": "limitation"
+    },
+    {
+      "text": "Specimen viability 94% by 7-AAD.",
+      "verbatim_support": "viability 94% by 7-AAD",
+      "category": "other"
+    }
+  ],
+  "stated_limitations": "The flow blast estimate (22%) differs modestly from the manual aspirate differential; the report states flow gating and manual counts are expected to differ and either value supports the diagnosis in this context. Correlation with cytogenetic and molecular studies is required for final classification. Flow cytometry is a component study within a combined diagnostic workup; final lineage and classification require integration with morphology, cytogenetics, and molecular results. Method is a laboratory-developed test with performance characteristics established by the performing laboratory.",
+  "molecular_variants": []
+}

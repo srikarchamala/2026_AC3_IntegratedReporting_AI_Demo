@@ -1,0 +1,104 @@
+{
+  "source_id": "MORPH",
+  "display_name": "Bone marrow aspirate and core biopsy morphology",
+  "summary": "Bone marrow aspirate and core biopsy (left posterior iliac crest) from a 58-year-old man with peripheral blood showing 41% circulating blasts. The marrow is markedly hypercellular (approximately 90-95%) with extensive replacement by immature mononuclear cells in sheets. The 500-cell aspirate differential gives 18% blasts, with promonocytes (4%) enumerated separately because their assignment is morphologically subjective. Blasts are medium-to-large with fine chromatin and one to three nucleoli; a subset shows folded or indented nuclei with grayish cytoplasm. No definite Auer rods are seen. MPO is positive in a minor subset of blasts (approximately 5-10%), and NSE is positive in a subset of cells with partial fluoride inhibition. The diagnosis is hypercellular marrow with acute myeloid leukemia, with probable monocytic differentiation to be confirmed by flow cytometry. The report states that the aspirate blast count is below the historical 20% threshold, that aspirate enumeration is likely affected by hemodilution and by difficulty separating promonocytes from blasts, and that classification depends on pending flow cytometry, cytogenetic, and molecular results.",
+  "key_findings": [
+    {
+      "text": "Diagnosis: hypercellular marrow with acute myeloid leukemia.",
+      "verbatim_support": "HYPERCELLULAR MARROW WITH ACUTE MYELOID LEUKEMIA (see comment)",
+      "category": "lineage"
+    },
+    {
+      "text": "Aspirate blast count is 18% by 500-cell manual differential.",
+      "verbatim_support": "Aspirate blast count 18% by 500-cell manual differential",
+      "category": "blast_burden"
+    },
+    {
+      "text": "Core biopsy shows extensive blast-equivalent infiltration.",
+      "verbatim_support": "core biopsy with extensive blast-equivalent infiltration",
+      "category": "blast_burden"
+    },
+    {
+      "text": "Core is markedly hypercellular (approximately 90-95%) with extensive replacement by immature mononuclear cells in sheets.",
+      "verbatim_support": "The core is markedly hypercellular (cellularity approximately 90-95%) with extensive replacement by",
+      "category": "blast_burden"
+    },
+    {
+      "text": "Peripheral blood blast count is 41%.",
+      "verbatim_support": "the peripheral blood blast count is 41%",
+      "category": "blast_burden"
+    },
+    {
+      "text": "Promonocytes (4%) were counted separately from blasts; their assignment is described as morphologically subjective.",
+      "verbatim_support": "Promonocytes were enumerated separately; their assignment is morphologically subjective",
+      "category": "blast_burden"
+    },
+    {
+      "text": "Monocytic differentiation is stated as probable, based on morphology and cytochemistry, and is to be confirmed by flow cytometry.",
+      "verbatim_support": "Probable monocytic differentiation by morphology and cytochemistry; to be confirmed by flow cytometry.",
+      "category": "lineage"
+    },
+    {
+      "text": "Unequivocal promonocytes are difficult to distinguish from immature myeloid forms on morphology alone.",
+      "verbatim_support": "unequivocal promonocytes are difficult to",
+      "category": "lineage"
+    },
+    {
+      "text": "A subset of blasts shows slightly folded or indented nuclei with grayish cytoplasm and occasional fine azurophilic granulation.",
+      "verbatim_support": "A subset of blasts shows slightly folded or indented",
+      "category": "lineage"
+    },
+    {
+      "text": "No definite Auer rods were identified after review of multiple smears.",
+      "verbatim_support": "No definite Auer rods are identified after review of multiple",
+      "category": "lineage"
+    },
+    {
+      "text": "MPO is positive in a minor subset of blasts (approximately 5-10%).",
+      "verbatim_support": "positive in a minor subset of blasts (approximately 5-10%)",
+      "category": "biomarker"
+    },
+    {
+      "text": "NSE is positive in a subset of cells with partial fluoride inhibition, which the report says supports a monocytic component.",
+      "verbatim_support": "positive in a subset of cells with partial fluoride inhibition, supporting a monocytic component",
+      "category": "biomarker"
+    },
+    {
+      "text": "The combined cytochemical pattern is consistent with a myeloid process with probable monocytic differentiation.",
+      "verbatim_support": "combined pattern is consistent with a myeloid process with probable monocytic differentiation",
+      "category": "lineage"
+    },
+    {
+      "text": "Erythropoiesis is left-shifted with mild megaloblastoid change, and megakaryocytes are reduced.",
+      "verbatim_support": "Erythropoiesis is left-shifted with mild megaloblastoid change",
+      "category": "other"
+    },
+    {
+      "text": "Reticulin shows no significant fibrosis (MF-1).",
+      "verbatim_support": "shows no significant fibrosis (MF-1)",
+      "category": "other"
+    },
+    {
+      "text": "Storage iron is present, with no ring sideroblasts.",
+      "verbatim_support": "storage iron present; no ring sideroblasts",
+      "category": "other"
+    },
+    {
+      "text": "Aspirate blast percentage is below the historical 20% threshold.",
+      "verbatim_support": "The manual aspirate blast percentage (18%) is below the historical 20% threshold",
+      "category": "limitation"
+    },
+    {
+      "text": "Aspirate enumeration is likely affected by hemodilution and by difficulty separating promonocytes from myeloid blasts.",
+      "verbatim_support": "enumeration is likely affected by hemodilution and by the difficulty of separating promonocytes from myeloid blasts on smears",
+      "category": "limitation"
+    },
+    {
+      "text": "Classification depends on integration with flow cytometry, cytogenetic, and molecular results, which were pending at the time of the report.",
+      "verbatim_support": "classification will therefore depend on integration with flow cytometry, cytogenetic, and",
+      "category": "limitation"
+    }
+  ],
+  "stated_limitations": "The manual aspirate blast percentage (18%) is below the historical 20% threshold. Aspirate enumeration is likely affected by hemodilution and by the difficulty of separating promonocytes from myeloid blasts on smears. Promonocyte assignment is morphologically subjective, and unequivocal promonocytes are difficult to distinguish from immature myeloid forms on morphology alone. Monocytic differentiation is probable only and is to be confirmed by flow cytometry. Classification depends on flow cytometry, cytogenetic, and molecular results that were pending at the time of the report. The report is a morphology component report that is part of a larger diagnostic episode and is not intended to stand alone.",
+  "molecular_variants": []
+}

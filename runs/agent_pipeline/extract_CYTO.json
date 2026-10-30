@@ -1,0 +1,84 @@
+{
+  "source_id": "CYTO",
+  "display_name": "Cytogenetics + FISH panel",
+  "summary": "G-banded chromosome analysis of an unstimulated bone marrow aspirate (24- and 48-hour synchronized cultures; 20 cells counted, 5 karyotyped; 400-425 bphs) showed a normal male karyotype, 46,XY[20], with no clonal numerical or structural abnormality at the stated band resolution. Interphase FISH using the acute myeloid leukemia panel (200 nuclei scored per probe) was negative for RUNX1-RUNX1T1, CBFB, PML-RARA, KMT2A (MLL), MECOM (EVI1), -5/5q- (EGR1), -7/7q- (D7S486), and TP53 (17p13.1) deletion, with all signal counts within the laboratory's normal cutoff range. The report interprets the case as cytogenetically normal, states that a normal karyotype does not exclude a submicroscopic abnormality, and states that molecular testing (NPM1, FLT3, CEBPA, and a broader myeloid panel) is required for classification and risk stratification and has been ordered separately (accession MMD-26-NGS-22150).",
+  "key_findings": [
+    {
+      "text": "Conventional karyotype: normal male karyotype in all 20 metaphase cells analyzed.",
+      "verbatim_support": "46,XY[20]",
+      "category": "genetics"
+    },
+    {
+      "text": "No clonal numerical or structural abnormality was identified at the stated band resolution (400-425 bphs).",
+      "verbatim_support": "No clonal numerical or structural abnormality was identified at the stated band resolution",
+      "category": "genetics"
+    },
+    {
+      "text": "Analysis scope: 20 cells counted, 5 fully karyotyped.",
+      "verbatim_support": "Twenty metaphase cells were analyzed and five were fully karyotyped",
+      "category": "other"
+    },
+    {
+      "text": "FISH RUNX1-RUNX1T1 for t(8;21)(q22;q22): negative (0.5% nuclei).",
+      "verbatim_support": "RUNX1-RUNX1T1 t(8;21)(q22;q22) NEGATIVE 0.5%",
+      "category": "genetics"
+    },
+    {
+      "text": "FISH CBFB for inv(16)/t(16;16)(p13;q22): negative (1.0% nuclei).",
+      "verbatim_support": "CBFB inv(16)/t(16;16)(p13;q22) NEGATIVE 1.0%",
+      "category": "genetics"
+    },
+    {
+      "text": "FISH PML-RARA for t(15;17)(q24;q21): negative (0.5% nuclei).",
+      "verbatim_support": "PML-RARA t(15;17)(q24;q21) NEGATIVE 0.5%",
+      "category": "genetics"
+    },
+    {
+      "text": "FISH KMT2A (MLL) for 11q23.3 rearrangement: negative (1.5% nuclei).",
+      "verbatim_support": "KMT2A (MLL) 11q23.3 rearrangement NEGATIVE 1.5%",
+      "category": "genetics"
+    },
+    {
+      "text": "FISH MECOM (EVI1) for 3q26.2 rearrangement: negative (1.0% nuclei).",
+      "verbatim_support": "MECOM (EVI1) 3q26.2 rearrangement NEGATIVE 1.0%",
+      "category": "genetics"
+    },
+    {
+      "text": "FISH -5/5q- (EGR1) for deletion 5q31: negative (1.5% nuclei).",
+      "verbatim_support": "-5/5q- (EGR1) deletion 5q31 NEGATIVE 1.5%",
+      "category": "genetics"
+    },
+    {
+      "text": "FISH -7/7q- (D7S486) for monosomy 7 / del(7q): negative (1.0% nuclei).",
+      "verbatim_support": "-7/7q- (D7S486) monosomy 7 / del(7q) NEGATIVE 1.0%",
+      "category": "genetics"
+    },
+    {
+      "text": "FISH TP53 (17p13.1) for deletion 17p: negative (2.0% nuclei).",
+      "verbatim_support": "TP53 (17p13.1) deletion 17p NEGATIVE 2.0%",
+      "category": "genetics"
+    },
+    {
+      "text": "All FISH probe signal counts were within the laboratory's normal cutoff range.",
+      "verbatim_support": "All probe signal counts were within the laboratory's established normal cutoff range",
+      "category": "genetics"
+    },
+    {
+      "text": "Interpretation: no recurrent cytogenetic abnormality of AML detected; case placed in the cytogenetically normal category.",
+      "verbatim_support": "This places the case in the cytogenetically normal category",
+      "category": "genetics"
+    },
+    {
+      "text": "A normal karyotype does not exclude a submicroscopic abnormality.",
+      "verbatim_support": "A normal karyotype does not exclude a submicroscopic abnormality",
+      "category": "limitation"
+    },
+    {
+      "text": "Molecular testing is stated to be required for classification and risk stratification and has been ordered separately.",
+      "verbatim_support": "molecular testing (NPM1, FLT3, CEBPA, and a broader myeloid panel) is required for classification and risk stratification",
+      "category": "limitation"
+    }
+  ],
+  "stated_limitations": "The report states that a normal karyotype does not exclude a submicroscopic abnormality and that correlation with FISH and molecular studies is advised. Results apply at the stated band resolution (400-425 bphs), with 20 cells counted and 5 fully karyotyped. Cytogenetically normal AML is described as frequently driven by gene-level mutations not visible by karyotype or FISH; molecular testing (NPM1, FLT3, CEBPA, and a broader myeloid panel) is stated to be required for classification and risk stratification and has been ordered separately (accession MMD-26-NGS-22150). The report is one component of a combined hematopathology workup and should be interpreted together with the morphology, flow cytometry, and molecular reports.",
+  "molecular_variants": []
+}
