@@ -30,10 +30,10 @@ In the Project's **Files** or **project knowledge** area, use **+** to upload ea
 |---|---|
 | `Skills_1_master_procedure.docx` | Follow the complete reporting workflow |
 | `Skills_2_extraction_rules_all_reports.docx` | Preserve quotations, evidence locations, measurements, and missing information |
-| `Skills_3_checklist_morphology.docx` | Extract morphology findings |
-| `Skills_4_checklist_flow_cytometry.docx` | Extract flow cytometry findings |
-| `Skills_5_checklist_cytogenetics_FISH.docx` | Extract cytogenetics and FISH findings |
-| `Skills_6_checklist_molecular.docx` | Extract molecular findings |
+| `Skills_3_extraction_rules_morphology.docx` | Extract morphology findings |
+| `Skills_4_extraction_rules_flow_cytometry.docx` | Extract flow cytometry findings |
+| `Skills_5_extraction_rules_cytogenetics_FISH.docx` | Extract cytogenetics and FISH findings |
+| `Skills_6_extraction_rules_molecular.docx` | Extract molecular findings |
 | `Skills_7_guideline_sources.docx` | Locate and read the approved original WHO reference; use optional ELN guidance only when requested |
 | `Skills_8_report_template.docx` | Format the report, criteria table, and evidence review |
 

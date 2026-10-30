@@ -71,10 +71,10 @@ They fall into four groups. Together they work like a written procedure handed t
 | File | What it does |
 |---|---|
 | `Skills_2_extraction_rules_all_reports.docx` | Rules for every report: quote the exact words, record where they came from, keep units and methods, and treat "not reported" as unknown, never as negative |
-| `Skills_3_checklist_morphology.docx` | Checklist for the bone marrow morphology report: cellularity, blast and monocyte counts kept separate, lineage wording, cytochemistry |
-| `Skills_4_checklist_flow_cytometry.docx` | Checklist for the flow cytometry report: each cell population and its percentage, gating, markers, lineage wording |
-| `Skills_5_checklist_cytogenetics_FISH.docx` | Checklist for the cytogenetics and FISH report: exact karyotype, each FISH probe and result, and the limits of a targeted panel |
-| `Skills_6_checklist_molecular.docx` | Checklist for the molecular (NGS) report: each variant with its transcript, allele fraction and tier, what was tested, and assay limits |
+| `Skills_3_extraction_rules_morphology.docx` | Extraction rules for the bone marrow morphology report: cellularity, blast and monocyte counts kept separate, lineage wording, cytochemistry |
+| `Skills_4_extraction_rules_flow_cytometry.docx` | Extraction rules for the flow cytometry report: each cell population and its percentage, gating, markers, lineage wording |
+| `Skills_5_extraction_rules_cytogenetics_FISH.docx` | Extraction rules for the cytogenetics and FISH report: exact karyotype, each FISH probe and result, and the limits of a targeted panel |
+| `Skills_6_extraction_rules_molecular.docx` | Extraction rules for the molecular (NGS) report: each variant with its transcript, allele fraction and tier, what was tested, and assay limits |
 
 **Where the rules come from and how to write it up (2 files)**
 

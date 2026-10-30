@@ -25,12 +25,12 @@ Stop integration if reported patient identity conflicts. If a required report is
 
 ## 2. Extract by report type
 
-Read [the common extraction policy](Skills_2_extraction_rules_all_reports.md), then read the matching checklist for each document:
+Read [the common extraction policy](Skills_2_extraction_rules_all_reports.md), then read the matching report-specific extraction rules for each document:
 
-- [Morphology](Skills_3_checklist_morphology.md)
-- [Flow cytometry](Skills_4_checklist_flow_cytometry.md)
-- [Cytogenetics and FISH](Skills_5_checklist_cytogenetics_FISH.md)
-- [Molecular](Skills_6_checklist_molecular.md)
+- [Morphology](Skills_3_extraction_rules_morphology.md)
+- [Flow cytometry](Skills_4_extraction_rules_flow_cytometry.md)
+- [Cytogenetics and FISH](Skills_5_extraction_rules_cytogenetics_FISH.md)
+- [Molecular](Skills_6_extraction_rules_molecular.md)
 
 Create one evidence table per report using the specified columns. Use only that document to populate its table. Preserve exact short source quotations and page numbers; if a page is unavailable, use an identifiable heading and state that the page is unavailable. Retain missingness, methods, units, denominators, uncertainty, separate populations, and grouped variants. Attribute source-authored diagnoses and prognostic statements. Do not derive a classification at this stage.
 

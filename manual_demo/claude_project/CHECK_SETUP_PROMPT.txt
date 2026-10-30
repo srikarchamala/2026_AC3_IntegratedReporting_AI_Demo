@@ -3,10 +3,10 @@ Check this Claude Project's uploaded files before we run the demonstration. Actu
 Check one complete set of eight workflow documents. The Word set is preferred; the Markdown set is an alternative. Each pair below represents one module, not two required uploads:
 Skills_1_master_procedure.docx or Skills_1_master_procedure.md
 Skills_2_extraction_rules_all_reports.docx or Skills_2_extraction_rules_all_reports.md
-Skills_3_checklist_morphology.docx or Skills_3_checklist_morphology.md
-Skills_4_checklist_flow_cytometry.docx or Skills_4_checklist_flow_cytometry.md
-Skills_5_checklist_cytogenetics_FISH.docx or Skills_5_checklist_cytogenetics_FISH.md
-Skills_6_checklist_molecular.docx or Skills_6_checklist_molecular.md
+Skills_3_extraction_rules_morphology.docx or Skills_3_extraction_rules_morphology.md
+Skills_4_extraction_rules_flow_cytometry.docx or Skills_4_extraction_rules_flow_cytometry.md
+Skills_5_extraction_rules_cytogenetics_FISH.docx or Skills_5_extraction_rules_cytogenetics_FISH.md
+Skills_6_extraction_rules_molecular.docx or Skills_6_extraction_rules_molecular.md
 Skills_7_guideline_sources.docx or Skills_7_guideline_sources.md
 Skills_8_report_template.docx or Skills_8_report_template.md
 
