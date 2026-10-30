@@ -33,7 +33,7 @@ Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
 | `RUN_DEMO_PROMPT.txt` | Prompt that runs the workflow (step 5) | Paste |
 | `PARTICIPANT_GUIDE.docx` | All of the above in one Word document | Keep for yourself; **don't upload** |
 
-Every upload file is named for its job: `Skills_1` to `Skills_8` are the instructions, in the order Claude uses them, and `CASE_01` to `CASE_04` are the four reports. Both folders hold the same four reports.
+Every upload file is named for its job: `Skills_1` to `Skills_8` are the instructions, in the order Claude uses them, and `Pathology_Report_1` to `Pathology_Report_4` are the four pathology reports. Both folders hold the same four reports.
 
 ## Step 2: Run the regular chat first
 
@@ -41,7 +41,7 @@ Do this **before** you create the Project, so nothing from the Project influence
 
 1. Open a **new chat** at [claude.ai](https://claude.ai), **outside** any Project.
 2. If your chat has a Memory option in the **+** menu, turn it off for this chat.
-3. Attach the **four `CASE_` PDFs** from `upload_word/` (paperclip or **+** → upload). Attach nothing else.
+3. Attach the **four `Pathology_Report_` PDFs** from `upload_word/` (paperclip or **+** → upload). Attach nothing else.
 4. Paste the contents of `BASELINE_PROMPT.txt` and send.
 5. Save the answer (copy it into a document, or leave the tab open).
 
@@ -54,7 +54,7 @@ Note the model you used (shown near the message box). Use the same model in step
 3. Click **Set project instructions**. Paste the **entire** contents of `PROJECT_INSTRUCTIONS.txt` and click **Save instructions**.
    Put it in the instructions box, not in the Project description.
 4. In the Project's **Files** (project knowledge) area, click **+** and upload all **12 files** from `upload_word/`. You can select them together.
-5. Check that the Project lists 12 files: 8 starting `Skills_` and 4 starting `CASE_`.
+5. Check that the Project lists 12 files: 8 starting `Skills_` and 4 starting `Pathology_Report_`.
 
 ### What the 12 files are
 
@@ -87,10 +87,10 @@ They fall into four groups. Together they work like a written procedure handed t
 
 | File | What it is |
 |---|---|
-| `CASE_01_bone_marrow_morphology.pdf` | Synthetic morphology report (MORPH) |
-| `CASE_02_flow_cytometry.pdf` | Synthetic flow cytometry report (FLOW) |
-| `CASE_03_cytogenetics_fish.pdf` | Synthetic karyotype and FISH report (CYTO) |
-| `CASE_04_molecular_ngs.pdf` | Synthetic molecular NGS report from a separate reference lab (MOLEC) |
+| `Pathology_Report_1_bone_marrow_morphology.pdf` | Synthetic morphology report (MORPH) |
+| `Pathology_Report_2_flow_cytometry.pdf` | Synthetic flow cytometry report (FLOW) |
+| `Pathology_Report_3_cytogenetics_fish.pdf` | Synthetic karyotype and FISH report (CYTO) |
+| `Pathology_Report_4_molecular_ngs.pdf` | Synthetic molecular NGS report from a separate reference lab (MOLEC) |
 
 The 8 workflow files contain no diagnosis or expected answer, and none of them are the guideline itself; Claude reads the WHO article separately in step 5. The `upload_files/` folder has the same 8 workflow files as Markdown (`.md`) if you prefer them.
 

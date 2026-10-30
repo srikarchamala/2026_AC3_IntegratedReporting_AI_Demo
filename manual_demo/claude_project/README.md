@@ -39,10 +39,10 @@ In the Project's **Files** or **project knowledge** area, use **+** to upload ea
 
 ### Four source reports
 
-- `CASE_01_bone_marrow_morphology.pdf`
-- `CASE_02_flow_cytometry.pdf`
-- `CASE_03_cytogenetics_fish.pdf`
-- `CASE_04_molecular_ngs.pdf`
+- `Pathology_Report_1_bone_marrow_morphology.pdf`
+- `Pathology_Report_2_flow_cytometry.pdf`
+- `Pathology_Report_3_cytogenetics_fish.pdf`
+- `Pathology_Report_4_molecular_ngs.pdf`
 
 The Markdown alternative uses the same workflow filenames ending in `.md`. Project instructions recognize either format. Word files contain the workflow as real document text, with headings and readable tables; they are not screenshots of the instructions.
 
