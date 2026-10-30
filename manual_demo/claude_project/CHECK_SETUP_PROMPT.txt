@@ -1,20 +1,20 @@
 Check this Claude Project's uploaded files before we run the demonstration. Actually locate and read the files using the available document tools. Do not diagnose the case, derive a classification, search the web, or retrieve WHO guidance yet.
 
 Check one complete set of eight workflow documents. The Word set is preferred; the Markdown set is an alternative. Each pair below represents one module, not two required uploads:
-SKILL.docx or SKILL.md
-extractor_common.docx or extractor_common.md
-extractor_MORPH.docx or extractor_MORPH.md
-extractor_FLOW.docx or extractor_FLOW.md
-extractor_CYTO.docx or extractor_CYTO.md
-extractor_MOLEC.docx or extractor_MOLEC.md
-guideline_sources.docx or guideline_sources.md
-report_template.docx or report_template.md
+WORKFLOW_1_procedure.docx or WORKFLOW_1_procedure.md
+WORKFLOW_2_extraction_rules_all_reports.docx or WORKFLOW_2_extraction_rules_all_reports.md
+WORKFLOW_3_checklist_morphology.docx or WORKFLOW_3_checklist_morphology.md
+WORKFLOW_4_checklist_flow_cytometry.docx or WORKFLOW_4_checklist_flow_cytometry.md
+WORKFLOW_5_checklist_cytogenetics_FISH.docx or WORKFLOW_5_checklist_cytogenetics_FISH.md
+WORKFLOW_6_checklist_molecular.docx or WORKFLOW_6_checklist_molecular.md
+WORKFLOW_7_guideline_sources.docx or WORKFLOW_7_guideline_sources.md
+WORKFLOW_8_report_template.docx or WORKFLOW_8_report_template.md
 
 Check these four case reports:
-01_bone_marrow_morphology.pdf
-02_flow_cytometry.pdf
-03_cytogenetics_fish.pdf
-04_molecular_ngs.pdf
+CASE_01_bone_marrow_morphology.pdf
+CASE_02_flow_cytometry.pdf
+CASE_03_cytogenetics_fish.pdf
+CASE_04_molecular_ngs.pdf
 
 The intended upload set is eight workflow documents plus four PDFs: 12 files. Return one compact table naming the actual selected files:
 Filename | Access status | Scope actually read | Short evidence of access
@@ -23,6 +23,6 @@ Use distinct statuses: READ, PARTIAL, MISSING, or UNREADABLE. READ means the ent
 
 For each Word or Markdown workflow document, give an actual heading and a short instruction actually present in its content. Word pagination can differ from other formats; cite its actual heading/location. For each PDF, give one report identifier, such as its accession, and its actual page or identifiable location. Avoid diagnostic findings. A single example establishes access to that location, not proof that unread portions were reviewed; report the read scope honestly.
 
-Resolve links inside the selected SKILL document to individually uploaded files with the matching names and format. Report duplicate versions separately. If their instructions agree, select Word once and note the choice; if they differ or cannot be compared, request a selection before the affected stage. Do not merge conflicting versions. Request complete accessible copies of missing or incomplete documents; do not reconstruct unavailable content.
+Resolve links inside the selected WORKFLOW_1_procedure document to individually uploaded files with the matching names and format. Report duplicate versions separately. If their instructions agree, select Word once and note the choice; if they differ or cannot be compared, request a selection before the affected stage. Do not merge conflicting versions. Request complete accessible copies of missing or incomplete documents; do not reconstruct unavailable content.
 
 Finish with either "File setup ready for the workflow" or "File setup incomplete," followed by any concrete file gaps. File readiness does not establish online guideline access, clinical correctness, native Skill installation, or independent agents. Stop after this setup check.

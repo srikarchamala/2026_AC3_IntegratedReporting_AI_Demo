@@ -1,6 +1,6 @@
 # MORPH: morphology extraction pass
 
-Use `extractor_common.md` and the **MORPH** source ID. Inspect only the assigned morphology report. Return the common findings table, starting at `MORPH-001`.
+Use `WORKFLOW_2_extraction_rules_all_reports.md` and the **MORPH** source ID. Inspect only the assigned morphology report. Return the common findings table, starting at `MORPH-001`.
 
 | Field / population | What to capture |
 |---|---|

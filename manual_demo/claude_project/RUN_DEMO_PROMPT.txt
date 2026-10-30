@@ -1,4 +1,4 @@
-Run the integrated-reporting demonstration using this Project's selected SKILL.docx and seven supporting Word modules, or the equivalent complete .md set if that is what I uploaded. Use one version per module and only the four named component PDFs as case evidence. Confirm access and resolve any differing duplicate versions before their affected stages; do not merge conflicting instructions. Carry out the full workflow without asking me to run code or supply an API key.
+Run the integrated-reporting demonstration using this Project's selected WORKFLOW_1_procedure.docx and seven supporting Word modules, or the equivalent complete .md set if that is what I uploaded. Use one version per module and only the four named component PDFs as case evidence. Confirm access and resolve any differing duplicate versions before their affected stages; do not merge conflicting instructions. Carry out the full workflow without asking me to run code or supply an API key.
 
 Show short, accurate status updates for:
 1. Report inventory and identity check.
@@ -8,7 +8,7 @@ Show short, accurate status updates for:
 5. Integrated teaching draft.
 6. Same-conversation evidence review.
 
-Read the approved WHO article online using guideline_sources.docx or guideline_sources.md from the selected set, including the applicable full sections, tables, footnotes, exceptions, and scope. Show its source card and the portions actually accessed. Do not replace source reading with a search snippet or model memory. If necessary instruction files, reports, or guidance cannot be read, identify the affected stage, retain useful completed work, and request the missing accessible material. Pause derived classification when required guidance is unavailable.
+Read the approved WHO article online using WORKFLOW_7_guideline_sources.docx or WORKFLOW_7_guideline_sources.md from the selected set, including the applicable full sections, tables, footnotes, exceptions, and scope. Show its source card and the portions actually accessed. Do not replace source reading with a search snippet or model memory. If necessary instruction files, reports, or guidance cannot be read, identify the affected stage, retain useful completed work, and request the missing accessible material. Pause derived classification when required guidance is unavailable.
 
 Use the four extraction tables and the criteria table from the modules. Preserve original quotations, locations, finding IDs, methods, units, denominators, uncertainty, and source-reported interpretation. Derived statements must link to both case findings and applicable source criteria. Do not perform an optional formal risk assessment unless I request it.
 

@@ -33,8 +33,7 @@ Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
 | `RUN_DEMO_PROMPT.txt` | Prompt that runs the workflow (step 5) | Paste |
 | `PARTICIPANT_GUIDE.docx` | All of the above in one Word document | Keep for yourself; **don't upload** |
 
-The four reports are the same in both folders:
-`01_bone_marrow_morphology.pdf`, `02_flow_cytometry.pdf`, `03_cytogenetics_fish.pdf`, `04_molecular_ngs.pdf`.
+Every upload file is named for its job: `WORKFLOW_1` to `WORKFLOW_8` are the instructions, in the order Claude uses them, and `CASE_01` to `CASE_04` are the four reports. Both folders hold the same four reports.
 
 ## Step 2: Run the regular chat first
 
@@ -42,7 +41,7 @@ Do this **before** you create the Project, so nothing from the Project influence
 
 1. Open a **new chat** at [claude.ai](https://claude.ai), **outside** any Project.
 2. If your chat has a Memory option in the **+** menu, turn it off for this chat.
-3. Attach the **four PDFs** (paperclip or **+** → upload). Attach nothing else.
+3. Attach the **four `CASE_` PDFs** from `upload_word/` (paperclip or **+** → upload). Attach nothing else.
 4. Paste the contents of `BASELINE_PROMPT.txt` and send.
 5. Save the answer (copy it into a document, or leave the tab open).
 
@@ -55,7 +54,7 @@ Note the model you used (shown near the message box). Use the same model in step
 3. Click **Set project instructions**. Paste the **entire** contents of `PROJECT_INSTRUCTIONS.txt` and click **Save instructions**.
    Put it in the instructions box, not in the Project description.
 4. In the Project's **Files** (project knowledge) area, click **+** and upload all **12 files** from `upload_word/`. You can select them together.
-5. Check that the Project lists 12 files: 8 `.docx` and 4 `.pdf`.
+5. Check that the Project lists 12 files: 8 starting `WORKFLOW_` and 4 starting `CASE_`.
 
 ### What the 12 files are
 
@@ -65,33 +64,33 @@ They fall into four groups. Together they work like a written procedure handed t
 
 | File | What it does |
 |---|---|
-| `SKILL.docx` | The master procedure. Lists the six stages (inventory, extraction, guideline, criteria, draft, review), the evidence rules, and which other file to use at each stage |
+| `WORKFLOW_1_procedure.docx` | The master procedure. Lists the six stages (inventory, extraction, guideline, criteria, draft, review), the evidence rules, and which other file to use at each stage |
 
 **How to read each report (5 files)**
 
 | File | What it does |
 |---|---|
-| `extractor_common.docx` | Rules for every report: quote the exact words, record where they came from, keep units and methods, and treat "not reported" as unknown, never as negative |
-| `extractor_MORPH.docx` | Checklist for the bone marrow morphology report: cellularity, blast and monocyte counts kept separate, lineage wording, cytochemistry |
-| `extractor_FLOW.docx` | Checklist for the flow cytometry report: each cell population and its percentage, gating, markers, lineage wording |
-| `extractor_CYTO.docx` | Checklist for the cytogenetics and FISH report: exact karyotype, each FISH probe and result, and the limits of a targeted panel |
-| `extractor_MOLEC.docx` | Checklist for the molecular (NGS) report: each variant with its transcript, allele fraction and tier, what was tested, and assay limits |
+| `WORKFLOW_2_extraction_rules_all_reports.docx` | Rules for every report: quote the exact words, record where they came from, keep units and methods, and treat "not reported" as unknown, never as negative |
+| `WORKFLOW_3_checklist_morphology.docx` | Checklist for the bone marrow morphology report: cellularity, blast and monocyte counts kept separate, lineage wording, cytochemistry |
+| `WORKFLOW_4_checklist_flow_cytometry.docx` | Checklist for the flow cytometry report: each cell population and its percentage, gating, markers, lineage wording |
+| `WORKFLOW_5_checklist_cytogenetics_FISH.docx` | Checklist for the cytogenetics and FISH report: exact karyotype, each FISH probe and result, and the limits of a targeted panel |
+| `WORKFLOW_6_checklist_molecular.docx` | Checklist for the molecular (NGS) report: each variant with its transcript, allele fraction and tier, what was tested, and assay limits |
 
 **Where the rules come from and how to write it up (2 files)**
 
 | File | What it does |
 |---|---|
-| `guideline_sources.docx` | Points to the WHO 5th edition myeloid article (and optional ELN 2022 risk guidance) that Claude must open and read. It holds addresses and scope only, not the rules themselves, and no answer |
-| `report_template.docx` | The output format: extraction tables, criteria table, the 11-section report, and the review table |
+| `WORKFLOW_7_guideline_sources.docx` | Points to the WHO 5th edition myeloid article (and optional ELN 2022 risk guidance) that Claude must open and read. It holds addresses and scope only, not the rules themselves, and no answer |
+| `WORKFLOW_8_report_template.docx` | The output format: extraction tables, criteria table, the 11-section report, and the review table |
 
 **The case (4 files)**
 
 | File | What it is |
 |---|---|
-| `01_bone_marrow_morphology.pdf` | Synthetic morphology report (MORPH) |
-| `02_flow_cytometry.pdf` | Synthetic flow cytometry report (FLOW) |
-| `03_cytogenetics_fish.pdf` | Synthetic karyotype and FISH report (CYTO) |
-| `04_molecular_ngs.pdf` | Synthetic molecular NGS report from a separate reference lab (MOLEC) |
+| `CASE_01_bone_marrow_morphology.pdf` | Synthetic morphology report (MORPH) |
+| `CASE_02_flow_cytometry.pdf` | Synthetic flow cytometry report (FLOW) |
+| `CASE_03_cytogenetics_fish.pdf` | Synthetic karyotype and FISH report (CYTO) |
+| `CASE_04_molecular_ngs.pdf` | Synthetic molecular NGS report from a separate reference lab (MOLEC) |
 
 The 8 workflow files contain no diagnosis or expected answer, and none of them are the guideline itself; Claude reads the WHO article separately in step 5. The `upload_files/` folder has the same 8 workflow files as Markdown (`.md`) if you prefer them.
 

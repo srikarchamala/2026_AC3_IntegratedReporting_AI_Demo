@@ -25,18 +25,18 @@ Stop integration if reported patient identity conflicts. If a required report is
 
 ## 2. Extract by report type
 
-Read [the common extraction policy](extractor_common.md), then read the matching checklist for each document:
+Read [the common extraction policy](WORKFLOW_2_extraction_rules_all_reports.md), then read the matching checklist for each document:
 
-- [Morphology](extractor_MORPH.md)
-- [Flow cytometry](extractor_FLOW.md)
-- [Cytogenetics and FISH](extractor_CYTO.md)
-- [Molecular](extractor_MOLEC.md)
+- [Morphology](WORKFLOW_3_checklist_morphology.md)
+- [Flow cytometry](WORKFLOW_4_checklist_flow_cytometry.md)
+- [Cytogenetics and FISH](WORKFLOW_5_checklist_cytogenetics_FISH.md)
+- [Molecular](WORKFLOW_6_checklist_molecular.md)
 
 Create one evidence table per report using the specified columns. Use only that document to populate its table. Preserve exact short source quotations and page numbers; if a page is unavailable, use an identifiable heading and state that the page is unavailable. Retain missingness, methods, units, denominators, uncertainty, separate populations, and grouped variants. Attribute source-authored diagnoses and prognostic statements. Do not derive a classification at this stage.
 
 ## 3. Retrieve the actual guidance
 
-Read [the approved source reference](guideline_sources.md). Open the public WHO author article using the available web tool and read the relevant complete sections, including tables, footnotes, exceptions, and scope. A URL, search snippet, or remembered rule is not retrieved evidence.
+Read [the approved source reference](WORKFLOW_7_guideline_sources.md). Open the public WHO author article using the available web tool and read the relevant complete sections, including tables, footnotes, exceptions, and scope. A URL, search snippet, or remembered rule is not retrieved evidence.
 
 Record a source card: title, framework, edition/year, actual accessed URL, access date, relevant section/table, and access status. Do not invent retrieval timestamps, page numbers, quotations, checksums, or successful tool use.
 
@@ -44,7 +44,7 @@ If the required text cannot be read, finish evidence extraction if useful, then 
 
 ## 4. Assess criteria before classification
 
-Use the criterion table in [the report template](report_template.md). Cite the actual source section/table and the finding IDs for every assessment. Read context, exclusions, hierarchy, and prerequisites before deciding **met**, **not met**, **unknown**, or **not applicable**. Keep unknown evidence distinct from a negative result. Use brief quotations within source quotation limits; paraphrase other criteria with precise citations.
+Use the criterion table in [the report template](WORKFLOW_8_report_template.md). Cite the actual source section/table and the finding IDs for every assessment. Read context, exclusions, hierarchy, and prerequisites before deciding **met**, **not met**, **unknown**, or **not applicable**. Keep unknown evidence distinct from a negative result. Use brief quotations within source quotation limits; paraphrase other criteria with precise citations.
 
 State one classification status: **supported**, **insufficient evidence**, or **outside the retrieved source's scope**. A supported WHO classification requires applicable WHO criteria and case evidence. Unknown necessary classification prerequisites block a definitive conclusion. Optional risk uncertainty is a separate issue.
 
