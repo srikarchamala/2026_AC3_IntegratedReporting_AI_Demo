@@ -28,7 +28,7 @@ In the Project's **Files** or **project knowledge** area, use **+** to upload ea
 
 | Word file | What it tells Claude to do |
 |---|---|
-| `Skills_1_procedure.docx` | Follow the complete reporting workflow |
+| `Skills_1_master_procedure.docx` | Follow the complete reporting workflow |
 | `Skills_2_extraction_rules_all_reports.docx` | Preserve quotations, evidence locations, measurements, and missing information |
 | `Skills_3_checklist_morphology.docx` | Extract morphology findings |
 | `Skills_4_checklist_flow_cytometry.docx` | Extract flow cytometry findings |

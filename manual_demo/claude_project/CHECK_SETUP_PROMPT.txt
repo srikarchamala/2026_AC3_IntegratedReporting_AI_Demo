@@ -1,7 +1,7 @@
 Check this Claude Project's uploaded files before we run the demonstration. Actually locate and read the files using the available document tools. Do not diagnose the case, derive a classification, search the web, or retrieve WHO guidance yet.
 
 Check one complete set of eight workflow documents. The Word set is preferred; the Markdown set is an alternative. Each pair below represents one module, not two required uploads:
-Skills_1_procedure.docx or Skills_1_procedure.md
+Skills_1_master_procedure.docx or Skills_1_master_procedure.md
 Skills_2_extraction_rules_all_reports.docx or Skills_2_extraction_rules_all_reports.md
 Skills_3_checklist_morphology.docx or Skills_3_checklist_morphology.md
 Skills_4_checklist_flow_cytometry.docx or Skills_4_checklist_flow_cytometry.md
@@ -23,6 +23,6 @@ Use distinct statuses: READ, PARTIAL, MISSING, or UNREADABLE. READ means the ent
 
 For each Word or Markdown workflow document, give an actual heading and a short instruction actually present in its content. Word pagination can differ from other formats; cite its actual heading/location. For each PDF, give one report identifier, such as its accession, and its actual page or identifiable location. Avoid diagnostic findings. A single example establishes access to that location, not proof that unread portions were reviewed; report the read scope honestly.
 
-Resolve links inside the selected Skills_1_procedure document to individually uploaded files with the matching names and format. Report duplicate versions separately. If their instructions agree, select Word once and note the choice; if they differ or cannot be compared, request a selection before the affected stage. Do not merge conflicting versions. Request complete accessible copies of missing or incomplete documents; do not reconstruct unavailable content.
+Resolve links inside the selected Skills_1_master_procedure document to individually uploaded files with the matching names and format. Report duplicate versions separately. If their instructions agree, select Word once and note the choice; if they differ or cannot be compared, request a selection before the affected stage. Do not merge conflicting versions. Request complete accessible copies of missing or incomplete documents; do not reconstruct unavailable content.
 
 Finish with either "File setup ready for the workflow" or "File setup incomplete," followed by any concrete file gaps. File readiness does not establish online guideline access, clinical correctness, native Skill installation, or independent agents. Stop after this setup check.

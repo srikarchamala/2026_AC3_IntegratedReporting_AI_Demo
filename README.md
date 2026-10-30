@@ -64,7 +64,7 @@ They fall into four groups. Together they work like a written procedure handed t
 
 | File | What it does |
 |---|---|
-| `Skills_1_procedure.docx` | The master procedure. Lists the six stages (inventory, extraction, guideline, criteria, draft, review), the evidence rules, and which other file to use at each stage |
+| `Skills_1_master_procedure.docx` | The master procedure. Lists the six stages (inventory, extraction, guideline, criteria, draft, review), the evidence rules, and which other file to use at each stage |
 
 **How to read each report (5 files)**
 

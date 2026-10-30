@@ -1,4 +1,4 @@
-Run the integrated-reporting demonstration using this Project's selected Skills_1_procedure.docx and seven supporting Word modules, or the equivalent complete .md set if that is what I uploaded. Use one version per module and only the four named component PDFs as case evidence. Confirm access and resolve any differing duplicate versions before their affected stages; do not merge conflicting instructions. Carry out the full workflow without asking me to run code or supply an API key.
+Run the integrated-reporting demonstration using this Project's selected Skills_1_master_procedure.docx and seven supporting Word modules, or the equivalent complete .md set if that is what I uploaded. Use one version per module and only the four named component PDFs as case evidence. Confirm access and resolve any differing duplicate versions before their affected stages; do not merge conflicting instructions. Carry out the full workflow without asking me to run code or supply an API key.
 
 Show short, accurate status updates for:
 1. Report inventory and identity check.
