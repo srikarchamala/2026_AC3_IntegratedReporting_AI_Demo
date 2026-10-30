@@ -8,7 +8,7 @@ Use `PARTICIPANT_GUIDE.docx` for these directions, the Project instructions, and
 
 Download and extract the [Claude Project demo kit](https://raw.githubusercontent.com/srikarchamala/2026_AC3_IntegratedReporting_AI_Demo/main/manual_demo/Claude_Project_Demo_Kit.zip). The ZIP is a download container. Upload its individual documents to the Project.
 
-For the workshop, use **`upload_word/`**. It contains eight Skills files (Word) and four pathology reports (PDF), twelve files in total. The alternative **`upload_files/`** folder contains the same eight Skills files as Markdown plus the same four PDFs. Choose one complete set. Uploading both sets creates duplicate instructions.
+For the workshop, use **`upload_word/`**. The **`guidelines/`** folder holds the original WHO and ELN articles; you attach the WHO article in step 5, you don't upload it to the Project. It contains eight Skills files (Word) and four pathology reports (PDF), twelve files in total. The alternative **`upload_files/`** folder contains the same eight Skills files as Markdown plus the same four PDFs. Choose one complete set. Uploading both sets creates duplicate instructions.
 
 ## 2 Run regular chat first
 
@@ -54,9 +54,11 @@ Resolve any missing, partial, duplicate, or unreadable document before the affec
 
 ## 5 Run the workflow
 
-In that Project conversation, send `RUN_DEMO_PROMPT.txt`, also reproduced in the Word guide. It asks Claude to extract the four reports, open the approved WHO source, assess criteria, draft the integrated report, and review support.
+Attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf` to this chat before you send the prompt (paperclip or **+** → upload). Claude then reads the original WHO article from the attachment and labels it an uploaded source, so the run does not depend on web access. Do not attach the ELN article unless you want a formal risk category, and never attach the answer key.
 
-If your interface has a **Web search** option in the chat's **+** menu, enable it. The newer Claude interface searches when useful and may have no toggle. The run prompt explicitly requests opening and reading the source. Workspace settings can affect access.
+Then, in that Project conversation, send `RUN_DEMO_PROMPT.txt`, also reproduced in the Word guide. It asks Claude to extract the four reports, open the approved WHO source, assess criteria, draft the integrated report, and review support.
+
+If you did not attach the article and your interface has a **Web search** option in the chat's **+** menu, enable it. The newer Claude interface searches when useful and may have no toggle. The run prompt explicitly requests opening and reading the source. Workspace settings can affect access.
 
 Show one reported finding, its original quotation, the guideline section actually read, and the report statement supported by that evidence. A file named `Skills_7_guideline_sources` supplies the source address and scope; it is not itself the guideline. The default is the public 2022 WHO fifth-edition myeloid overview, rather than a claim to have consulted the full current Blue Book. If Claude cannot read the necessary article text, it should pause derived classification and request the original article as an upload.
 

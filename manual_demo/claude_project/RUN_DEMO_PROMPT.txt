@@ -8,7 +8,7 @@ Show short, accurate status updates for:
 5. Integrated teaching draft.
 6. Same-conversation evidence review.
 
-Read the approved WHO article online using Skills_7_guideline_sources.docx or Skills_7_guideline_sources.md from the selected set, including the applicable full sections, tables, footnotes, exceptions, and scope. Show its source card and the portions actually accessed. Do not replace source reading with a search snippet or model memory. If necessary instruction files, reports, or guidance cannot be read, identify the affected stage, retain useful completed work, and request the missing accessible material. Pause derived classification when required guidance is unavailable.
+Read the approved WHO article using Skills_7_guideline_sources.docx or Skills_7_guideline_sources.md from the selected set. If I attached the original WHO article PDF to this chat, use it and label it an uploaded source; otherwise open it online. Read it including the applicable full sections, tables, footnotes, exceptions, and scope. Show its source card and the portions actually accessed. Do not replace source reading with a search snippet or model memory. If necessary instruction files, reports, or guidance cannot be read, identify the affected stage, retain useful completed work, and request the missing accessible material. Pause derived classification when required guidance is unavailable.
 
 Use the four extraction tables and the criteria table from the modules. Preserve original quotations, locations, finding IDs, methods, units, denominators, uncertainty, and source-reported interpretation. Derived statements must link to both case findings and applicable source criteria. Do not perform an optional formal risk assessment unless I request it.
 

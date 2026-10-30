@@ -31,6 +31,7 @@ Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
 | `BASELINE_PROMPT.txt` | Prompt for the regular chat (step 2) | Paste |
 | `CHECK_SETUP_PROMPT.txt` | Prompt that checks Claude can read every file (step 4) | Paste |
 | `RUN_DEMO_PROMPT.txt` | Prompt that runs the workflow (step 5) | Paste |
+| `guidelines/` | The original WHO 2022 classification article and the optional ELN 2022 AML guidelines (PDF) | **Attach** the WHO article in the chat in step 5; don't upload to the Project |
 | `PARTICIPANT_GUIDE.docx` | All of the above in one Word document | Keep for yourself; **don't upload** |
 
 Every upload file is named for its job: `Skills_1` to `Skills_8` are the instructions, in the order Claude uses them, and `Pathology_Report_1` to `Pathology_Report_4` are the four pathology reports. Both folders hold the same four reports.
@@ -107,8 +108,8 @@ If it says **"File setup incomplete"**, re-upload the files it names and run the
 
 ## Step 5: Run the workflow
 
-1. In the same Project chat, turn on **Web search** if your **+** menu offers it. (Some newer layouts search automatically and have no switch.)
-2. Paste the contents of `RUN_DEMO_PROMPT.txt` and send.
+1. In the same Project chat, **attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf`** (paperclip or **+** → upload). Claude reads the original WHO article from it, so the run does not depend on web access or conference Wi-Fi. Leave the ELN article out unless you want a formal risk category.
+2. Paste the contents of `RUN_DEMO_PROMPT.txt` and send. (Without the attachment, turn on **Web search** if your **+** menu offers it; Claude will then try to open the article online.)
 3. Wait. The full run usually takes **several minutes** and produces a long answer.
 
 Claude works through six labelled stages:
@@ -122,7 +123,7 @@ Claude works through six labelled stages:
 | 5. Draft | An 11-section integrated report. Statements cite findings, e.g. `[MOLEC-003; C2]` |
 | 6. Review | A table of concerns by severity. Open issues stay visible |
 
-**If Claude says it could not open the WHO article:** download the open-access PDF from [PubMed Central (PMC9252913)](https://pmc.ncbi.nlm.nih.gov/articles/PMC9252913/), attach it to the chat, and ask Claude to continue using the uploaded article. It will label it as an uploaded source.
+**If Claude says it could not open the WHO article:** attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf` and ask Claude to continue using the uploaded article. It will label it as an uploaded source. Without the article, Claude is instructed to pause the diagnosis rather than classify from memory.
 
 ## Step 6: Compare the two answers
 
@@ -147,7 +148,7 @@ The regular chat may produce a good answer. The point is not that it is wrong, b
 |---|---|
 | Setup check shows PARTIAL or MISSING | Re-upload that file. Project search sometimes reads only parts of a document; run the check again |
 | Claude asks you to run code or give an API key | You don't need to. Reply: "Continue using only the uploaded files and the web, no code." |
-| Classification paused, WHO article not read | Attach the PMC PDF (link in step 5) and ask Claude to continue |
+| Classification paused, WHO article not read | Attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf` and ask Claude to continue |
 | Answer is too long to present | Ask: "Show only the opening summary, one extraction row with its quote, the source card, and the review table." |
 | Claude mentions the answer key or earlier results | You uploaded extra files. Remove them, start a new Project chat, and rerun |
 | Results differ between runs | Expected. AI output varies; that is part of what the demo shows |
@@ -196,6 +197,8 @@ No single report is enough. The pathologist-authored answer is **acute myeloid l
 | Extracted quotes found in the source text | n/a | 61 of 61 | 33 of 33 |
 | Lab names and accessions carried through | Yes | No (not in its extraction schema) | Yes |
 
+[`runs/claude_project_test/`](runs/claude_project_test/) has test runs of the current Claude Project kit (regular chat, setup check, and the workflow with and without the WHO article), with a comparison to the answer key.
+
 `prompts/agent_pipeline/who5e_instructions.md` is the workshop's condensed rule summary, kept only to explain those runs. The Project workflow reads the original WHO article instead.
 
 ## Credits
@@ -206,6 +209,6 @@ The synthetic case, answer key, two-prompt pipeline and agent pipeline come from
 - Srikar Chamala, PhD (Children's Hospital Los Angeles, USC Keck School of Medicine)
 - Omar Baba, MD (Henry Ford Health): AML case design, answer key, two-stage prompts
 
-Workshop materials are used under the MIT License; see [`LICENSE-workshop-materials`](LICENSE-workshop-materials). The WHO and ELN articles belong to their authors and publishers and are linked, not redistributed.
+Workshop materials are used under the MIT License; see [`LICENSE-workshop-materials`](LICENSE-workshop-materials). The WHO article (Khoury et al., *Leukemia* 2022) is included under CC BY 4.0 and the ELN recommendations (Döhner et al., *Blood* 2022) as an unmodified copy under CC BY-NC-ND 4.0; copyright remains with their authors and publishers. See [`manual_demo/claude_project/guidelines/README.md`](manual_demo/claude_project/guidelines/README.md).
 
 Contact: Srikar Chamala, schamala@chla.usc.edu
