@@ -1,0 +1,3 @@
+Please create an integrated hematopathology draft from the four synthetic component reports pasted below. Include the main findings, integrated interpretation, a diagnostic assessment where supported, and any discrepancies or limitations. This is a teaching demonstration for human review.
+
+[Paste the full contents of 2_PATHOLOGY_REPORTS_ALL.md here, then send.]

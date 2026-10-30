@@ -1,0 +1,13 @@
+Check this Claude Project's pasted knowledge before we run the demonstration. Actually locate and read the three pasted text items. Do not diagnose the case, derive a classification, or apply WHO guidance yet.
+
+Return one compact table with one row per section:
+Section (from its FILE marker) | Access status | Scope actually read | Short evidence of access
+
+Rows needed:
+- the eight Skills sections in SKILLS_ALL: Skills_1_master_procedure.md to Skills_8_integrated_report_template.md;
+- the four reports in PATHOLOGY_REPORTS_ALL: Pathology_Report_1 to Pathology_Report_4;
+- the WHO article in WHO_2022_article_text.
+
+Use distinct statuses: READ, PARTIAL, MISSING, or UNREADABLE. READ means the entire section was reviewed; if you received only snippets, selected passages, or some pages, use PARTIAL and specify the scope. For each Skills section, give an actual heading and a short instruction present in it. For each report, give its accession and PDF page marker, avoiding diagnostic findings. For the WHO text, give its title, DOI, and the number of page markers present.
+
+Finish with either "Setup ready for the workflow" or "Setup incomplete," followed by any concrete gaps. Readiness does not establish clinical correctness, native Skill installation, or independent agents. Stop after this setup check.

@@ -1,0 +1,19 @@
+Run the integrated-reporting demonstration using this Project's pasted SKILLS_ALL (Skills_1_master_procedure.md and the seven supporting Skills sections), the four reports in PATHOLOGY_REPORTS_ALL as the only case evidence, and the pasted WHO_2022_article_text as the approved guideline source. Carry out the full workflow without asking me to run code or supply an API key.
+
+Show short, accurate status updates for:
+1. Report inventory and identity check.
+2. MORPH, FLOW, CYTO, and MOLEC extraction passes.
+3. WHO source access (the pasted text copy of the original article).
+4. Source-grounded criteria assessment.
+5. Integrated teaching draft.
+6. Same-conversation evidence review.
+
+Check the WHO text's title and DOI against Skills_7_guideline_sources.md and label it an uploaded text copy of the original article. Read the applicable full sections, tables, footnotes, exceptions, and scope. Show its source card and the journal pages actually read. Do not replace source reading with model memory. If a required section, report, or the guidance cannot be read, identify the affected stage, retain useful completed work, and request the missing material. Pause derived classification when required guidance is unavailable.
+
+Use the four extraction tables and the criteria table from the modules. Preserve original quotations, locations (PDF page markers), finding IDs, methods, units, denominators, uncertainty, and source-reported interpretation. Derived statements must link to both case findings and applicable source criteria. Do not perform an optional formal risk assessment unless I request it.
+
+Keep the opening display concise: classification status, source/framework actually consulted, a few key findings, and material unresolved issues. Then provide the eleven-section draft and review findings. Label it "Synthetic teaching draft — human review required."
+
+Retain the complete extraction and criteria tables after the concise display. Do not omit evidence or claim a document was saved merely to shorten the presentation. Highlight one report statement that can be traced to its finding evidence and, where derived, its source criterion.
+
+Describe these as stages in one Project conversation. Do not claim a native Skill installation, four independent agents, independent QA, or clinical validation.

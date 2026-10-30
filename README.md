@@ -19,6 +19,8 @@ Then you compare what you can *check* in each answer. No coding, no API key, no 
 - About **20 minutes** the first time.
 - The demo kit: **[Claude_Project_Demo_Kit.zip](manual_demo/Claude_Project_Demo_Kit.zip)** (on that page, click the download button).
 
+> **Can't upload files?** If your organisation blocks uploads, use the **[copy-and-paste route](manual_demo/claude_project/PASTE_TEXT/README.md)** instead. You copy text from GitHub and paste it into Claude, with no downloads or uploads.
+
 ## Step 1: Download and unzip the kit
 
 Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
