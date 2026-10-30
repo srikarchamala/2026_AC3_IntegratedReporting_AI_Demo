@@ -34,7 +34,7 @@ Create one evidence table per report using the specified columns. Use only that 
 
 ## 3. Retrieve the actual guidance
 
-Read [the approved source reference](references/Skills_7_guideline_sources.md). Open the public WHO author article using the available web tool and read the relevant complete sections, including tables, footnotes, exceptions, and scope. A URL, search snippet, or remembered rule is not retrieved evidence.
+Read [the approved source reference](references/Skills_7_guideline_sources.md). If the original WHO author article has been uploaded or attached in this conversation, use it and label it an uploaded source; otherwise open the public WHO author article using the available web tool. Either way, read the relevant complete sections, including tables, footnotes, exceptions, and scope. A URL, search snippet, or remembered rule is not retrieved evidence.
 
 Record a source card: title, framework, edition/year, actual accessed URL, access date, relevant section/table, and access status. Do not invent retrieval timestamps, page numbers, quotations, checksums, or successful tool use.
 

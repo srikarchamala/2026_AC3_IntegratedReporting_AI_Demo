@@ -4,7 +4,7 @@ This file is a source directory. It contains no diagnostic criteria or expected 
 
 ## Default: WHO fifth edition, public 2022 myeloid overview
 
-- Source ID: WHO5E_MYEOID_2022.
+- Source ID: WHO5E_MYELOID_2022.
 - Title: The 5th edition of the World Health Organization Classification of Haematolymphoid Tumours: Myeloid and Histiocytic/Dendritic Neoplasms.
 - Authors: Khoury and colleagues.
 - DOI: 10.1038/s41375-022-01613-1.
