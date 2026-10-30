@@ -57,6 +57,44 @@ Note the model you used (shown near the message box). Use the same model in step
 4. In the Project's **Files** (project knowledge) area, click **+** and upload all **12 files** from `upload_word/`. You can select them together.
 5. Check that the Project lists 12 files: 8 `.docx` and 4 `.pdf`.
 
+### What the 12 files are
+
+They fall into four groups. Together they work like a written procedure handed to a new colleague, plus the case to work on.
+
+**The procedure (1 file)**
+
+| File | What it does |
+|---|---|
+| `SKILL.docx` | The master procedure. Lists the six stages (inventory, extraction, guideline, criteria, draft, review), the evidence rules, and which other file to use at each stage |
+
+**How to read each report (5 files)**
+
+| File | What it does |
+|---|---|
+| `extractor_common.docx` | Rules for every report: quote the exact words, record where they came from, keep units and methods, and treat "not reported" as unknown, never as negative |
+| `extractor_MORPH.docx` | Checklist for the bone marrow morphology report: cellularity, blast and monocyte counts kept separate, lineage wording, cytochemistry |
+| `extractor_FLOW.docx` | Checklist for the flow cytometry report: each cell population and its percentage, gating, markers, lineage wording |
+| `extractor_CYTO.docx` | Checklist for the cytogenetics and FISH report: exact karyotype, each FISH probe and result, and the limits of a targeted panel |
+| `extractor_MOLEC.docx` | Checklist for the molecular (NGS) report: each variant with its transcript, allele fraction and tier, what was tested, and assay limits |
+
+**Where the rules come from and how to write it up (2 files)**
+
+| File | What it does |
+|---|---|
+| `guideline_sources.docx` | Points to the WHO 5th edition myeloid article (and optional ELN 2022 risk guidance) that Claude must open and read. It holds addresses and scope only, not the rules themselves, and no answer |
+| `report_template.docx` | The output format: extraction tables, criteria table, the 11-section report, and the review table |
+
+**The case (4 files)**
+
+| File | What it is |
+|---|---|
+| `01_bone_marrow_morphology.pdf` | Synthetic morphology report (MORPH) |
+| `02_flow_cytometry.pdf` | Synthetic flow cytometry report (FLOW) |
+| `03_cytogenetics_fish.pdf` | Synthetic karyotype and FISH report (CYTO) |
+| `04_molecular_ngs.pdf` | Synthetic molecular NGS report from a separate reference lab (MOLEC) |
+
+The 8 workflow files contain no diagnosis or expected answer, and none of them are the guideline itself; Claude reads the WHO article separately in step 5. The `upload_files/` folder has the same 8 workflow files as Markdown (`.md`) if you prefer them.
+
 Do **not** upload the answer key (`case/05_GOLD_STANDARD_integrated_report.pdf`), this README, the participant guide, or anything from `runs/`. They contain the expected answer and would make the comparison unfair.
 
 ## Step 4: Check that Claude can read every file
