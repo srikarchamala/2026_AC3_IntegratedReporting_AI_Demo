@@ -2,79 +2,46 @@
 
 Demo materials for **"Bridging the AI Readiness Gap: A Five-Pillar Framework for Equitable Cancer Research"**, 9th Biennial African Caribbean Cancer Consortium (AC3) Conference, Bridgetown, Barbados, October 2026.
 
-**Open the archived replay:** download [`index.html`](index.html) and open it in a browser. It displays the previously recorded workshop outputs offline. The executable workflow below generates new outputs.
+**Start the no-code demo:** download the [complete upload kit](manual_demo/AC3_No_Code_Demo_Kit.zip) and follow [START_HERE](manual_demo/START_HERE.md). Use it directly in ChatGPT or Claude.
 
 > Everything here is a **synthetic teaching case**. No real patient data. Not for clinical use.
 
-## Live source-grounded workflow
+## No-code chat-versus-agent demonstration
 
-The new [`workflow/`](workflow/) implementation runs the same four component reports through **four independent report-specific extractors, one integrator, and one independent QA call**. It works with the OpenAI API or Anthropic API. Each call starts a fresh context.
+**Download, upload, and chat.** The demo needs no local Python setup, terminal commands, or API key. It uses your app's file-reading and web capabilities.
 
-| Stage | Implemented behavior |
+| Part | What to do |
 |---|---|
-| Extract | One shared extraction policy plus separate morphology, flow, cytogenetics, and molecular prompts and schemas. Preserve exact quotes, pages, missingness, methods, denominators, identifiers, and source-reported interpretations. |
-| Retrieve guidance | Fetch approved public articles listed in [`workflow/sources.json`](workflow/sources.json), verify article identity and relevant sections, and save original bytes, passage text, source version, timestamp, and hashes. |
-| Integrate | Match retrieved criteria to extracted findings, report unknown prerequisites, and attach finding and criterion IDs to report sentences. No case-answer rules or hand-written WHO medical thresholds are embedded in the new prompts. |
-| Validate and review | Check schemas, quotations, source identity, reference IDs, and report structure; then run independent model QA. Render a reviewable HTML/Markdown draft with linked source evidence and visible QA flags. |
+| Regular chat | In a fresh ordinary chat, attach the four component PDFs and use `01_BASELINE_PROMPT.txt`. Run this before enabling the demo skill. |
+| Saved skill | Upload the inner `integrated-reporting-demo.zip` through the app's Skills interface, enable it, then attach the same reports in a new chat and use `02_AGENT_START_PROMPT.txt`. |
+| Project alternative | If Skills upload is unavailable, paste `03_PROJECT_INSTRUCTIONS.txt` into a new ChatGPT Project's instructions and attach the four reports. |
+| Evidence review | Show a reported finding, its quotation, the guideline source, an assessed criterion, and the supported report statement. An optional fresh-chat review uses `04_QA_PROMPT.txt`. |
 
-The default reference is the **public 2022 author overview of WHO fifth-edition myeloid classification**, with the complete relevant AML section and its tables. It is a bounded source, not a claim to access the full current WHO Blue Book. Optional ELN 2022 adult AML risk guidance is a separate reference enabled with `--include-risk`. Retrieval failures stop the workflow; there is no model-memory fallback. See the [source definitions](workflow/sources.json) and [architecture](docs/ARCHITECTURE.md).
+Use the same app and model for both demonstrations. A regular chat can produce a good result; compare what actually happened instead of assuming a failure.
 
-### Run with an API
+### Downloads and files
 
-Requires Python 3.10+ and an API key for the chosen provider. A consumer chat subscription alone does not configure this runner.
+- **[Complete demo kit](manual_demo/AC3_No_Code_Demo_Kit.zip):** the four PDFs, uploadable skill, prompt files, editable skill sources, and presenter guide. Extract this outer ZIP first.
+- **[Skill upload file](manual_demo/integrated-reporting-demo.zip):** upload this inner ZIP through Skills. It contains one named folder with `SKILL.md` and supporting Markdown references.
+- **[Start-here guide](manual_demo/START_HERE.md):** click-by-click Claude/ChatGPT setup and a five-to-six-minute presentation script.
+- **[Skill source](manual_demo/integrated-reporting-demo/SKILL.md):** the saved procedure, with separate morphology, flow, cytogenetics, and molecular checklists.
+- **[Project instructions](manual_demo/03_PROJECT_INSTRUCTIONS.txt):** a self-contained alternative requiring only the four case reports as uploads.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
+### Where the WHO guidance goes
 
-# These commands work without an API key:
-python -m workflow prepare --out outputs/prepared-case
-python -m workflow sources --out outputs/source-check
-```
+The [guideline source directory](manual_demo/integrated-reporting-demo/references/guideline_sources.md) identifies the approved original articles. The assistant is instructed to open and read the source, including relevant tables, footnotes, exclusions, and scope, before deriving a classification. The default is the **public 2022 author overview of WHO fifth-edition myeloid classification**, not the full current WHO Blue Book. Optional ELN 2022 adult AML risk guidance is separate.
 
-Set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` in your local environment. Choose a model ID available to that API account and replace `YOUR_MODEL_ID` below. For an Anthropic key that is not scoped to a workspace, also set `ANTHROPIC_WORKSPACE_ID`.
+The skill contains workflow instructions, not hand-written medical criteria or an expected case answer. If the reference cannot be read, the assistant must say so and request the original public article rather than reconstruct rules from memory.
 
-```bash
-# Claude / Anthropic
-python -m workflow run --provider anthropic --model YOUR_MODEL_ID --out outputs/claude-agent
+### What this demonstrates
 
-# Or OpenAI
-python -m workflow run --provider openai --model YOUR_MODEL_ID --out outputs/openai-agent
-```
+One assistant follows a reusable procedure: report-specific extraction, source retrieval, criterion assessment, integration, and review. These are separate stages in one conversation. Uploading a skill does not automatically create four independent agents, and a same-chat review is not independent QA. The [design notes](docs/ARCHITECTURE.md) explain the evidence boundaries.
 
-Open `report.html` inside the selected output directory. It contains the draft, criterion assessments, linked findings, original quotations, retrieved guideline passages, and QA flags. The structured report is `integration.json`. Input text, prompts, responses, source snapshots, and model metadata are saved alongside it for inspection.
-
-For the regular-chat comparison, run a fresh baseline with the **same provider and model**:
-
-```bash
-python -m workflow baseline --provider anthropic --model YOUR_MODEL_ID --out outputs/claude-baseline
-python -m workflow validate --run-dir outputs/claude-agent
-```
-
-Use a new output directory each time. The `run` command retrieves its own sources; it does not silently reuse a prior preflight. Exit code `2` means high-severity review flags remain. Deterministic evidence failures stop before report rendering; model QA flags remain visible on the rendered draft. None of these checks establishes clinical correctness.
-
-### Use regular ChatGPT or Claude chat
-
-```bash
-python -m workflow chat-pack --out outputs/chat-demo
-```
-
-Follow `outputs/chat-demo/START_HERE.md`. It packages exactly the four input PDFs and the new prompts. Use four fresh conversations for the four extraction steps, then fresh integration and QA conversations. This is manual orchestration; copying prompts into chat does not execute the Python checks or install a native skill.
-
-For a short presentation, follow the [six-minute demo guide](docs/SOURCE_GROUNDED_DEMO.md). Prepare a successful run in advance, then show the baseline, one extraction, the retrieved source, the criteria table, and the final QA view. A prerecorded run should be identified as a replay.
-
-### Development checks
-
-```bash
-python -m unittest discover -s tests -v
-```
-
-The tests use artificial model responses to check orchestration and failure handling. They do not measure model accuracy or clinical validity. Actual model execution requires your provider credentials.
+For a recorded fallback, open [`index.html`](index.html). It displays archived workshop outputs; identify it as a replay.
 
 ## Original teaching case and archived results
 
-The material below describes the original workshop artifacts. `prompts/agent_pipeline/`, `prompts/two_prompt_by_hand/`, `runs/`, the answer key, and the embedded data in `index.html` are historical. The new runner reads **only** `case/01` through `case/04` as case inputs and uses its own resources under `workflow/`; it never loads the guide, answer key, archived outputs, or condensed historical WHO rules.
+The material below describes the original workshop artifacts. `prompts/agent_pipeline/`, `prompts/two_prompt_by_hand/`, `runs/`, the answer key, and the embedded data in `index.html` are historical. For the new demo, upload **only** `case/01` through `case/04` as case evidence. Do not upload this README, the guide, answer key, archived outputs, or condensed historical rules into the generation chats; they contain teaching answers or prior conclusions.
 
 ### The case
 

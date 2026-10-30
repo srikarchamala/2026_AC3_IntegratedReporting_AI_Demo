@@ -1,0 +1,5 @@
+Use the integrated-reporting-demo skill, or the integrated-reporting instructions configured in this Project, to work through these four attached synthetic reports.
+
+Perform report-specific extraction, open and read the approved public WHO reference, assess the applicable criteria against the case evidence, draft the integrated report, and review its support. Show the guideline source card, evidence links, and any unresolved issues. Keep the opening summary concise for a live teaching demo.
+
+If a required report or the guideline text is unavailable, explain what is missing and pause the affected stage. Do not invent a completed lookup, independent agent, or validation step.

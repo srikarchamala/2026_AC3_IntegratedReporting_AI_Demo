@@ -1,181 +1,56 @@
-# Source-grounded workflow architecture
+# Design of the no-code reporting demonstration
 
-## Scope
+## Three kinds of input
 
-This implementation is a fixed sequence of calls for a synthetic integrated-reporting teaching case. It is designed to make source extraction, classification evidence, and independent review inspectable. It does not claim autonomous planning, clinical validation, or equivalence to the archived twelve-node workshop pipeline.
-
-There are six model calls: four document-specific extractions, one integration, and one QA review. The runner controls which inputs reach each call and executes deterministic preparation, retrieval, and validation between them. A general chat baseline is a separate, single-call path.
-
-The authoritative interface and schemas are specified in [workflow/CONTRACT.md](../workflow/CONTRACT.md). Presentation and command examples are in [SOURCE_GROUNDED_DEMO.md](SOURCE_GROUNDED_DEMO.md).
-
-## Execution and isolation
-
-```mermaid
-flowchart TD
-    PDFs["Case PDFs 01–04"] --> Pages["Page text"]
-    Pages --> Morph["Morphology extraction"]
-    Pages --> Flow["Flow extraction"]
-    Pages --> Cyto["Cytogenetics extraction"]
-    Pages --> Molec["Molecular extraction"]
-    Morph --> Checks["Validate findings and quotes"]
-    Flow --> Checks
-    Cyto --> Checks
-    Molec --> Checks
-    Manifest["Approved source manifest"] --> Retrieve["Retrieve public references"]
-    Retrieve --> Sources["Verified reference snapshots"]
-    Checks --> Integrate["Integration call"]
-    Sources --> Integrate
-    Integrate --> DraftChecks["Validate report evidence"]
-    DraftChecks --> QA["Independent QA call"]
-    Pages --> QA
-    Sources --> QA
-    Checks --> QA
-    QA --> Output["Draft report and review findings"]
-```
-
-Each extraction receives **only the page text of its own assigned document**, along with that modality's instructions and schema. The shared page-text box in the diagram represents preparation; it does not mean that every extractor receives all four reports.
-
-The integration call receives all four structured extractions, retrieved reference snapshots, and deterministic validation findings. The QA call receives the original page text as well as the findings, references, integration output, and flags. QA is an independent review request and returns concerns rather than rewriting the draft.
-
-The call sequence is predetermined. Multiple roles or separate calls alone do not demonstrate an autonomous agent; this implementation is a controlled workflow using language models for specified stages.
-
-## Input boundaries
-
-| Input | Permitted role | Boundary |
+| Input | Role | Location |
 |---|---|---|
-| `case/01` through `case/04` PDFs | Source evidence for generation | Each extractor sees one assigned document. |
-| Approved reference manifest | Source identity, edition, retrieval locations, and relevant section selectors | It does not contain expected case answers or condensed diagnostic rules. |
-| Retrieved public article text | Evidence for classification criteria | Preserve provenance, scope, tables, footnotes, exceptions, and surrounding context. |
-| `case/05_GOLD_STANDARD_integrated_report.pdf` | Evaluation after generation | Never an input to extraction, integration, or QA. |
-| `case/00_DEMO_GUIDE.pdf` | Presenter guidance | Never a generation input. |
-| Historical prompts and `runs/` | Historical comparison and documentation | Never used as ground truth inside the new generation path. |
-| Provider API key | Authentication from a provider-specific environment variable | Never included in prompts, report files, saved metadata, or Git. |
+| Skill | A reusable procedure for reading reports, consulting guidance, drafting, and reviewing | `manual_demo/integrated-reporting-demo/SKILL.md` and its references |
+| Case reports | The evidence about this synthetic case | Only the four component PDFs, uploaded at run time |
+| Guideline | The external authority for an applied classification criterion | The original public article opened by the assistant, or an identified uploaded original |
 
-Case documents and retrieved source text are **untrusted data**. Text embedded in them cannot change the workflow, authorize extra tools, request disclosure of credentials, or replace the system's extraction and citation requirements. They are evidence to quote and assess, not instructions to obey.
+The assistant uses its built-in document and web tools. The kit contains no scripts, API calls, software dependencies, or encoded expected diagnosis. Users install the skill through their app's upload interface, or paste the self-contained Project instructions into a Project.
 
-## Extraction contract
+## One assistant, visible stages
 
-Each `extract_<SOURCE>.json` contains exactly three top-level keys:
+The saved workflow organizes one assistant's work into six stages:
 
-- `source_id`: `MORPH`, `FLOW`, `CYTO`, or `MOLEC`.
-- `document_name`: the assigned source document.
-- `findings`: a list of evidence-bearing observations.
+1. Inventory the four reports and check the available identity information.
+2. Extract each report with the shared policy and its report-specific checklist.
+3. Open and read the approved guidance, preserving source identity and scope.
+4. Assess the relevant criteria against the extracted findings.
+5. Draft the integrated report with evidence references.
+6. Revisit the evidence and display review concerns.
 
-A finding records its `id`, `field`, `group_id`, `value`, `status`, `units`, `method`, `denominator`, `quote`, and `page`. Field enums and extraction instructions vary by modality. Shared fields include patient and specimen identifiers, dates, accession, performing laboratory, reported interpretation, and limitations.
+Separate extraction passes in one chat share context. The instructions require report-specific evidence, but do not establish isolated processing. A skill upload does not itself spawn independent agents. A review in the same conversation is a self-review stage; a fresh review chat can provide an additional pass when given the full evidence bundle.
 
-| Status | Meaning for downstream interpretation |
-|---|---|
-| `reported` | A finding is explicitly stated in the source. |
-| `negative` | The source explicitly reports a negative finding. |
-| `not_reported` | The source does not provide the item; this is not a negative result. |
-| `not_performed` | The source states that the relevant study or measurement was not performed. |
-| `pending` | The source states that a result is pending. |
-| `equivocal` | The source presents an uncertain or equivocal finding. |
-| `unreadable` | The relevant source content cannot be read reliably. |
+These distinctions should be stated during the demo. The demonstration shows a reusable workflow with tools and inspectable evidence. It is not an isolated benchmark of model intelligence or clinical accuracy, because instructions, reference use, and output structure differ from the baseline.
 
-`not_reported` requires a null value and page and an empty quote. Other statuses need source support, with the documented exception for unreadable content. Quotes must occur on the specified PDF page after whitespace and Unicode normalization. Extraction does not infer a classification-ready boolean from ambiguous prose.
+## Extraction and interpretation
 
-Units, methods, and denominators travel with measurements. A percentage obtained by one method must not silently replace a percentage obtained by another method. Molecular `group_id` values keep fields belonging to the same variant associated; findings from different variants must not be combined solely because they appear in the same document.
+The common policy preserves source identity, accession numbers, laboratories, dates, quotations, locations, methods, units, denominators, and explicit missingness. Four checklists cover morphology, flow, cytogenetics/FISH, and molecular results.
 
-Reported interpretation is an attributed source finding. It remains distinguishable from any interpretation derived by the integration step.
+A table records what its assigned report actually says. A source-authored diagnosis or prognostic statement remains attributed to that source. Missing text is not a tested negative result. Distinct measurements, populations, and variants remain separate. Derived classification belongs in the later criterion assessment.
 
-## Reference retrieval and provenance
+## The online reference is not a rule summary
 
-The approved source manifest records the classification framework, edition or year, scope, canonical URL, retrieval URLs, and section selectors. The active path retrieves an approved **public author overview**, not subscriber-only WHO content. An overview has a narrower scope than the complete Blue Book; the output must not represent it as complete or automatically current guidance.
+The source directory identifies the public 2022 WHO fifth-edition myeloid author overview by title, DOI, and public locations. It does not reproduce a medical decision tree. The assistant must read the actual relevant context, including tables, footnotes, exceptions, prerequisites, and scope.
 
-A saved reference snapshot carries:
+That overview has a defined scope; it is not the full current WHO Blue Book. Optional ELN 2022 adult AML risk guidance is a separate framework and requires its own applicability checks. If the text is unavailable, the instructions require a visible pause or an upload of the original public article. Search snippets and remembered criteria are insufficient.
 
-| Field | Purpose |
-|---|---|
-| `source_id` | Stable identity used by criteria and citations |
-| `title` | Human-readable source title |
-| `framework` and `edition` | Classification or risk framework and the applicable version |
-| `canonical_url` | Identity of the approved original source |
-| `retrieved_url` | Location from which the content was actually obtained |
-| `retrieved_at` | Timestamp of retrieval or recorded import |
-| `sha256` | Content-integrity record for the saved material |
-| `passages` | Identified sections and their text, each with an ID |
+A source card records what was actually accessed. No computed checksum, retrieval success, timestamp, or page number should be claimed unless observed. An uploaded original remains labeled an upload.
 
-Retrieval must preserve enough context to assess scope, hierarchy, exceptions, exclusions, and footnotes. A short matching phrase is not sufficient if the omitted context changes its meaning.
+## Evidence trail and limits
 
-If required reference material cannot be retrieved and verified, the source-grounded generation path stops. It does not ask the model to reconstruct WHO criteria from memory. A local original public article can be provided with `--who-source FILE`; it must retain the approved identity and edition, record its import provenance, and be hashed. Imported files and saved snapshots must never be described as newly fetched online content.
+Each extracted finding has an ID and an original quote/location. Each applied criterion has a source citation, finding references, an assessment, and a concise explanation. Reported facts cite findings; derived interpretation and diagnosis cite findings and applicable criteria. Unknown necessary evidence remains unknown.
 
-The historical `prompts/agent_pipeline/who5e_instructions.md` is retained to document the earlier workshop. Its condensed rules are not an active substitute for the public reference in this implementation.
+The review stage checks support, omissions, identity, missingness, measurement context, variant grouping, criterion applicability, and overstatement. Those checks are model behavior requested by instructions, not enforced programmatic guarantees. They can fail. Human inspection of the original passages remains part of the teaching exercise.
 
-Risk classification is an explicit extension. `--include-risk` defaults to false. Without a separately retrieved, applicable risk reference, source-reported prognostic observations may be reproduced with attribution, but the workflow does not derive a formal risk category. A local `--eln-source FILE` requires `--include-risk`.
+The eleven report sections cover patient/specimen, component studies, clinical context, four modalities, integrated interpretation, diagnostic assessment, prognostic/predictive observations, and limitations.
 
-## Integration: findings, criteria, and sentences
+## Demonstration boundaries
 
-Integration returns `framework`, `classification_status`, `criteria_assessment`, `sections`, and `unresolved_issues`. The permitted classification states are `supported`, `insufficient_evidence`, and `out_of_scope`.
+Run the baseline before enabling the skill, outside any Project containing the case answer. Keep the same app and model for the second conversation. Keep the answer key, original README's teaching answers, archived outputs, and prior conclusions out of generation. Show what happened, including failures and uncertainty. Do not assume the baseline must give a wrong diagnosis.
 
-Each criterion records:
+The full kit contains only the four input PDFs, skill package/source files, prompts, presenter guide, and workshop attribution/license. The existing `index.html` and `runs/` remain historical replays.
 
-```text
-id, criterion, source_id, passage_id, quote,
-finding_ids, assessment, explanation
-```
-
-Its assessment is `met`, `not_met`, `unknown`, or `not_applicable`. The quote must match the cited retrieved passage, and finding references must resolve to real extracted findings. The integration stage must evaluate scope, hierarchy, exclusions, and missing prerequisites before asserting a classification. An unknown prerequisite is not automatically satisfied.
-
-Keep `framework` equal to the approved WHO snapshot's exact framework label. Record source-scope qualifications in the report and `unresolved_issues`, rather than changing that identifier or combining it with an ELN label. WHO disease classification and optional ELN risk assessment remain separate.
-
-Each report section contains sentences represented by:
-
-```text
-id, text, finding_ids, criterion_ids
-```
-
-Every sentence must cite at least one real finding or criterion. A statement that applies classification in the interpretation or diagnosis must cite applicable criteria. No new scientific interpretation may be added without retrieved source support. Where the available source or case evidence is insufficient, the output must describe the limitation and unresolved evidence rather than manufacture certainty.
-
-The report has eleven sections in a fixed order:
-
-| Order | Section ID | Content |
-|---|---|---|
-| 1 | `patient_specimen` | Patient and specimen information |
-| 2 | `component_studies` | Studies and reporting sources |
-| 3 | `clinical_context` | Available clinical context and its absence where relevant |
-| 4 | `morphology` | Morphologic findings |
-| 5 | `flow` | Flow cytometric findings |
-| 6 | `cytogenetics` | Cytogenetic and FISH findings |
-| 7 | `molecular` | Molecular findings |
-| 8 | `interpretation` | Integrated interpretation with evidence references |
-| 9 | `diagnosis` | Supported classification or explicit uncertainty |
-| 10 | `prognostic_predictive` | Attributed observations and any separately supported assessment |
-| 11 | `limitations` | Missing information, source limits, and unresolved issues |
-
-The evidence chain is therefore: **report sentence → finding and/or criterion → original case page and/or retrieved reference passage**. A reference can resolve correctly yet still fail to support the sentence's meaning; reference existence and clinical support are different checks.
-
-## Validation and independent QA
-
-Deterministic checks address machine-checkable requirements such as schema structure, required fields, identifier consistency, cited evidence, quote matching, and report structure. Saved input and reference integrity records support revalidation. These checks cannot establish that a classification has been applied correctly in every clinical circumstance.
-
-Independent QA receives the original documents and the complete evidence bundle. It returns only a `flags` array. Each flag has `severity` (`low`, `medium`, or `high`), `category`, `concern`, and `reference`. Its purpose is to identify semantic and evidentiary problems as well as unresolved deterministic flags. It does not silently repair the report or erase contradictory evidence.
-
-High-severity structural or provenance problems stop generation. High-severity QA concerns produce a visibly review-required draft and exit code `2`. The `validate` command rechecks saved evidence and includes existing QA flags; it does not repeat the QA model call or clear an earlier concern. Neither a clean schema check nor an empty QA list constitutes clinical validation. QA is itself model-generated and requires review.
-
-All outputs remain drafts. Do not equate a measured quote-match rate, a correct identifier link, or agreement with one synthetic answer key with general diagnostic reliability.
-
-## Commands, artifacts, and reproducibility
-
-| Command | Purpose | Provider credentials |
-|---|---|---|
-| `python -m workflow prepare --out NEW_DIR` | Extract the four case PDFs into page text and save preparation metadata | Not required |
-| `python -m workflow sources --out NEW_DIR` | Retrieve and save the approved reference snapshots | Not required |
-| `python -m workflow chat-pack --out NEW_DIR` | Create portable prompts and instructions for manual sessions | Not required |
-| `python -m workflow baseline --provider PROVIDER --model MODEL --out NEW_DIR` | Run one general request on the four source reports | Required |
-| `python -m workflow run --provider PROVIDER --model MODEL --out NEW_DIR` | Run the complete source-grounded workflow | Required |
-| `python -m workflow validate --run-dir RUN_DIR` | Recheck saved evidence and output structure | Not required |
-
-`PROVIDER` is `anthropic` or `openai`; `MODEL` must be an explicit identifier available to that provider account. The default input location is the repository's `case/`, with `--case-dir` available for an intentional alternative. The source commands support the documented local article fallback and optional risk reference; see the demo guide for examples.
-
-A run preserves the case page text (`inputs/`), per-source `extract_<SOURCE>.json`, `references.json` and original articles in `references/`, extraction and integration validation results, `integration.json`, `qa.json`, and the combined flags in `qa_all.json`. The presentation draft is `report.html`; its Markdown counterpart is `report.md`. **`integration.json` is the structured report representation; there is no separate `report.json`.** The `requests/`, `raw/`, and `calls/` directories preserve request inputs, accepted raw response text, and model response metadata. `manifest.json` records run status and provenance, and `validate` adds `revalidation.json`.
-
-The baseline instead saves `baseline.md`, `request.json`, `call.json`, `manifest.json`, and its prepared `inputs/`. It has no integration or independent QA stage. Keep provider/model identity and source provenance alongside both paths so another reviewer can identify what was actually run. API credentials are read from environment variables and must never be persisted with those artifacts.
-
-Use separate new output directories for each baseline, workflow run, and preflight. Downloaded references, outputs, and credentials are excluded from Git. A snapshot's hash helps identify the saved content; it does not prove that the source was scientifically adequate or that the model's interpretation was correct.
-
-## Comparing the new workflow with the archive
-
-The existing `index.html`, historical prompts, and `runs/` support presentation of previous demonstrations. They remain separate from new API outputs. Their reported trace counts, quote checks, and case conclusions are not measurements of this implementation.
-
-For a new comparison, generate a baseline and workflow output with the same provider, model, and source PDFs, preserve both, and inspect their evidence before consulting the held-out gold standard. Record what the new run actually did. Do not infer a general performance improvement from the design alone or from a single synthetic case.
+Setup and presentation instructions are in [START_HERE](../manual_demo/START_HERE.md). Platform menu labels and availability are checked against the official documentation linked there; actual installation and a rehearsal in the presenter's account are still required.

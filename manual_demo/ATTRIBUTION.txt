@@ -1,0 +1,11 @@
+AC3 Integrated Reporting Demo — synthetic teaching materials
+
+The four synthetic component reports originate from the Agentic Pathology Workshop, API Summit 2026:
+https://github.com/hesamhakim/agentic-pathology-workshop
+
+The AC3 demo repository credits Hesam H. Javadi, Srikar Chamala, and Omar Baba for the workshop infrastructure, case design, and reporting exercises:
+https://github.com/srikarchamala/2026_AC3_IntegratedReporting_AI_Demo
+
+The workshop reports are distributed under the MIT License. The complete notice is included as LICENSE-workshop-materials.
+
+The no-code skill and prompts organize extraction, source lookup, criterion assessment, drafting, and review. They contain no expected case answer and do not establish clinical validation. Guideline articles retain their own authorship and publication terms; the package links to the original sources instead of redistributing condensed medical rules.
