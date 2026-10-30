@@ -2,11 +2,48 @@
 
 Demo materials for **"Bridging the AI Readiness Gap: A Five-Pillar Framework for Equitable Cancer Research"**, 9th Biennial African Caribbean Cancer Consortium (AC3) Conference, Bridgetown, Barbados, October 2026.
 
-**Open the demo:** download [`index.html`](index.html) (click it, then the download button) and open it in any browser. It works offline.
+**Start the no-code demo:** download the [complete upload kit](manual_demo/AC3_No_Code_Demo_Kit.zip) and follow [START_HERE](manual_demo/START_HERE.md). Use it directly in ChatGPT or Claude.
 
 > Everything here is a **synthetic teaching case**. No real patient data. Not for clinical use.
 
-## The case
+## No-code chat-versus-agent demonstration
+
+**Download, upload, and chat.** The demo needs no local Python setup, terminal commands, or API key. It uses your app's file-reading and web capabilities.
+
+| Part | What to do |
+|---|---|
+| Regular chat | In a fresh ordinary chat, attach the four component PDFs and use `01_BASELINE_PROMPT.txt`. Run this before enabling the demo skill. |
+| Saved skill | Upload the inner `integrated-reporting-demo.zip` through the app's Skills interface, enable it, then attach the same reports in a new chat and use `02_AGENT_START_PROMPT.txt`. |
+| Project alternative | If Skills upload is unavailable, paste `03_PROJECT_INSTRUCTIONS.txt` into a new ChatGPT Project's instructions and attach the four reports. |
+| Evidence review | Show a reported finding, its quotation, the guideline source, an assessed criterion, and the supported report statement. An optional fresh-chat review uses `04_QA_PROMPT.txt`. |
+
+Use the same app and model for both demonstrations. A regular chat can produce a good result; compare what actually happened instead of assuming a failure.
+
+### Downloads and files
+
+- **[Complete demo kit](manual_demo/AC3_No_Code_Demo_Kit.zip):** the four PDFs, uploadable skill, prompt files, editable skill sources, and presenter guide. Extract this outer ZIP first.
+- **[Skill upload file](manual_demo/integrated-reporting-demo.zip):** upload this inner ZIP through Skills. It contains one named folder with `SKILL.md` and supporting Markdown references.
+- **[Start-here guide](manual_demo/START_HERE.md):** click-by-click Claude/ChatGPT setup and a five-to-six-minute presentation script.
+- **[Skill source](manual_demo/integrated-reporting-demo/SKILL.md):** the saved procedure, with separate morphology, flow, cytogenetics, and molecular checklists.
+- **[Project instructions](manual_demo/03_PROJECT_INSTRUCTIONS.txt):** a self-contained alternative requiring only the four case reports as uploads.
+
+### Where the WHO guidance goes
+
+The [guideline source directory](manual_demo/integrated-reporting-demo/references/guideline_sources.md) identifies the approved original articles. The assistant is instructed to open and read the source, including relevant tables, footnotes, exclusions, and scope, before deriving a classification. The default is the **public 2022 author overview of WHO fifth-edition myeloid classification**, not the full current WHO Blue Book. Optional ELN 2022 adult AML risk guidance is separate.
+
+The skill contains workflow instructions, not hand-written medical criteria or an expected case answer. If the reference cannot be read, the assistant must say so and request the original public article rather than reconstruct rules from memory.
+
+### What this demonstrates
+
+One assistant follows a reusable procedure: report-specific extraction, source retrieval, criterion assessment, integration, and review. These are separate stages in one conversation. Uploading a skill does not automatically create four independent agents, and a same-chat review is not independent QA. The [design notes](docs/ARCHITECTURE.md) explain the evidence boundaries.
+
+For a recorded fallback, open [`index.html`](index.html). It displays archived workshop outputs; identify it as a replay.
+
+## Original teaching case and archived results
+
+The material below describes the original workshop artifacts. `prompts/agent_pipeline/`, `prompts/two_prompt_by_hand/`, `runs/`, the answer key, and the embedded data in `index.html` are historical. For the new demo, upload **only** `case/01` through `case/04` as case evidence. Do not upload this README, the guide, answer key, archived outputs, or condensed historical rules into the generation chats; they contain teaching answers or prior conclusions.
+
+### The case
 
 One fictional patient, one bone marrow specimen, four separately issued reports (in [`case/`](case/)):
 
@@ -19,7 +56,7 @@ One fictional patient, one bone marrow specimen, four separately issued reports 
 
 No single report is enough. The diagnosis is **acute myeloid leukemia with mutated NPM1, with monocytic differentiation**. The built-in trap: DNMT3A is real and prognostic but belongs in the prognostic notes, not the diagnosis line. The pathologist-authored answer key is `case/05_GOLD_STANDARD_integrated_report.pdf`.
 
-## Three ways to do the same task
+### Three archived approaches
 
 | Approach | What it is | Prompts | Outputs |
 |---|---|---|---|
@@ -27,7 +64,7 @@ No single report is enough. The diagnosis is **acute myeloid leukemia with mutat
 | **Two prompts by hand** | Extract with quotes, then integrate with a trace, in any chat tool | [`prompts/two_prompt_by_hand/`](prompts/two_prompt_by_hand/) | [`runs/two_prompt_by_hand/`](runs/two_prompt_by_hand/) |
 | **Agent pipeline** | 12 steps: per-report extraction, cross-report analysis, parsers, WHO classifier, QA | [`prompts/agent_pipeline/`](prompts/agent_pipeline/) | [`runs/agent_pipeline/`](runs/agent_pipeline/) |
 
-## Try the two-prompt version yourself (no code)
+### Historical two-prompt exercise (no code)
 
 You need any AI chat tool. Use only the synthetic files here, never patient data in a public tool.
 
@@ -38,7 +75,7 @@ You need any AI chat tool. Use only the synthetic files here, never patient data
 5. You get the 11-section integrated report and an evidence trace: every sentence of the interpretation and diagnosis mapped to its source.
 6. Compare with `case/05_GOLD_STANDARD_integrated_report.pdf`. Check the diagnosis line, both blast counts, and where DNMT3A landed. Run it again and see what changes.
 
-## What happened in these runs
+### What happened in the recorded workshop runs
 
 | Check | Chatbot (3 runs) | Agent pipeline | Two prompts |
 |---|---|---|---|
