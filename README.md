@@ -2,7 +2,7 @@
 
 Demo materials for **"Bridging the AI Readiness Gap: A Five-Pillar Framework for Equitable Cancer Research"**, 9th Biennial African Caribbean Cancer Consortium (AC3) Conference, Bridgetown, Barbados, October 2026.
 
-**Open the demo:** [srikarchamala.github.io/2026_AC3_IntegratedReporting_AI_Demo](https://srikarchamala.github.io/2026_AC3_IntegratedReporting_AI_Demo/) (or download `index.html` and open it in any browser; it works offline).
+**Open the demo:** download [`index.html`](index.html) (click it, then the download button) and open it in any browser. It works offline.
 
 > Everything here is a **synthetic teaching case**. No real patient data. Not for clinical use.
 
