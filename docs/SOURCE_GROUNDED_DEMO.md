@@ -2,7 +2,7 @@
 
 The preferred demonstration uses a Claude Project with individually uploaded Skills files (`Skills_1` to `Skills_8`), pathology reports (`Pathology_Report_1` to `_4`), and online references.
 
-Start with the [Claude Project kit](../manual_demo/Claude_Project_Demo_Kit.zip) and [Word participant guide](../manual_demo/claude_project/PARTICIPANT_GUIDE.docx). Extract the kit, paste the supplied Project instructions, and upload the twelve files inside `upload_word/` individually. Run the setup check, then the demo prompt. The Word documents are workflow instructions; native Skill installation is not required. An equivalent Markdown set is available in `upload_files/`; choose one complete set. The [online guide](../manual_demo/claude_project/README.md) describes both formats.
+Start with the [Claude Project kit](../manual_demo/Claude_Project_Demo_Kit.zip) and [Word participant guide](../manual_demo/claude_project/PARTICIPANT_GUIDE.docx). Extract the kit, paste the supplied Project instructions, and upload the twelve files inside `SKILLS/` and `PATHOLOGY_REPORTS/` individually. Run the setup check, then the demo prompt. The Word documents are workflow instructions; native Skill installation is not required. Markdown copies of the Skills files are in `SKILLS_MARKDOWN/`; upload one format, not both. The [online guide](../manual_demo/claude_project/README.md) describes both formats.
 
 The [complete multi-route kit](../manual_demo/AC3_No_Code_Demo_Kit.zip) and [general presenter guide](../manual_demo/START_HERE.md) retain native Skills and ChatGPT Project alternatives.
 

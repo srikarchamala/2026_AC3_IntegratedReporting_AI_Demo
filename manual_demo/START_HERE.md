@@ -4,7 +4,7 @@ Use this kit directly in Claude or ChatGPT. **Skills files = saved procedure; re
 
 **Preferred for this workshop: Claude Projects with individual Word uploads.** Follow [the Claude Project guide](claude_project/README.md), or open `claude_project/PARTICIPANT_GUIDE.docx` for the complete directions, Project instructions, and prompts in Word. Use the dedicated [Claude Project kit](https://raw.githubusercontent.com/srikarchamala/2026_AC3_IntegratedReporting_AI_Demo/main/manual_demo/Claude_Project_Demo_Kit.zip), or the `claude_project/` folder inside the complete kit.
 
-Extract the downloaded kit on your computer. For the Project route, upload the individual files from `claude_project/upload_word/`, or the equivalent Markdown set in `claude_project/upload_files/`, after pasting the Project instructions. The separate inner `integrated-reporting-demo.zip` is used only for the optional native Skills route below.
+Extract the downloaded kit on your computer. For the Project route, upload the individual files from `claude_project/SKILLS/` and `claude_project/PATHOLOGY_REPORTS/` (or use the Markdown copies in `claude_project/SKILLS_MARKDOWN/` instead of `SKILLS/`) after pasting the Project instructions. The separate inner `integrated-reporting-demo.zip` is used only for the optional native Skills route below.
 
 ## 1. Run regular chat first
 
@@ -17,7 +17,7 @@ Attach only the four pathology reports in `case/`:
 - `Pathology_Report_3_cytogenetics_fish.pdf`
 - `Pathology_Report_4_molecular_ngs.pdf`
 
-The same four files are in `claude_project/upload_word/`. In the GitHub repository, the originals are in the top-level `case/` folder as `01_` to `04_`.
+The same four files are in `claude_project/PATHOLOGY_REPORTS/`. In the GitHub repository, the originals are in the top-level `case/` folder as `01_` to `04_`.
 
 Paste the contents of `01_BASELINE_PROMPT.txt` and send. Save the response. Keep the **same app and model** for the second demonstration. A regular chat may produce a good report; compare the actual results without assuming it must fail.
 
@@ -25,7 +25,7 @@ Paste the contents of `01_BASELINE_PROMPT.txt` and send. Save the response. Keep
 
 ### Claude Project with individual Skills files
 
-Create a Project named **AC3 Integrated Reporting Demo**. Under **Set project instructions**, paste the contents of `claude_project/PROJECT_INSTRUCTIONS.txt` and save. Add all twelve documents from `claude_project/upload_word/` to the Project's Files or knowledge area: eight Skills files (`Skills_1` to `Skills_8`) and the four pathology reports (`Pathology_Report_1` to `_4`). An equivalent Markdown set is in `upload_files/`; use one set.
+Create a Project named **AC3 Integrated Reporting Demo**. Under **Set project instructions**, paste the contents of `claude_project/PROJECT_INSTRUCTIONS.txt` and save. Add all twelve documents to the Project's Files or knowledge area: the eight Skills files in `claude_project/SKILLS/` (`Skills_1` to `Skills_8`) and the four pathology reports in `claude_project/PATHOLOGY_REPORTS/` (`Pathology_Report_1` to `_4`). Markdown copies of the Skills files are in `SKILLS_MARKDOWN/`; use them instead of `SKILLS/`, not as well.
 
 Start a conversation inside the Project. Send `claude_project/CHECK_SETUP_PROMPT.txt`, resolve any reported missing or partial content, then send `claude_project/RUN_DEMO_PROMPT.txt`. All copy-and-paste text is also in the Word participant guide. These documents guide the workflow without native Skill installation. See the [complete Project guide](claude_project/README.md) for the file list and source-access steps.
 

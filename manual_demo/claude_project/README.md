@@ -8,7 +8,7 @@ Use `PARTICIPANT_GUIDE.docx` for these directions, the Project instructions, and
 
 Download and extract the [Claude Project demo kit](https://raw.githubusercontent.com/srikarchamala/2026_AC3_IntegratedReporting_AI_Demo/main/manual_demo/Claude_Project_Demo_Kit.zip). The ZIP is a download container. Upload its individual documents to the Project.
 
-For the workshop, use **`upload_word/`**. The **`guidelines/`** folder holds the original WHO and ELN articles; you attach the WHO article in step 5, you don't upload it to the Project. It contains eight Skills files (Word) and four pathology reports (PDF), twelve files in total. The alternative **`upload_files/`** folder contains the same eight Skills files as Markdown plus the same four PDFs. Choose one complete set. Uploading both sets creates duplicate instructions.
+Upload twelve files to the Project: the eight Skills files (Word) in **`SKILLS/`** and the four pathology reports (PDF) in **`PATHOLOGY_REPORTS/`**. **`SKILLS_MARKDOWN/`** holds the same eight Skills files as Markdown; use it instead of `SKILLS/` if you prefer, never both, because uploading both creates duplicate instructions. **`GUIDELINES/`** holds the original WHO and ELN articles; you attach the WHO article in step 5, you don't upload it to the Project.
 
 ## 2 Run regular chat first
 
@@ -22,7 +22,7 @@ Open [Claude Projects](https://claude.ai/projects), select **+ New Project**, an
 
 Select **Set project instructions**. Paste the complete contents of `PROJECT_INSTRUCTIONS.txt` and select **Save instructions**. You can copy the same text from the Project instructions section of the Word guide. Put it in the instructions field, not only in the Project description or an uploaded document.
 
-In the Project's **Files** or **project knowledge** area, use **+** to upload each of the twelve documents from `upload_word/`. You may select them together while keeping them as individual files. Some accounts have a newer Project layout; use its corresponding files and instructions controls.
+In the Project's **Files** or **project knowledge** area, use **+** to upload each of the twelve documents: the eight in `SKILLS/` and the four in `PATHOLOGY_REPORTS/`. You may select them together while keeping them as individual files. Some accounts have a newer Project layout; use its corresponding files and instructions controls.
 
 ### Eight Skills files
 
@@ -54,7 +54,7 @@ Resolve any missing, partial, duplicate, or unreadable document before the affec
 
 ## 5 Run the workflow
 
-Attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf` to this chat before you send the prompt (paperclip or **+** → upload). Claude then reads the original WHO article from the attachment and labels it an uploaded source, so the run does not depend on web access. Do not attach the ELN article unless you want a formal risk category, and never attach the answer key.
+Attach `GUIDELINES/WHO_2022_Khoury_myeloid_5th_edition.pdf` to this chat before you send the prompt (paperclip or **+** → upload). Claude then reads the original WHO article from the attachment and labels it an uploaded source, so the run does not depend on web access. Do not attach the ELN article unless you want a formal risk category, and never attach the answer key.
 
 Then, in that Project conversation, send `RUN_DEMO_PROMPT.txt`, also reproduced in the Word guide. It asks Claude to extract the four reports, open the approved WHO source, assess criteria, draft the integrated report, and review support.
 

@@ -25,13 +25,14 @@ Unzip `Claude_Project_Demo_Kit.zip`. Inside you will find:
 
 | File or folder | What it is | Upload it? |
 |---|---|---|
-| `upload_word/` | 8 Skills files (Word) + 4 pathology reports (PDF): 12 files | **Yes**, into the Project (step 3) |
-| `upload_files/` | The same 8 Skills files as Markdown, plus the same 4 pathology reports | Only if you prefer Markdown. Use **one** set, never both |
+| `SKILLS/` | The 8 Skills files (Word): the workflow instructions | **Yes**, into the Project (step 3) |
+| `PATHOLOGY_REPORTS/` | The 4 pathology reports (PDF): the case | **Yes**, into the Project (step 3); also attached in the regular chat (step 2) |
+| `SKILLS_MARKDOWN/` | The same 8 Skills files as Markdown (`.md`) | Only if you prefer Markdown, **instead of** `SKILLS/`. Never upload both |
 | `PROJECT_INSTRUCTIONS.txt` | Text you paste into the Project's instructions | Paste, don't upload |
 | `BASELINE_PROMPT.txt` | Prompt for the regular chat (step 2) | Paste |
 | `CHECK_SETUP_PROMPT.txt` | Prompt that checks Claude can read every file (step 4) | Paste |
 | `RUN_DEMO_PROMPT.txt` | Prompt that runs the workflow (step 5) | Paste |
-| `guidelines/` | The original WHO 2022 classification article and the optional ELN 2022 AML guidelines (PDF) | **Attach** the WHO article in the chat in step 5; don't upload to the Project |
+| `GUIDELINES/` | The original WHO 2022 classification article and the optional ELN 2022 AML guidelines (PDF) | **Attach** the WHO article in the chat in step 5; don't upload to the Project |
 | `PARTICIPANT_GUIDE.docx` | All of the above in one Word document | Keep for yourself; **don't upload** |
 
 Every upload file is named for its job: `Skills_1` to `Skills_8` are the instructions, in the order Claude uses them, and `Pathology_Report_1` to `Pathology_Report_4` are the four pathology reports. Both folders hold the same four reports.
@@ -42,7 +43,7 @@ Do this **before** you create the Project, so nothing from the Project influence
 
 1. Open a **new chat** at [claude.ai](https://claude.ai), **outside** any Project.
 2. If your chat has a Memory option in the **+** menu, turn it off for this chat.
-3. Attach the **four `Pathology_Report_` PDFs** from `upload_word/` (paperclip or **+** → upload). Attach nothing else.
+3. Attach the **four `Pathology_Report_` PDFs** from `PATHOLOGY_REPORTS/` (paperclip or **+** → upload). Attach nothing else.
 4. Paste the contents of `BASELINE_PROMPT.txt` and send.
 5. Save the answer (copy it into a document, or leave the tab open).
 
@@ -54,7 +55,7 @@ Note the model you used (shown near the message box). Use the same model in step
 2. Name it `AC3 Integrated Reporting Demo`. Keep it private.
 3. Click **Set project instructions**. Paste the **entire** contents of `PROJECT_INSTRUCTIONS.txt` and click **Save instructions**.
    Put it in the instructions box, not in the Project description.
-4. In the Project's **Files** (project knowledge) area, click **+** and upload all **12 files** from `upload_word/`. You can select them together.
+4. In the Project's **Files** (project knowledge) area, click **+** and upload all **12 files**: the 8 in `SKILLS/` and the 4 in `PATHOLOGY_REPORTS/`. You can select them together.
 5. Check that the Project lists 12 files: 8 starting `Skills_` and 4 starting `Pathology_Report_`.
 
 ### What the 12 files are
@@ -93,7 +94,7 @@ They fall into four groups. Together they work like a written procedure handed t
 | `Pathology_Report_3_cytogenetics_fish.pdf` | Synthetic karyotype and FISH report (CYTO) |
 | `Pathology_Report_4_molecular_ngs.pdf` | Synthetic molecular NGS report from a separate reference lab (MOLEC) |
 
-The 8 Skills files contain no diagnosis or expected answer, and none of them are the guideline itself; Claude reads the WHO article separately in step 5. The `upload_files/` folder has the same 8 Skills files as Markdown (`.md`) if you prefer them.
+The 8 Skills files contain no diagnosis or expected answer, and none of them are the guideline itself; Claude reads the WHO article separately in step 5. The `SKILLS_MARKDOWN/` folder has the same 8 Skills files as Markdown (`.md`) if you prefer them; upload it in place of `SKILLS/`, not as well.
 
 Do **not** upload the answer key (`case/05_GOLD_STANDARD_integrated_report.pdf`), this README, the participant guide, or anything from `runs/`. They contain the expected answer and would make the comparison unfair.
 
@@ -108,7 +109,7 @@ If it says **"File setup incomplete"**, re-upload the files it names and run the
 
 ## Step 5: Run the workflow
 
-1. In the same Project chat, **attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf`** (paperclip or **+** → upload). Claude reads the original WHO article from it, so the run does not depend on web access or conference Wi-Fi. Leave the ELN article out unless you want a formal risk category.
+1. In the same Project chat, **attach `GUIDELINES/WHO_2022_Khoury_myeloid_5th_edition.pdf`** (paperclip or **+** → upload). Claude reads the original WHO article from it, so the run does not depend on web access or conference Wi-Fi. Leave the ELN article out unless you want a formal risk category.
 2. Paste the contents of `RUN_DEMO_PROMPT.txt` and send. (Without the attachment, turn on **Web search** if your **+** menu offers it; Claude will then try to open the article online.)
 3. Wait. The full run usually takes **several minutes** and produces a long answer.
 
@@ -123,7 +124,7 @@ Claude works through six labelled stages:
 | 5. Draft | An 11-section integrated report. Statements cite findings, e.g. `[MOLEC-003; C2]` |
 | 6. Review | A table of concerns by severity. Open issues stay visible |
 
-**If Claude says it could not open the WHO article:** attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf` and ask Claude to continue using the uploaded article. It will label it as an uploaded source. Without the article, Claude is instructed to pause the diagnosis rather than classify from memory.
+**If Claude says it could not open the WHO article:** attach `GUIDELINES/WHO_2022_Khoury_myeloid_5th_edition.pdf` and ask Claude to continue using the uploaded article. It will label it as an uploaded source. Without the article, Claude is instructed to pause the diagnosis rather than classify from memory.
 
 ## Step 6: Compare the two answers
 
@@ -148,7 +149,7 @@ The regular chat may produce a good answer. The point is not that it is wrong, b
 |---|---|
 | Setup check shows PARTIAL or MISSING | Re-upload that file. Project search sometimes reads only parts of a document; run the check again |
 | Claude asks you to run code or give an API key | You don't need to. Reply: "Continue using only the uploaded files and the web, no code." |
-| Classification paused, WHO article not read | Attach `guidelines/WHO_2022_Khoury_myeloid_5th_edition.pdf` and ask Claude to continue |
+| Classification paused, WHO article not read | Attach `GUIDELINES/WHO_2022_Khoury_myeloid_5th_edition.pdf` and ask Claude to continue |
 | Answer is too long to present | Ask: "Show only the opening summary, one extraction row with its quote, the source card, and the review table." |
 | Claude mentions the answer key or earlier results | You uploaded extra files. Remove them, start a new Project chat, and rerun |
 | Results differ between runs | Expected. AI output varies; that is part of what the demo shows |
@@ -209,6 +210,6 @@ The synthetic case, answer key, two-prompt pipeline and agent pipeline come from
 - Srikar Chamala, PhD (Children's Hospital Los Angeles, USC Keck School of Medicine)
 - Omar Baba, MD (Henry Ford Health): AML case design, answer key, two-stage prompts
 
-Workshop materials are used under the MIT License; see [`LICENSE-workshop-materials`](LICENSE-workshop-materials). The WHO article (Khoury et al., *Leukemia* 2022) is included under CC BY 4.0 and the ELN recommendations (Döhner et al., *Blood* 2022) as an unmodified copy under CC BY-NC-ND 4.0; copyright remains with their authors and publishers. See [`manual_demo/claude_project/guidelines/README.md`](manual_demo/claude_project/guidelines/README.md).
+Workshop materials are used under the MIT License; see [`LICENSE-workshop-materials`](LICENSE-workshop-materials). The WHO article (Khoury et al., *Leukemia* 2022) is included under CC BY 4.0 and the ELN recommendations (Döhner et al., *Blood* 2022) as an unmodified copy under CC BY-NC-ND 4.0; copyright remains with their authors and publishers. See [`manual_demo/claude_project/GUIDELINES/README.md`](manual_demo/claude_project/GUIDELINES/README.md).
 
 Contact: Srikar Chamala, schamala@chla.usc.edu
